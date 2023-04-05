@@ -9,9 +9,34 @@
     padding: 2%;
   }
 
-  @keyframes morph {
+  @keyframes morph1 {
     0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
     100% {border-radius: 40% 60%;} 
+    }
+
+  @keyframes morph2 {
+    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
+    100% {border-radius: 50% 70%;} 
+  }
+
+  @keyframes morph3 {
+    0% {border-radius: 40% 70% 70% 40% / 60% 40% 70% 50%;} 
+    100% {border-radius: 100% 50%;} 
+  }
+
+  @keyframes morph4 {
+    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
+    100% {border-radius: 70% 70%;}  
+  }
+
+  @keyframes morph5 {
+    0% {border-radius: 40% 60% 60% 40% / 80% 30% 70% 40%;} 
+    100% {border-radius: 50% 70%;}  
+  }
+
+  @keyframes morph6 {
+    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
+    100% {border-radius: 60% 70%;} 
   }
   
   @keyframes spin {
@@ -30,7 +55,7 @@
   .spin-container1 {
     width: 100%;
     height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
+    animation: spin 10s ease-in-out infinite alternate;
     position: relative;
   }
   
@@ -39,7 +64,7 @@
     height: 100%;
     transition: border-radius 1s ease-out;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite both alternate;
+    animation: morph1 8s ease-in-out infinite both alternate;
     position: absolute;
     overflow: hidden;
     z-index: 5;
@@ -62,7 +87,7 @@
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
-    animation: spin 12s ease-in-out infinite alternate-reverse;
+    animation: spin 10s ease-in-out infinite alternate-reverse;
     opacity: 1;
     z-index: 2;
   }
@@ -87,7 +112,7 @@
     height: 100%;
     transition: border-radius 1s ease-out;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite both alternate;
+    animation: morph2 8s ease-in-out infinite both alternate;
     position: absolute;
     overflow: hidden;
     z-index: 5;
@@ -134,7 +159,7 @@
     height: 100%;
     transition: border-radius 1s ease-out;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite both alternate;
+    animation: morph3 8s ease-in-out infinite both alternate;
     position: absolute;
     overflow: hidden;
     z-index: 5;
@@ -172,7 +197,7 @@
   .spin-container4 {
     width: 100%;
     height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
+    animation: spin 9s ease-in-out infinite alternate;
     position: relative;
   }
   
@@ -181,7 +206,7 @@
     height: 100%;
     transition: border-radius 1s ease-out;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite both alternate;
+    animation: morph4 8s ease-in-out infinite both alternate;
     position: absolute;
     overflow: hidden;
     z-index: 5;
@@ -204,7 +229,7 @@
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
-    animation: spin 12s ease-in-out infinite alternate-reverse;
+    animation: spin 9s ease-in-out infinite alternate-reverse;
     opacity: 1;
     z-index: 2;
   }
@@ -220,7 +245,7 @@
   .spin-container5 {
     width: 100%;
     height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
+    animation: spin 11s ease-in-out infinite alternate;
     position: relative;
   }
   
@@ -229,7 +254,7 @@
     height: 100%;
     transition: border-radius 1s ease-out;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite both alternate;
+    animation: morph5 8s ease-in-out infinite both alternate;
     position: absolute;
     overflow: hidden;
     z-index: 5;
@@ -252,58 +277,11 @@
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
-    animation: spin 12s ease-in-out infinite alternate-reverse;
+    animation: spin 11s ease-in-out infinite alternate-reverse;
     opacity: 1;
     z-index: 2;
   }
 
-  .box5 {
-    width: 200px;
-    height: 200px;
-
-    top:15vh;
-    position: relative;
-  }
-  
-  .spin-container5 {
-    width: 100%;
-    height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
-    position: relative;
-  }
-  
-  .shape5 {
-    width: 100%;
-    height: 100%;
-    transition: border-radius 1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite both alternate;
-    position: absolute;
-    overflow: hidden;
-    z-index: 5;
-  }
-  
-  .bd5 {
-    width: 142%;
-    height: 142%;
-    position: absolute;
-    left: -21%;
-    top: -21%;
-    background: url(https://www.univ-grenoble-alpes.fr/medias/photo/egalite-mars_1616659981101-jpg);
-    background-size: 125%;
-    background-position: center center;
-    display: flex;
-    color: #003;
-    font-size: 5vw;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    animation: spin 12s ease-in-out infinite alternate-reverse;
-    opacity: 1;
-    z-index: 2;
-  }
   .box6 {
     width: 200px;
     height: 200px;
@@ -314,7 +292,7 @@
   .spin-container6 {
     width: 100%;
     height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
+    animation: spin 9s ease-in-out infinite alternate;
     position: relative;
   }
   
@@ -323,7 +301,7 @@
     height: 100%;
     transition: border-radius 1s ease-out;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite both alternate;
+    animation: morph6 8s ease-in-out infinite both alternate;
     position: absolute;
     overflow: hidden;
     z-index: 5;
@@ -335,8 +313,8 @@
     position: absolute;
     left: -21%;
     top: -21%;
-    background: url(https://medias.cerveauetpsycho.fr/api/v1/images/view/5dd3c4eb3e454601467e9e26/wide_1300/image.jpg);
-    background-size: 125%;
+    background: url(https://payetonillustration.fr/wp-content/uploads/2020/12/illustration-5-winona-adamon-charline-mahroug.jpg);
+    background-size: 100%;
     background-position: center center;
     display: flex;
     color: #003;
@@ -346,7 +324,7 @@
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
-    animation: spin 12s ease-in-out infinite alternate-reverse;
+    animation: spin 9s ease-in-out infinite alternate-reverse;
     opacity: 1;
     z-index: 2;
   } 
