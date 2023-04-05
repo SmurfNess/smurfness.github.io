@@ -1,0 +1,213 @@
+.nessclass{
+	position: absolute;
+	top:0%;
+	left:50%;
+	animation: hidingness;
+	animation-iteration-count: infinite;
+	animation-duration: 30s;
+	animation-fill-mode: forwards;
+	animation-delay: 15s;
+}
+
+:root {
+	--random-left: 0%;
+	--random-left-left:0%;
+	--random-left-right:0%;
+}
+
+@keyframes hidingness{
+	10%		{ top:20%; 	left: var(--random-left-left);}
+	20%		{ top:0%; 	left: var(--random-left);}
+	30%		{ top:20%; 	left: var(--random-left-right);}
+	40%		{ top:20%; 	left: var(--random-left-left);}
+	45%		{ top:0%; 	left: var(--random-left);}
+	75%		{ top:0%; 	left: var(--random-left);}
+	90%		{ top:20%; 	left: var(--random-left-right);}
+	100%	{ top:0%; 	left: 50%;}
+}
+.purrwhite{
+	background: white;
+	height: 50px;
+	width:100px ;
+	position: absolute;
+	top: 130px; 
+	left: 30px;
+	border-radius: 45%;
+}
+.purrwhiteV{
+	background:white;
+	height: 40px;
+	width:25px ;
+	position: absolute;
+	top: 110px; 
+	left: 65px;
+	border-radius: 40%;
+}
+.purrwhiteV2{
+	background: white;
+	height: 20px;
+	width:35px ;
+	position: absolute;
+	top: 123px; 
+	left: 60px;
+	border-radius: 40%;
+}
+.face{
+		background: black;
+		height: 25px;
+		width: 130px;
+		left: 11px;
+		top: 75px;
+		position: absolute;
+		border-radius: 25%;
+		animation: expressions;
+		animation-duration: 45s;
+		animation-iteration-count: infinite;
+}
+@keyframes expressions {
+		00% { height: 25px;}
+		10% { height: 15px;}
+		20% { height: 25px;}
+		30% { height: 20px;}
+		40% { height: 25px;}
+		50% { height: 40px;}
+		60% { height: 35px;}
+		70% { height: 40px;}
+		80% { height: 25px;}
+		90% { height: 20px;}
+		100% { height: 25px;}
+
+}
+.eyes {
+        position: absolute;
+		left: 8px;
+		top:90px;
+        display: flex;
+}
+.eyes .eye {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: block;
+        background: radial-gradient(#4f5c16,#bfdf0a,#4f5c16);
+        margin: 0 15px;
+        border-radius: 50%;
+}
+.eyes .eye::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        background: black;
+        border-radius: 50%;
+		animation: grozyeux;
+		animation-duration:  60s;
+		animation-iteration-count: infinite;
+		animation-delay: 0s;
+}
+@keyframes grozyeux {
+		00% 	{ top: 50%; left: 28%; width: 25px;	height: 25px; }
+		2%  	{ top: 50%; left: 50%; }
+		8% 		{ top: 50%; left: 50%; width: 35px;	height: 35px; }
+		13% 	{ top: 50%; left: 50%; width: 25px;	height: 25px; }
+		15% 	{ top: 50%; left: 28%; width: 25px;	height: 25px; }
+}
+.eyelid-left{
+		background:black;
+		position: absolute;
+		top: 70px;
+		left: 18px;
+		height: 15px;
+		width: 45px;
+		border-radius: 50px;
+		animation: blink;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-delay: 5s;
+}
+.eyelid-right{
+		background:black;
+		position: absolute;
+		top:70px;
+		left: 90px;
+		height: 15px;
+		width: 45px;
+		border-radius: 50px;
+		animation: blink;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-delay: 5s;
+}
+@keyframes blink {
+		00% { height: 15px;}
+		02% { height: 62px;}
+		04% { height: 15px;}
+		100% {height: 15px;}
+}
+.backpurr{
+		background: black;
+		position: absolute;
+		height: 150px;
+		width: 140px;
+		left: 5px;
+		top: 50px;
+		border-radius: 35%;
+}
+.muzzle {
+		position: absolute;
+		top: 130px;
+		left:77px;
+		height: 12px;
+		width: 21px;
+		background: rgb(250, 136, 155);
+		transform: translateX(-50%);
+		border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+}
+.ear-r{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-top-left-radius: 25%;
+	border-width: 0 80px 70px 00px;
+	position: absolute;
+	left: 8px;
+	top: 20px;
+	border-color: transparent transparent black transparent;
+}
+.ear-l{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 0px 70px 80px;
+	position: absolute;
+	border-top-right-radius: 25%;
+	left: 63px;
+	top: 20px;
+	border-color: transparent transparent black transparent;
+}
+.ear-r-intern{
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-top-left-radius: 25%;
+		border-width: 0 50px 60px 00px;
+		position: absolute;
+		left: 10px;
+		top: 25px;
+		border-color: transparent transparent rgb(168, 102, 113) transparent;
+}
+.ear-l-intern{
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 0 0px 70px 60px;
+		border-top-right-radius: 25%;
+		position: absolute;
+		left: 81px;
+		top: 23px;
+		border-color: transparent transparent rgb(168, 102, 113) transparent;
+}
+

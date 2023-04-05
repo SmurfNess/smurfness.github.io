@@ -1,0 +1,352 @@
+
+  /* *********************** values style ********************** */
+
+  .container-values {
+    background-color: grey;
+    height: 100vh;
+    width:100vw ;
+    position: relative;
+    padding: 2%;
+  }
+
+  @keyframes morph {
+    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
+    100% {border-radius: 40% 60%;} 
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  .box1 {
+    width: 200px;
+    height: 200px;
+    top:15vh;
+    position: relative;
+  }
+  
+  .spin-container1 {
+    width: 100%;
+    height: 100%;
+    animation: spin 12s ease-in-out infinite alternate;
+    position: relative;
+  }
+  
+  .shape1 {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd1 {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: url(https://d2csxpduxe849s.cloudfront.net/media/469BA343-4BDA-4DA8-82EFE0F61A0F858A/2D5984EA-53FA-40B7-AB96A035C3FCCE66/webimage-D87E2BA0-5D44-443A-9BFD11F9EEE2CC25.jpg);
+    background-size: 125%;
+    background-position: center center;
+    display: flex;
+    color: #003;
+    font-size: 5vw;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: spin 12s ease-in-out infinite alternate-reverse;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .box2 {
+    width: 200px;
+    height: 200px;
+    top:15vh;
+
+    position: relative;
+  }
+  
+  .spin-container2 {
+    width: 100%;
+    height: 100%;
+    animation: spin 12s ease-in-out infinite alternate;
+    position: relative;
+  }
+  
+  .shape2 {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd2 {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: url(https://media.istockphoto.com/id/1285788969/vector/idea-in-head.jpg?s=612x612&w=0&k=20&c=qUqpAxqG032f0s4_AufdM3tvGW2Qbop_Kkled_yoiyY=);
+    background-size: 100%;
+    background-position: center center;
+    display: flex;
+    color: #003;
+    font-size: 5vw;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: spin 12s ease-in-out infinite alternate-reverse;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .box3 {
+    width: 200px;
+    height: 200px;
+    top:15vh;
+    position: relative;
+  }
+  
+  .spin-container3 {
+    width: 100%;
+    height: 100%;
+    animation: spin 12s ease-in-out infinite alternate;
+    position: relative;
+  }
+  
+  .shape3 {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd3 {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: url(https://www.viquepedia.com/assets/images/sitelogo/Effective-Business-Communication.jpg);
+    background-size: 100%;
+    background-position: center center;
+    display: flex;
+    color: #003;
+    font-size: 5vw;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: spin 12s ease-in-out infinite alternate-reverse;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .box4 {
+    width: 200px;
+    height: 200px;
+    top:15vh;
+    position: relative;
+  }
+  
+  .spin-container4 {
+    width: 100%;
+    height: 100%;
+    animation: spin 12s ease-in-out infinite alternate;
+    position: relative;
+  }
+  
+  .shape4 {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd4 {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: url(https://www.gamespot.com/a/uploads/scale_landscape/1575/15759911/3423084-overcooked2-review-thumb-nologo.jpg);
+    background-size: 100%;
+    background-position: center center;
+    display: flex;
+    color: #003;
+    font-size: 5vw;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: spin 12s ease-in-out infinite alternate-reverse;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  
+  .box5 {
+    width: 200px;
+    height: 200px;
+    top:15vh;
+    position: relative;
+  }
+  
+  .spin-container5 {
+    width: 100%;
+    height: 100%;
+    animation: spin 12s ease-in-out infinite alternate;
+    position: relative;
+  }
+  
+  .shape5 {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd5 {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: url(https://medias.cerveauetpsycho.fr/api/v1/images/view/5dd3c4eb3e454601467e9e26/wide_1300/image.jpg);
+    background-size: 125%;
+    background-position: center center;
+    display: flex;
+    color: #003;
+    font-size: 5vw;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: spin 12s ease-in-out infinite alternate-reverse;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .box5 {
+    width: 200px;
+    height: 200px;
+
+    top:15vh;
+    position: relative;
+  }
+  
+  .spin-container5 {
+    width: 100%;
+    height: 100%;
+    animation: spin 12s ease-in-out infinite alternate;
+    position: relative;
+  }
+  
+  .shape5 {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd5 {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: url(https://www.univ-grenoble-alpes.fr/medias/photo/egalite-mars_1616659981101-jpg);
+    background-size: 125%;
+    background-position: center center;
+    display: flex;
+    color: #003;
+    font-size: 5vw;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: spin 12s ease-in-out infinite alternate-reverse;
+    opacity: 1;
+    z-index: 2;
+  }
+  .box6 {
+    width: 200px;
+    height: 200px;
+    top:15vh;
+    position: relative;
+  }
+  
+  .spin-container6 {
+    width: 100%;
+    height: 100%;
+    animation: spin 12s ease-in-out infinite alternate;
+    position: relative;
+  }
+  
+  .shape6 {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd6 {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: url(https://medias.cerveauetpsycho.fr/api/v1/images/view/5dd3c4eb3e454601467e9e26/wide_1300/image.jpg);
+    background-size: 125%;
+    background-position: center center;
+    display: flex;
+    color: #003;
+    font-size: 5vw;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: spin 12s ease-in-out infinite alternate-reverse;
+    opacity: 1;
+    z-index: 2;
+  } 

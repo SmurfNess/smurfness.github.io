@@ -1,0 +1,10 @@
+/* *********************** trivia style ********************** */
+
+.container-trivia{
+  background-color:rgba(93, 74, 255, 0.5);
+  color: black;
+  height: 100%;
+	width:100% ;
+	position: relative;
+  padding: 2%;
+}

@@ -1,0 +1,25 @@
+/* *********************** navbar style ********************** */
+
+.navbar-expand-md{
+    background-color: #000000;
+  }
+  
+  .navbar-expand-md .navbar-brand,
+  .navbar-expand-md .nav-link ,
+  .navbar-expand-md .nav-sublink,
+  .navbar-expand-md .dropdown-item
+  {
+    
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+  }
+  
+  .dropdown-menu{
+    background-color: #000000;
+    border-radius: 0%;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #8B0000; /* replace with your desired color */
+  }

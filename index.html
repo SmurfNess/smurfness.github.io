@@ -1,0 +1,307 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arnaud Lemasçon</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets\css\about.css">
+    <link rel="stylesheet" href="assets\css\banner.css">
+    <link rel="stylesheet" href="assets\css\contact.css">
+    <link rel="stylesheet" href="assets\css\css.css">
+    <link rel="stylesheet" href="assets\css\d&c.css">
+    <link rel="stylesheet" href="assets\css\home.css">
+    <link rel="stylesheet" href="assets\css\navbar.css">
+    <link rel="stylesheet" href="assets\css\ness.css">
+    <link rel="stylesheet" href="assets\css\resume.css">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets\css\trivia.css">
+    <link rel="stylesheet" href="assets\css\values.css">
+    <link rel="stylesheet" href="assets\css\website.css">
+
+  </head>
+  <body>
+    <!-- Bandeau avant la navbar -->
+    <div class="banner" id="home">
+    <img src="assets/images/fondanimation.jpg" id="fondanimation">
+        <div class="animation">
+			  <div class="catback"></div>
+  			<div class="nessclass"> <!-- animation ness-->
+				<div class="ear-r"></div>
+				<div class="ear-l"></div>
+				<div class="ear-l-intern"></div>
+				<div class="ear-r-intern"></div>
+				<div class="earpurr"></div>
+				<div class="earpurr2"></div>
+				<div class="earpurr3"></div>
+				<div class="backpurr"></div>
+				<div class="purrwhite"></div>
+				<div class="purrwhiteV"></div>
+				<div class="purrwhiteV2"></div>
+				<div class="eyes">
+					<div class="eye"></div>  
+					<div class="eye"></div>
+				</div>
+				<div class="eyelid-left"></div>
+				<div class="eyelid-right"></div>
+				<div class="white-mask">
+					<div class="face"></div>
+					<div class="white-line"></div>
+					<div class="muzzle"></div>
+				</div>
+			</div>
+			</div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#home">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-toggle="dropdown">Personnal</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#about">About</a>
+                <a class="dropdown-item" href="#values">Values</a>
+                <a class="dropdown-item" href="#trivia">Trivia</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Professional</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#d&c">Degrees & certifications</a>
+                <a class="dropdown-item" href="#resume">Resume</a>
+                <a class="dropdown-item dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Works</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#web">Web development</a>
+                  <a class="dropdown-item" href="#pictures">CSS pictures</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>          
+      
+    <!-- Contenu -->
+    <section id="default">
+      <div class="container-home">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content-title"><p><h1>Hey, I'm Arnaud, welcome here</h1></p></div> 
+            <div id="bouncytext"></div>
+            <div class="content-text"><p>I like making things, as much with my hands as with a computer. So i've designed this website by challenge </p></div>
+          </div>  
+          <div class="col-md-1">
+            <div class="circle"></div>
+            <div class="gallery">
+              <img src="assets/images/portrait1.jpg" alt="">
+              <img src="assets/images/portrait2.jpg" alt="">
+              <img src="assets/images/portrait3.jpg" alt="">
+              <img src="assets/images/portrait4.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container-about">
+        <div class="row">
+          <div class="col-md-4" >
+            <div class="content-title"><p><h1>About</h1></p></div> 
+            <div class="content-text"><p>You can look at the map to the right  have a quick look from where i from.</p></div>
+          </div>  
+          <div class="col-md-6">
+            <div class="map-container">
+              <span class="tooltip-picardie" title="I was born here and grows till i moved to Dunkirk to learn Fine Arts"></span>
+              <div class="pic-dk"></div>
+              <div class="dk-paris"></div>
+              <span class="tooltip-dunkerque" title="I studied Fine Arts and obtained my diploma as a contemporary artist before moving to Paris"></span>
+              <div class="paris-lyon"></div>
+              <span class="tooltip-paris" title="Spoiler, i'm not becomed a famous artist in Paris, i moved here to study IT support and have a job who brought me to Lyon"></span>
+              <span class="tooltip-lyon" title="i have an opportunity to leave Paris (which it was so good for me) and began a whole new life here!"></span>
+              <img src="assets/images/aboutme.png" alt="Picture" class="img-map">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="values">
+      <div class="container-values">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="content-title"><h1>Values</h1></div> 
+            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
+
+            <div class="box1">
+              <div class="spin-container1">
+                <div class="shape1">
+                  <div class="bd1"></div>
+                </div>
+               </div>
+            </div>
+
+          </div>  
+          <div class="col-md-2">
+
+            <div class="box2">
+              <div class="spin-container2">
+                <div class="shape2">
+                  <div class="bd2"></div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+          <div class="col-md-2">
+
+            <div class="box3">
+              <div class="spin-container3">
+                <div class="shape3">
+                  <div class="bd3"></div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+          <div class="col-md-2">
+
+            <div class="box4">
+              <div class="spin-container4">
+                <div class="shape4">
+                  <div class="bd4"></div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+          <div class="col-md-2">
+
+            <div class="box5">
+              <div class="spin-container5">
+                <div class="shape5">
+                  <div class="bd5"></div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+          <div class="col-md-2">
+
+            <div class="box6">
+              <div class="spin-container6">
+                <div class="shape6">
+                  <div class="bd6"></div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="trivia">
+      <div class="container-trivia">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content-title"><h1>trivia</h1></div> 
+            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
+          </div>  
+          <div class="col-md-6">
+            <img src="assets/images/trivia.jpg" alt="Picture" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="d&c">
+      
+      <div class="container-dc">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content-title"><h1>degrees & certifications</h1></div> 
+            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
+          </div>  
+          <div class="col-md-6">
+            <img src="assets/images/d&c.jpg" alt="Picture" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="resume">
+          <div class="container-resume">        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content-title"><h1>resume</h1></div> 
+            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
+          </div>  
+          <div class="col-md-6">
+            <img src="assets/images/resume.png" alt="Picture" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    
+    </section>
+    <section id="web">
+      <div class="container-web">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content-title"><h1>web</h1></div> 
+            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
+          </div>  
+          <div class="col-md-6">
+            <img src="assets/images/web.jpg" alt="Picture" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pictures">
+      <div class="container-pictures">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content-title"><h1>Css pictures</h1></div> 
+            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
+          </div>  
+          <div class="col-md-6">
+            <img src="assets/images/pictures.jpg" alt="Picture" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container-contact">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="content-title"><h1>contact</h1></div> 
+            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
+          </div>  
+          <div class="col-md-6">
+            <img src="assets/images/contact.jpg" alt="Picture" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    </div> <!-- end content-->
+
+
+      </div>
+    </div>
+  </body>
+      <!-- jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- JS de Bootstrap -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="assets\js\ness.js"></script>
+      <script src="assets\js\Hometext.js"></script>
+
+      <script src="assets\js\polyground.js"></script>
+
+</html>

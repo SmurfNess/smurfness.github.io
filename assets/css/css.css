@@ -1,0 +1,10 @@
+/* *********************** css pictures style ********************** */
+
+.container-pictures{
+	background-color:rgba(255, 255, 255, 0.63);
+  color: black;
+	height: 100%;
+	width:100% ;
+	position: relative;
+  padding: 2%;
+}
