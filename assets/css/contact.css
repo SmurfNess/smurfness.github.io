@@ -1,10 +1,15 @@
 /* *********************** contact style ********************** */
 
 .container-contact{
-	background-color:white;
+	background-color:aquamarine;
   color: black;
 	height: 100%;
 	width:100% ;
 	position: relative;
   padding: 2%;
+}
+
+.img-web{
+	width: 60vw;
+	bottom: 0%;
 }
