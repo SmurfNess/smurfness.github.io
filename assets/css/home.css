@@ -18,10 +18,10 @@
   
   .gallery > img {
     grid-area: 1/1;
-    width: 300;
+    width: 500px;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius:  50%;
     transform: translate(var(--_x,0),var(--_y,0));
     cursor: pointer;
     z-index: 0;
@@ -54,8 +54,8 @@
   
 .circle{
   background-color: white;
-  height: 320px;
-  width: 320px;
+  height: 520px;
+  width: 520px;
   top: -10px;
   left: 5px;
   border-radius: 50%;
@@ -81,3 +81,11 @@
     transition: opacity 0.5s ease-in;
   }
   
+/************************************* */
+
+#canvaspolygon {
+  position: relative;
+  background-color: red;
+  width: 500px;
+  height: 500px;
+}
