@@ -7,6 +7,7 @@
 	width:100vw ;
 	position: relative;
   padding: 2%;
+  z-index: 5;
 }
 
 .pic-dk {

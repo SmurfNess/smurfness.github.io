@@ -7,6 +7,7 @@
 	animation-duration: 30s;
 	animation-fill-mode: forwards;
 	animation-delay: 15s;
+	z-index: 2;
 }
 
 :root {
@@ -16,23 +17,23 @@
 }
 
 @keyframes hidingness{
-	10%		{ top:20%; 	left: var(--random-left-left);}
+	10%		{ top:125px; 	left: var(--random-left-left);}
 	20%		{ top:0%; 	left: var(--random-left);}
-	30%		{ top:20%; 	left: var(--random-left-right);}
-	40%		{ top:20%; 	left: var(--random-left-left);}
+	30%		{ top:125px; 	left: var(--random-left-right);}
+	40%		{ top:125px; 	left: var(--random-left-left);}
 	45%		{ top:0%; 	left: var(--random-left);}
 	75%		{ top:0%; 	left: var(--random-left);}
-	90%		{ top:20%; 	left: var(--random-left-right);}
+	90%		{ top:125px; 	left: var(--random-left-right);}
 	100%	{ top:0%; 	left: 50%;}
 }
 .purrwhite{
 	background: white;
-	height: 50px;
+	height: 20px;
 	width:100px ;
 	position: absolute;
 	top: 130px; 
 	left: 30px;
-	border-radius: 45%;
+	border-radius: 50% 50% 0% 0%;
 }
 .purrwhiteV{
 	background:white;
@@ -41,7 +42,7 @@
 	position: absolute;
 	top: 110px; 
 	left: 65px;
-	border-radius: 40%;
+	border-radius: 40% 40% 0% 0%;
 }
 .purrwhiteV2{
 	background: white;
@@ -50,7 +51,7 @@
 	position: absolute;
 	top: 123px; 
 	left: 60px;
-	border-radius: 40%;
+	border-radius: 40% 40% 0% 0%;
 }
 .face{
 		background: black;
@@ -150,11 +151,11 @@
 .backpurr{
 		background: black;
 		position: absolute;
-		height: 150px;
+		height: 100px;
 		width: 140px;
 		left: 5px;
 		top: 50px;
-		border-radius: 35%;
+		border-radius: 40% 40% 0% 0%;
 }
 .muzzle {
 		position: absolute;

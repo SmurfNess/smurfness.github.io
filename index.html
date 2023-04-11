@@ -21,12 +21,14 @@
 
   </head>
   <body>
-    <!-- Bandeau avant la navbar -->
-    <div class="banner" id="home">
+    <!-- Animation -->
+    <div class="banner" id="banner">
     <img src="assets/images/fondanimation.jpg" id="fondanimation">
         <div class="animation">
-			  <div class="catback"></div>
-  			<div class="nessclass"> <!-- animation ness-->
+
+        <!-- animation ness-->
+
+  			<div class="nessclass"> 
 				<div class="ear-r"></div>
 				<div class="ear-l"></div>
 				<div class="ear-l-intern"></div>
@@ -51,44 +53,49 @@
 				</div>
 			</div>
 			</div>
+
+          <!-- Navbar -->
+    <nav class="navbar navbar-expand-md">
+      <a class="navbar-brand" href="#home">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-toggle="dropdown">Personnal</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#about">About</a>
+              <a class="dropdown-item" href="#values">Values</a>
+              <a class="dropdown-item" href="#trivia">Trivia</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Professional</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#d&c">Degrees & certifications</a>
+              <a class="dropdown-item" href="#resume">Resume</a>
+              <a class="dropdown-item dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Works</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#web">Web development</a>
+                <a class="dropdown-item" href="#pictures">CSS pictures</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>  
     </div>
     
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="#home">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-toggle="dropdown">Personnal</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#about">About</a>
-                <a class="dropdown-item" href="#values">Values</a>
-                <a class="dropdown-item" href="#trivia">Trivia</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Professional</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#d&c">Degrees & certifications</a>
-                <a class="dropdown-item" href="#resume">Resume</a>
-                <a class="dropdown-item dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Works</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#web">Web development</a>
-                  <a class="dropdown-item" href="#pictures">CSS pictures</a>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>          
+    <!-- Background Canvas -->
+    
+    <canvas id="canvas"></canvas> 
       
     <!-- Contenu -->
+    <div class="content">
     <section id="default">
       <div class="container-home">
         
@@ -115,9 +122,9 @@
         </div>
 
       </div>
-      <div id="canvas-container">
-        <canvas id="canvas"></canvas> 
-      </div>    
+
+
+
     </section>
 
     <section id="about">
@@ -252,9 +259,6 @@
             <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
           </div>  
           <div class="col-md-6">
-            <canvas id="canvaspolygon"></canvas>
-            <img id="image" src="/assets/images/insert1.jpg" style="display: none;">
-
           </div>
         </div>
       </div>   
@@ -303,6 +307,7 @@
 
       </div>
     </div>
+  </div>
   </body>
       <!-- jQuery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
