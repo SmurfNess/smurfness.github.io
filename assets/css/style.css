@@ -4,6 +4,14 @@
 
 }
 
+#codepen{
+  transform: scale(0.1);
+}
+
+#github{
+  transform: scale(0.2);
+}
+
 #home {
   z-index: 5;
 }
