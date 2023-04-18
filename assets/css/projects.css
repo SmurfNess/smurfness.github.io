@@ -1,0 +1,10 @@
+/* *********************** website style ********************** */
+
+.container-web{
+	background-color:teal;
+  color: black;
+	height: 100%;
+	width:100% ;
+	position: relative;
+  padding: 2%;
+}

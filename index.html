@@ -1,328 +1,243 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arnaud Lemasçon</title>
-    <!-- CSS de Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arnaud Lemasçon</title>
+    <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- banner's style -->
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <!-- Ness's style -->
+    <link rel="stylesheet" href="assets/css/ness.css">
+    <!-- navbar's style -->
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Content's style-->
     <link rel="stylesheet" href="assets\css\about.css">
-    <link rel="stylesheet" href="assets\css\banner.css">
     <link rel="stylesheet" href="assets\css\contact.css">
-    <link rel="stylesheet" href="assets\css\css.css">
     <link rel="stylesheet" href="assets\css\d&c.css">
     <link rel="stylesheet" href="assets\css\home.css">
-    <link rel="stylesheet" href="assets\css\navbar.css">
-    <link rel="stylesheet" href="assets\css\ness.css">
+    <link rel="stylesheet" href="assets\css\projects.css">
     <link rel="stylesheet" href="assets\css\resume.css">
-    <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="assets\css\trivia.css">
     <link rel="stylesheet" href="assets\css\values.css">
-    <link rel="stylesheet" href="assets\css\website.css">
-
-  </head>
-  <body>
+</head>
+<body>
     <!-- Animation -->
     <div class="banner" id="banner">
-    <img src="assets/images/fondanimation.jpg" id="fondanimation">
-        <div class="animation">
+      <img src="assets/pictures/fondanimation.jpg" id="fondanimation">
+      <div class="animation">
+        <div class="links-container">
+          <a href="https://github.com/SmurfNess" class="link" target="_blank">
+            <img src="assets/pictures/github.png" class="link-img">
+            <span class="text">Github</span>
+          </a>
+          <a href="https://codepen.io/Greatness-GreatSmurf" class="link" target="_blank">
+            <img src="assets/pictures/codepen.webp" class="link-img">
+            <span class="text">Codepen</span>
+          </a>
+        </div>
+        <div class="nessclass">
+          <div id="blackNess"></div>
+          <div id="whiteNess"></div>
+          <div id="pinkNess"></div>
+          <div class="eyes">
+            <div class="eye"></div>  
+            <div class="eye"></div>
+            <div id="R-eyelid"class="eyelid"></div>
+            <div id="L-eyelid"class="eyelid"></div>
+          </div>
+          <div id="eyebrows"></div>
+        </div>  
+        <p id="positionDuBas"></p>
+        <p id="positionBande"></p>
+        <p id="resultat"></p>
+      </div>
+      
+      <div id="btn_toggle">
+        <img src="assets/pictures/toggle_collapse_navbar.png" id="img-toggle">
+      </div>
 
-        <!-- animation ness-->
-
-  			<div class="nessclass"> 
-				<div class="ear-r"></div>
-				<div class="ear-l"></div>
-				<div class="ear-l-intern"></div>
-				<div class="ear-r-intern"></div>
-				<div class="earpurr"></div>
-				<div class="earpurr2"></div>
-				<div class="earpurr3"></div>
-				<div class="backpurr"></div>
-				<div class="purrwhite"></div>
-				<div class="purrwhiteV"></div>
-				<div class="purrwhiteV2"></div>
-				<div class="eyes">
-					<div class="eye"></div>  
-					<div class="eye"></div>
-				</div>
-				<div class="eyelid-left"></div>
-				<div class="eyelid-right"></div>
-				<div class="white-mask">
-					<div class="face"></div>
-					<div class="white-line"></div>
-					<div class="muzzle"></div>
-				</div>
-			</div>
-			</div>
-
-          <!-- Navbar -->
-    <nav class="navbar navbar-expand-md">
-      <a class="navbar-brand" href="#home">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-toggle="dropdown">Personnal</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#about">About</a>
-              <a class="dropdown-item" href="#values">Values</a>
-              <a class="dropdown-item" href="#trivia">Trivia</a>
-            </div>
+      <nav class="navbar" id="maBande">
+        <div id="navbar-mobile">
+        <ul class="navbar-list">
+          <li class="navbar-item" id="navbarhome"><a href="#home">Home</a></li>
+          <li class="navbar-item dropdown">
+            <a href="#perso" class="dropdown-toggle">Personal</a>
+            <ul class="dropdown-menu">
+              <li><a href="#about">About</a></li>
+              <li><a href="#values">Values</a></li>
+              <li><a href="#trivia">Trivia</a></li>
+            </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Professional</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#d&c">Degrees & certifications</a>
-              <a class="dropdown-item" href="#resume">Resume</a>
-              <a class="dropdown-item dropdown-toggle" href="#" id="professionalDropdown" role="button" data-toggle="dropdown">Works</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#web">Web development</a>
-                <a class="dropdown-item" href="#pictures">CSS pictures</a>
-              </div>
-            </div>
+          <li class="navbar-item dropdown">
+            <a href="#pro" class="dropdown-toggle">Professional</a>
+            <ul class="dropdown-menu">
+              <li><a href="#d&c">Degrees & certifications</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#projects">Projects</a></li>
+                </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+          <li class="navbar-item"><a href="#contact">Contact</a></li>
         </ul>
       </div>
-    </nav>  
-    </div>
+      </nav>
+    </div> 
+
+<!-- Background Canvas -->
     
-    <!-- Background Canvas -->
-    
-    <canvas id="canvas"></canvas> 
-      
-    <!-- Contenu -->
-    <div class="content">
-    <section id="default">
-      <div class="container-home">
-        
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content-title"><p><h1>Hey, I'm Arnaud, welcome here</h1></p></div> 
-            <div class="content-text"><p>I like making things, as much with my hands as with a computer. So I've designed this website by challenge </p></div>
-          </div>
+<canvas id="canvas"></canvas> 
+
+ <!--Section Home--> 
   
-          <div class="col-md-1">
-            <div class="circle"></div>
-            <div class="gallery">
-              <img src="assets/images/portrait1.jpg" alt="">
-              <img src="assets/images/insert1.jpg" alt="">
-              <img src="assets/images/portrait3.jpg" alt="">
-              <img src="assets/images/portrait4.jpg" alt="">
+  <section id="home" class="section">
+    <div class="row">
+      <div class="col-md-4 min-width-0 contents" >
+
+        <div class="container"> <!-- gallery -->
+          <div class="box">
+            <img src="assets/pictures/portrait1.jpg" alt="">
+          </div>
+          <div class="box">
+            <img src="assets/pictures/insert1.jpg" alt="">
+            <div class="overlay">
+              <p class="title">Mélanie "Âmeheureuse" Kosowski</p>
+              <a href="https://www.ameheureuse-photographie.fr/ce-ux-qui-nous-lie/" class="photo-link" target="_blank">Voir plus</a>
             </div>
           </div>
-          <div class="col-md-1">
-            <a href="https://github.com/SmurfNess">
-              <img src="https://www.pngmart.com/files/22/GitHub-PNG-Isolated-Transparent-Image.png" id="github">
-            </a>
-            <a href="https://codepen.io/Greatness-GreatSmurf">
-              <img src="https://assets.codepen.io/1584356/codepen.png" id="codepen">
-            </a>
-
-
+          <div class="box">
+            <img src="assets/pictures/portrait3.jpg" alt="">
           </div>
-
-
-        </div>
-
-      </div>
-
-
-
-    </section>
-
-    <section id="about">
-      <div class="container-about">
-        <div class="row">
-          <div class="col-md-4" >
-            <div class="content-title"><p><h1>About</h1></p></div> 
-            <div class="content-text"><p>You can look at the map to the right  have a quick look from where i from.</p></div>
-          </div>  
-          <div class="col-md-6">
-            <div class="map-container">
-              <div class="pic-dk"></div>
-              <span class="tooltip-picardie" title="I was born here and grows till i moved to Dunkirk to learn Fine Arts"></span>
-              <div class="dk-paris"></div>
-              <span class="tooltip-dunkerque" title="I studied Fine Arts and obtained my diploma as a contemporary artist before moving to Paris"></span>
-              <div class="paris-lyon"></div>
-              <span class="tooltip-paris" title="Spoiler, i'm not becomed a famous artist in Paris, i moved here to study IT support and have a job who brought me to Lyon"></span>
-              <span class="tooltip-lyon" title="i have an opportunity to leave Paris (which it was so good for me) and began a whole new life here!"></span>
-              <img src="assets/images/aboutme.png" alt="Picture" class="img-map">
-            </div>
+          <div class="box">
+            <img src="assets/pictures/portrait4.jpg" alt="">
           </div>
         </div>
       </div>
-    </section>
-    <section id="values">
-      <div class="container-values">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="content-title"><h1>Values</h1></div> 
-            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
-
-            <div class="box1">
-              <div class="spin-container1">
-                <div class="shape1">
-                  <div class="bd1"></div>
-                </div>
-               </div><h1>Transparence</h1> 
-               <p>Un mélange d'humilité et d'honnêteté au service d'un but.</p>
-            </div>
-          </div>  
-          <div class="col-md-2">
-
-            <div class="box2">
-              <div class="spin-container2">
-                <div class="shape2">
-                  <div class="bd2"></div>
-                </div>
-              </div><h1>Curiosité</h1> 
-              <p>Je marche à l'intérêt, ce qui me permets de développer des compétences diverses, aussi bien anecdotiques qu'incontournables.</p>
-            </div>
-          </div>
-          <div class="col-md-2">
-
-            <div class="box3">
-              <div class="spin-container3">
-                <div class="shape3">
-                  <div class="bd3"></div>
-                </div>
-              </div><h1>Engagement</h1> 
-              <p>Je me suis engagé depuis 2011 pour la cause animale, depuis 2020 pour l'égalité des genres.</p>
-            </div>
-          </div>
-          <div class="col-md-2">
-
-            <div class="box4">
-              <div class="spin-container4">
-                <div class="shape4">
-                  <div class="bd4"></div>
-                </div>
-              </div><h1>Convivialité</h1> 
-              <p>Fondateur d'un groupe Meetup d'un millier de membres dont le but était de rencontrer et faire se rencontrer les membres en petits groupes pour favoriser les échanges</p>
-            </div>
-          </div>
-          <div class="col-md-2">
-
-            <div class="box5">
-              <div class="spin-container5">
-                <div class="shape5">
-                  <div class="bd5"></div>
-                </div>
-              </div><h1>Dynamique</h1> 
-              <p>Je me lance régulièrement dans différents challenges et ou nouvelles expériences</p>
-            </div>
-          </div>
-          <div class="col-md-2">
-
-            <div class="box6">
-              <div class="spin-container6">
-                <div class="shape6">
-                  <div class="bd6"></div>
-                </div>
-              </div><h1>Respect</h1> 
-              <p>Les autres, leurs travails mais je tiens à ce que la réciproque soit vraie</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <section id="trivia">
-      <div class="container-trivia">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content-title"><h1>trivia</h1></div> 
-            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
-          </div>  
-          <div class="col-md-6">
-            <img src="assets/images/trivia.jpg" alt="Picture" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="d&c">
-      
-      <div class="container-dc">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content-title"><h1>degrees & certifications</h1></div> 
-            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
-          </div>  
-          <div class="col-md-6">
-            <img src="assets/images/d&c.jpg" alt="Picture" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="resume">
-          <div class="container-resume">        
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content-title"><h1>resume</h1></div> 
-            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
-          </div>  
-          <div class="col-md-6">
-          </div>
-        </div>
-      </div>   
-    </section>
-    <section id="web">
-      <div class="container-web">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content-title"><h1>web</h1></div> 
-            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
-          </div>  
-          <div class="col-md-6">
-          </div>
-        </div>
-        <img src="assets/images/jamie.png" alt="Picture" class="img-web">
-      </div>
-    </section>
-    <section id="pictures">
-      <div class="container-pictures">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content-title"><h1>Css pictures</h1></div> 
-            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
-          </div>  
-          <div class="col-md-6">
-            <img src="assets/images/pictures.jpg" alt="Picture" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="container-contact">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content-title"><h1>contact</h1></div> 
-            <div class="content-text"><p>Lorem ipsum dolor sit amet.</p></div>
-          </div>  
-          <div class="col-md-6">
-            <img src="assets/images/contact.jpg" alt="Picture" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-    </div> <!-- end content-->
-
-
+      <div class="col-md-8 col-sm-11 col-xs-11 contents">
+        <div id="home-title"><p><h1>Hey, I'm Arnaud, welcome here</h1></p></div> 
+        <div id="home-text"><p>I like making things, as much with my hands as with a computer. So I've designed this website by challenge </p></div>
       </div>
     </div>
-  </div>
-  </body>
-      <!-- jQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <!-- JS de Bootstrap -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="assets\js\ness.js"></script>
-      <script src="assets\js\Hometext.js"></script>
+  </section>
+    
+ <!--Section About--> 
 
+ <section id="about" class="section">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-1" contents>
+        <div class="content-title"><p><h1>About</h1></p></div> 
+        <div class="content-text"><p>You can look at the map to the right  have a quick look from where i from.</p></div>
+      </div>  
+      <div class="col-md-6 col-md-offset-1">
+        <div class="map-container">
+          <div class="pic-dk"></div>
+          <span class="tooltip-picardie" title="I was born here and grows till i moved to Dunkirk to learn Fine Arts"></span>
+          <div class="dk-paris"></div>
+          <span class="tooltip-dunkerque" title="I studied Fine Arts and obtained my diploma as a contemporary artist before moving to Paris"></span>
+          <div class="paris-lyon"></div>
+          <span class="tooltip-paris" title="Spoiler, i'm not becomed a famous artist in Paris, i moved here to study IT support and have a job who brought me to Lyon"></span>
+          <span class="tooltip-lyon" title="i have an opportunity to leave Paris (which it was so good for me) and began a whole new life here!"></span>
+          <img src="assets/pictures/aboutme.png" alt="Picture" class="img-map">
+        </div>
+      </div>
+    </div>
+</section>
+
+<!--Section Values-->
+
+<section id="values" class="section">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-1">
+        <div class="content-title"><h1>Values</h1></div> 
+        <div class="content-text"><p>I have some values which contribue to define me that I think they're possibly interesting to share with you.</p></div>
+      </div>
+
+
+      <div class="col-md-2 col-md-push-1">
+        <div class="box1">
+          <div class="spin-container1">
+            <div class="shape1">
+              <div class="bd1"></div>
+            </div>
+           </div>
+        </div>
+        <h1>Transparence</h1> 
+           <p>Un mélange d'humilité et d'honnêteté au service d'un but.</p>
+      </div>  
+
+      <div class="col-md-2 col-md-push-1">
+        <div class="box2">
+          <div class="spin-container2">
+            <div class="shape2">
+              <div class="bd2"></div>
+            </div>
+          </div>
+        </div>
+        <h1>Curiosité</h1> 
+        <p>Je marche à l'intérêt, ce qui me permets de développer des compétences diverses, aussi bien anecdotiques qu'incontournables.</p>
+      </div>
+
+      <div class="col-md-2 col-md-push-1">
+        <div class="box3">
+          <div class="spin-container3">
+            <div class="shape3">
+              <div class="bd3"></div>
+            </div>
+          </div></div><h1>Engagement</h1> 
+          Je me suis engagé depuis 2011 pour la cause animale, depuis 2020 pour l'égalité des genres.</p>
+        
+      </div>
+
+      <div class="col-md-2 col-md-push-1">
+        <div class="box4">
+          <div class="spin-container4">
+            <div class="shape4">
+              <div class="bd4"></div>
+            </div>
+          </div>
+          </div>
+          <h1>Convivialité</h1> 
+          <p>Fondateur d'un groupe Meetup d'un millier de membres dont le but était de rencontrer et faire se rencontrer les membres en petits groupes pour favoriser les échanges</p>
+      </div>
+
+      <div class="col-md-2 col-md-push-1">
+        <div class="box5">
+          <div class="spin-container5">
+            <div class="shape5">
+              <div class="bd5"></div>
+            </div>
+          </div>
+          </div>
+          <h1>Dynamique</h1> 
+          <p>Je me lance régulièrement dans différents challenges et ou nouvelles expériences</p>
+      </div>
+
+      <div class="col-md-2 col-md-push-1">
+        <div class="box6">
+          <div class="spin-container6">
+            <div class="shape6">
+              <div class="bd6"></div>
+            </div>
+          </div>
+        </div>
+        <h1>Respect</h1> 
+          <p>Les autres, leurs travails mais je tiens à ce que la réciproque soit vraie</p>
+      </div>
+    </div>
+</section>
+
+<section id="trivia"  class="section">
+  <article class="column" style="background-image: url('https://www.gannett-cdn.com/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG');"data-description="Description 1"><div class="overlay"></div></article>
+  <article class="column" style="background-image: url('https://www.gannett-cdn.com/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG');"data-description="Description 2"><div class="overlay"></div></article>
+  <article class="column" style="background-image: url('https://www.gannett-cdn.com/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG');"data-description="Description 3"><div class="overlay"></div></article>
+    <article class="column" style="background-image: url('https://www.gannett-cdn.com/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG');"data-description="Description 4"><div class="overlay"></div></article>
+    <article class="column" style="background-image: url('https://www.gannett-cdn.com/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG');"data-description="Description 5"><div class="overlay"></div></article>    </div>
+</section>
+
+
+</body>
+      <script src="assets/js/animationNess.js"></script>
+      <script src="assets/js/bodyNess.js"></script>
+      <script src="assets/js/toggle.js"></script>
       <script src="assets\js\polyground.js"></script>
-
 </html>

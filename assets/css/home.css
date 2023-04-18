@@ -1,66 +1,78 @@
 /* *********************** home style ********************** */
-.container-home{
-    color: black;
-      height: 100vh;
-      width:100% ;
-      position: relative;
-    padding: 2%;
-    font-size: 40px;
-    z-index: 100;
+
+  #home-title, #home-text{
+    padding-left: 5px;
   }
-  .gallery {
-    --g: 2px;   /* the gap */
-    --s: 400px; /* the size */
-    
-    display: grid;
-    border-radius: 50%;
+
+  .min-width-0 {
+    min-width: 400px;
   }
   
-  .gallery > img {
-    grid-area: 1/1;
-    width: 500px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius:  50%;
-    transform: translate(var(--_x,0),var(--_y,0));
-    cursor: pointer;
-    z-index: 0;
-    transition: .3s, z-index 0s .3s; 
+
+  .container {
+    padding: 10px ;
+    display: flex;
+    position: relative;
+    width: 80%;
+    box-sizing: border-box;
+    height: 50vh;
   }
-  .gallery img:hover {
-    --_i: 1;
+
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 2% 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+    position: relative;
+  }
+  
+  .box > img {
+    width: 200%;
+    height: calc(50vh);
+    object-fit: cover; 
+    transition: .5s;
+    object-position: center;
+  }
+  
+  .box:hover { flex: 1 1 100%; }
+  .box:hover > img {
+    width: auto;
+    height: 100%;
+    object-fit:cover;
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    height: 70px;
+    bottom: 0; /* Positionner le texte en bas de l'image */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Utiliser une disposition en colonne pour afficher le texte sur deux lignes */
+    align-items: center;
+    padding: 10px; /* Ajouter un padding pour espacer le texte du bord de l'image */
+    opacity: 0;
+    transition: .5s;
     z-index: 1;
-    transition: transform .2s, clip-path .3s .2s, z-index 0s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
-  .gallery:hover img {
-    transform: translate(0,0);
-  }
-  .gallery > img:nth-child(1) {
-    clip-path: polygon(50% 50%,calc(50%*var(--_i,0)) calc(120%*var(--_i,0)),0 calc(100%*var(--_i,0)),0 0,100% 0,100% calc(100%*var(--_i,0)),calc(100% - 50%*var(--_i,0)) calc(120%*var(--_i,0)));
-    --_y: calc(-1*var(--g))
-  }
-  .gallery > img:nth-child(2) {
-    clip-path: polygon(50% 50%,calc(100% - 120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100% - 100%*var(--_i,0)) 0,100% 0,100% 100%,calc(100% - 100%*var(--_i,0)) 100%,calc(100% - 120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
-    --_x: var(--g)
-  }
-  .gallery > img:nth-child(3) {
-    clip-path: polygon(50% 50%,calc(100% - 50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)),100% calc(100% - 120%*var(--_i,0)),100% 100%,0 100%,0 calc(100% - 100%*var(--_i,0)),calc(50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)));
-    --_y: var(--g)
-  }
-  .gallery > img:nth-child(4) {
-    clip-path: polygon(50% 50%,calc(120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100%*var(--_i,0)) 0,0 0,0 100%,calc(100%*var(--_i,0)) 100%,calc(120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
-    --_x: calc(-1*var(--g))
+
+  .photo-link{
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: underline;
   }
   
-.circle{
-  background-color: white;
-  height: 520px;
-  width: 520px;
-  top: -10px;
-  left: 5px;
-  border-radius: 50%;
-  position: absolute;
-
-}
-
-
+  .overlay .title {
+    margin-top: 10px;
+  }
+  
+  
+  .box:hover .overlay { opacity: 1; }
+  

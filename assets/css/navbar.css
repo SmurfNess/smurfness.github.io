@@ -1,32 +1,134 @@
-/* *********************** navbar style ********************** */
-
-.navbar-expand-md{
-    background-color: #000000;
-    z-index: 200;
-    position: fixed;
-    top: 150px;
+#maBande {
     width: 100%;
-  }
-  
-  .navbar-expand-md .navbar-brand,
-  .navbar-expand-md .nav-link ,
-  .navbar-expand-md .nav-sublink,
-  .navbar-expand-md .dropdown-item
-  {
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-  }
-  
-  .navbar-brand{
-    margin-left: 50px;
+    height:70px;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 140px;
+    left: 0%;
+    z-index:0;
   }
 
-  .dropdown-menu{
-    background-color: #000000;
-    border-radius: 0%;
+  #btn_toggle{
+    cursor: pointer;
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    left: 15px;
+    background-color: transparent;
+    z-index: 5000;
+    top: 150px;
+  }
+  #img-toggle{
+    width: 50px;
+  }
+
+/* Style de base pour la navbar */
+  
+  .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
   }
   
-  .dropdown-menu .dropdown-item:hover {
-    background-color: #8B0000; /* replace with your desired color */
+  .navbar-item {
+    margin-right: 10px;
   }
+  
+  .navbar-item a {
+    
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /* Style pour les menus déroulants */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    width: 200px;
+  }
+  
+  #navbarhome{
+    padding-left: 75px;
+  }
+
+  .dropdown-menu li {
+    padding: 0;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration:none;
+    text-align: center;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #5c5c5c; /* Couleur de fond au survol */
+    width: 198px;
+  }
+  
+  /* Style pour la version mobile */
+
+  @media screen and (max-width: 768px) {
+    #navbar-mobile{
+        top: 150px;
+        margin-left: -15px;
+        width: 200px;
+        height: calc(100vh - 150px);
+        background-color: black;
+        display: none;
+    }
+
+    #navbar-mobile.active {
+        display: block;
+      }
+
+    .navbar-list {
+      flex-wrap: wrap;
+    }
+  
+    .navbar-item {
+    text-align: left;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  
+    .dropdown {
+      position: static;
+    }
+  
+    .dropdown-menu {
+      display: block;
+      position:static;
+      background-color: rgba(0, 0, 0, 0.9);
+      margin-top: 0;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #5c5c5c; /* Couleur de fond au survol */
+        width: 198px;
+        padding-left: 0px;
+      }
+
+      #navbarhome{
+        padding-left: 75px;
+        padding-top: 10px;
+      }
+  }
+  

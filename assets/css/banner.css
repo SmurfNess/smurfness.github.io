@@ -1,8 +1,63 @@
-/* *********************** banner style ********************** */
 .banner{
-background-color: #a6b3ff;
-height: 150px;
-width: 100%;
-z-index: 1000;
-position: fixed;
-}
+  background-color: #a6b3ff;
+  height: 150px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  }
+  
+
+  #fondanimation{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 150px;
+    background-color:#5c51ee;
+  }
+
+.links-container {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    display: flex;
+    flex-direction: column; /* Alignement vertical des liens */
+    padding: 10px;
+  }
+  
+  .link {
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Couleur de fond blanc */
+    padding: 10px; /* Marge intérieure pour l'espace autour de l'image et du texte */
+    height:35px ;
+    width: 150px; /* Largeur souhaitée pour le lien entier */
+    margin: 2px; /* Ajout d'une marge en bas pour créer un interstice vertical */
+  }
+  
+  .text {
+    margin-left: 10px; /* Marge à gauche pour séparer l'image du texte */
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .link-img {
+    width: 30px;
+  }
+  
+  #positionDuBas{
+    position: fixed;
+    display: none;
+  }
+
+  #positionBande{
+    position: fixed;
+    display: none;
+  }
+
+  #resultat{
+    position: fixed;
+    display: none;
+
+  }
