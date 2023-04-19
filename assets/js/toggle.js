@@ -8,3 +8,5 @@
     // Ajouter ou supprimer la classe 'active' à la navbar mobile
     navbarMobile.classList.toggle('active');
   });
+
+

@@ -1,314 +1,161 @@
- /* *********************** values style ********************** */
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
 
-  @keyframes morph1 {
-    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
-    100% {border-radius: 40% 60%;} 
-    }
+* {
+  box-sizing: border-box;
+}
 
-  @keyframes morph2 {
-    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
-    100% {border-radius: 50% 70%;} 
+#value {
+  display: grid;
+  place-items: center;
+}
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+.card:nth-child(2):before {
+  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+.card:nth-child(3):before {
+  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+.card:nth-child(4):before {
+  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
   }
 
-  @keyframes morph3 {
-    0% {border-radius: 40% 70% 70% 40% / 60% 40% 70% 50%;} 
-    100% {border-radius: 100% 50%;} 
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
   }
 
-  @keyframes morph4 {
-    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
-    100% {border-radius: 70% 70%;}  
-  }
-
-  @keyframes morph5 {
-    0% {border-radius: 40% 60% 60% 40% / 80% 30% 70% 40%;} 
-    100% {border-radius: 50% 70%;}  
-  }
-
-  @keyframes morph6 {
-    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
-    100% {border-radius: 60% 70%;} 
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(1turn);
-    }
-  }
-
-  .box1 {
-    width: 100px;
-    height: 100px;
-    position: relative;
-  }
-  
-  .spin-container1 {
-    width: 100%;
-    height: 100%;
-    animation: spin 10s ease-in-out infinite alternate;
-    position: relative;
-  }
-  
-  .shape1 {
-    width: 100%;
-    height: 100%;
-    transition: border-radius 1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph1 8s ease-in-out infinite both alternate;
-    position: absolute;
-    overflow: hidden;
-    z-index: 5;
-  }
-  
-  .bd1 {
-    width: 142%;
-    height: 142%;
-    position: absolute;
-    left: -21%;
-    top: -21%;
-    background: url(https://d2csxpduxe849s.cloudfront.net/media/469BA343-4BDA-4DA8-82EFE0F61A0F858A/2D5984EA-53FA-40B7-AB96A035C3FCCE66/webimage-D87E2BA0-5D44-443A-9BFD11F9EEE2CC25.jpg);
-    background-size: 125%;
-    background-position: center center;
-    display: flex;
-    color: #003;
-    font-size: 5vw;
-    font-weight: bold;
+  .card:hover,
+.card:focus-within {
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    animation: spin 10s ease-in-out infinite alternate-reverse;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
     opacity: 1;
-    z-index: 2;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
   }
 
-  .box2 {
-    width: 100px;
-    height: 100px;
-    position: relative;
+  .card:focus-within:before, .card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
   }
-  
-  .spin-container2 {
-    width: 100%;
-    height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
-    position: relative;
-  }
-  
-  .shape2 {
-    width: 100%;
-    height: 100%;
-    transition: border-radius 1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph2 8s ease-in-out infinite both alternate;
-    position: absolute;
-    overflow: hidden;
-    z-index: 5;
-  }
-  
-  .bd2 {
-    width: 142%;
-    height: 142%;
-    position: absolute;
-    left: -21%;
-    top: -21%;
-    background: url(https://media.istockphoto.com/id/1285788969/vector/idea-in-head.jpg?s=612x612&w=0&k=20&c=qUqpAxqG032f0s4_AufdM3tvGW2Qbop_Kkled_yoiyY=);
-    background-size: 100%;
-    background-position: center center;
-    display: flex;
-    color: #003;
-    font-size: 5vw;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    animation: spin 12s ease-in-out infinite alternate-reverse;
-    opacity: 1;
-    z-index: 2;
-  }
-
-  .box3 {
-    width: 100px;
-    height: 100px;
-    position: relative;
-  }
-  
-  .spin-container3 {
-    width: 100%;
-    height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
-    position: relative;
-  }
-  
-  .shape3 {
-    width: 100%;
-    height: 100%;
-    transition: border-radius 1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph3 8s ease-in-out infinite both alternate;
-    position: absolute;
-    overflow: hidden;
-    z-index: 5;
-  }
-  
-  .bd3 {
-    width: 142%;
-    height: 142%;
-    position: absolute;
-    left: -21%;
-    top: -21%;
-    background: url(https://www.viquepedia.com/assets/images/sitelogo/Effective-Business-Communication.jpg);
-    background-size: 100%;
-    background-position: center center;
-    display: flex;
-    color: #003;
-    font-size: 5vw;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    animation: spin 12s ease-in-out infinite alternate-reverse;
-    opacity: 1;
-    z-index: 2;
-  }
-
-  .box4 {
-    width: 100px;
-    height: 100px;
-    position: relative;
-  }
-  
-  .spin-container4 {
-    width: 100%;
-    height: 100%;
-    animation: spin 9s ease-in-out infinite alternate;
-    position: relative;
-  }
-  
-  .shape4 {
-    width: 100%;
-    height: 100%;
-    transition: border-radius 1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph4 8s ease-in-out infinite both alternate;
-    position: absolute;
-    overflow: hidden;
-    z-index: 5;
-  }
-  
-  .bd4 {
-    width: 142%;
-    height: 142%;
-    position: absolute;
-    left: -21%;
-    top: -21%;
-    background: url(https://www.gamespot.com/a/uploads/scale_landscape/1575/15759911/3423084-overcooked2-review-thumb-nologo.jpg);
-    background-size: 100%;
-    background-position: center center;
-    display: flex;
-    color: #003;
-    font-size: 5vw;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    animation: spin 9s ease-in-out infinite alternate-reverse;
-    opacity: 1;
-    z-index: 2;
-  }
-
-  
-  .box5 {
-    width: 100px;
-    height: 100px;
-    position: relative;
-  }
-  
-  .spin-container5 {
-    width: 100%;
-    height: 100%;
-    animation: spin 11s ease-in-out infinite alternate;
-    position: relative;
-  }
-  
-  .shape5 {
-    width: 100%;
-    height: 100%;
-    transition: border-radius 1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph5 8s ease-in-out infinite both alternate;
-    position: absolute;
-    overflow: hidden;
-    z-index: 5;
-  }
-  
-  .bd5 {
-    width: 142%;
-    height: 142%;
-    position: absolute;
-    left: -21%;
-    top: -21%;
-    background: url(https://medias.cerveauetpsycho.fr/api/v1/images/view/5dd3c4eb3e454601467e9e26/wide_1300/image.jpg);
-    background-size: 125%;
-    background-position: center center;
-    display: flex;
-    color: #003;
-    font-size: 5vw;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    animation: spin 11s ease-in-out infinite alternate-reverse;
-    opacity: 1;
-    z-index: 2;
-  }
-
-  .box6 {
-    width: 100px;
-    height: 100px;
-    position: relative;
-  }
-  
-  .spin-container6 {
-    width: 100%;
-    height: 100%;
-    animation: spin 9s ease-in-out infinite alternate;
-    position: relative;
-  }
-  
-  .shape6 {
-    width: 100%;
-    height: 100%;
-    transition: border-radius 1s ease-out;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph6 8s ease-in-out infinite both alternate;
-    position: absolute;
-    overflow: hidden;
-    z-index: 5;
-  }
-  
-  .bd6 {
-    width: 142%;
-    height: 142%;
-    position: absolute;
-    left: -21%;
-    top: -21%;
-    background: url(https://payetonillustration.fr/wp-content/uploads/2020/12/illustration-5-winona-adamon-charline-mahroug.jpg);
-    background-size: 100%;
-    background-position: center center;
-    display: flex;
-    color: #003;
-    font-size: 5vw;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    animation: spin 9s ease-in-out infinite alternate-reverse;
-    opacity: 1;
-    z-index: 2;
-  } 
+}

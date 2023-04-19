@@ -6,7 +6,7 @@ const colors = [  '#3131312a',  '#afafaf2a',  '#0000002a',  '#9292922a',];
 
 function draw() {
   context.clearRect(0, 0, width, height);
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 50; i++) {
     const x = Math.random() * width;
     const y = Math.random() * height;
     const size = {
