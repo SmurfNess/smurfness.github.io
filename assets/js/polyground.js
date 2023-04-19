@@ -2,21 +2,21 @@ const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 const width = canvas.width = canvas.offsetWidth;
 const height = canvas.height = canvas.offsetHeight;
-const colors = [  '#ffffff41',  '#c7c1fa41',  '#95b0fa6b',  '#5d87fa41',];
+const colors = [  '#3131312a',  '#afafaf2a',  '#0000002a',  '#9292922a',];
 
 function draw() {
   context.clearRect(0, 0, width, height);
-  for (let i = 0; i < 250; i++) {
+  for (let i = 0; i < 200; i++) {
     const x = Math.random() * width;
     const y = Math.random() * height;
     const size = {
-      width: Math.random() * 200 + 200,
-      height: Math.random() * 200 + 200
+      width: Math.random() * 100 + 1500,
+      height: Math.random() * 100 + 1500
     };
     const color = colors[Math.floor(Math.random() * colors.length)];
     const gradient = context.createLinearGradient(0, 0, 0, height);
     gradient.addColorStop(0, color);
-    gradient.addColorStop(1, '#00d6f8');
+    gradient.addColorStop(1, '#a6b3ff');
     context.fillStyle = gradient;
     context.beginPath();
     context.save();

@@ -29,9 +29,9 @@
     display: flex;
     align-items: center;
     background-color: #ffffff; /* Couleur de fond blanc */
-    padding: 10px; /* Marge intérieure pour l'espace autour de l'image et du texte */
+    padding: 5px; /* Marge intérieure pour l'espace autour de l'image et du texte */
     height:35px ;
-    width: 150px; /* Largeur souhaitée pour le lien entier */
+    width: 130px; /* Largeur souhaitée pour le lien entier */
     margin: 2px; /* Ajout d'une marge en bas pour créer un interstice vertical */
   }
   
@@ -44,6 +44,7 @@
   
   .link-img {
     width: 30px;
+
   }
   
   #positionDuBas{

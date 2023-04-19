@@ -1,7 +1,9 @@
 /* *********************** home style ********************** */
 
   #home-title, #home-text{
+    padding-top: 50px;
     padding-left: 5px;
+    color: #ffffff;
   }
 
   .min-width-0 {
@@ -10,7 +12,8 @@
   
 
   .container {
-    padding: 10px ;
+    left: -50px;
+    padding: 50px ;
     display: flex;
     position: relative;
     width: 80%;
@@ -26,10 +29,11 @@
     box-shadow: 0 20px 30px rgba(0,0,0,.1);
     line-height: 0;
     position: relative;
+    border-radius: 15px;
   }
   
   .box > img {
-    width: 200%;
+    width: 250%;
     height: calc(50vh);
     object-fit: cover; 
     transition: .5s;
