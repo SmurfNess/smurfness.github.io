@@ -42,10 +42,10 @@ function transition() {
     draw();
     canvas.classList.remove('fade-out');
     canvas.classList.add('fade-in');
-  }, 250);
+  }, 300);
 }
 
 
 draw();
-setInterval(transition, 30000);
+setInterval(transition, 5000);
 

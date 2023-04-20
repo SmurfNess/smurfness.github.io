@@ -1,10 +1,10 @@
 /* *********************** degrees & certifications style ********************** */
 
-.container-dc{
-	background-color:#51f3ffb4;
-  color: black;
-	height: 100%;
-	width:100% ;
-	position: relative;
-  padding: 2%;
-}
+
+#polyform {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    clip-path:polygon(100% 0%, 100% 45%,98% 60%,93% 70%,85% 90%,80% 92%, 70% 94%,60% 96%,50% 94%,40% 98%, 30% 97%,20% 99%, 10% 95%,00% 100%, 100% 100% );
+    background-color: black;
+  }
