@@ -4,6 +4,8 @@
   <title>Arnaud Lemasçon</title>
     <!-- Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Vis-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" type="text/css" />
     <!-- banner's style -->
     <link rel="stylesheet" href="assets/css/banner.css">
     <!-- Ness's style -->
@@ -22,70 +24,36 @@
     <link rel="stylesheet" href="assets\css\trivia.css">
     <link rel="stylesheet" href="assets\css\values.css">
 </head>
-<body>
-    <!-- Animation -->
-    <div class="banner" id="banner">
-      <img src="assets/pictures/fondanimation.jpg" id="fondanimation">
-      <div class="animation">
-        <div class="links-container">
-          <a href="https://github.com/SmurfNess" class="link" target="_blank">
-            <img src="assets/pictures/github.png" class="link-img">
-            <span class="text">Github</span>
-          </a>
-          <a href="https://codepen.io/Greatness-GreatSmurf" class="link" target="_blank">
-            <img src="assets/pictures/codepen.webp" class="link-img">
-            <span class="text">Codepen</span>
-          </a>
-          <a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness" class="link" target="_blank">
-            <img src="assets/pictures/linkedin.png" class="link-img">
-            <span class="text">LinkedIn</span>
-          </a>
-        </div>
-        <div class="nessclass">
-          <div id="blackNess"></div>
-          <div id="whiteNess"></div>
-          <div id="pinkNess"></div>
-          <div class="eyes">
-            <div class="eye"></div>  
-            <div class="eye"></div>
-            <div id="R-eyelid"class="eyelid"></div>
-            <div id="L-eyelid"class="eyelid"></div>
-          </div>
-          <div id="eyebrows"></div>
-        </div>  
-        <p id="positionDuBas"></p>
-        <p id="positionBande"></p>
-        <p id="resultat"></p>
-      </div>
-      
-      <div id="btn_toggle">
-        <img src="assets/pictures/toggle_collapse_navbar.png" id="img-toggle">
-      </div>
 
-      <nav class="navbar" id="maBande">
-        <div id="navbar-mobile">
-        <ul class="navbar-list">
-          <li class="navbar-item" id="navbarhome"><a href="#home">Home</a></li>
-          <li class="navbar-item dropdown">
-            <a href="#perso" class="dropdown-toggle">Personal</a>
-            <ul class="dropdown-menu">
-              <li><a href="#values">Values</a></li>
-              <li><a href="#trivia">Trivia</a></li>
-            </ul>
-          </li>
-          <li class="navbar-item dropdown">
-            <a href="#pro" class="dropdown-toggle">Professional</a>
-            <ul class="dropdown-menu">
-              <li><a href="#dc">Degrees & certifications</a></li>
-              <li><a href="#resume">Resume</a></li>
-              <li><a href="#projects">Projects</a></li>
-                </ul>
-          </li>
-          <li class="navbar-item"><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      </nav>
-    </div> 
+<body>
+    <div class="banner" id="banner"></div> <!-- Animation -->
+
+    <div id="btn_toggle">
+      <img src="assets/pictures/toggle_collapse_navbar.png" id="img-toggle">
+    </div>    
+    <nav class="navbar" id="maBande">
+      <div id="navbar-mobile">
+      <ul class="navbar-list">
+        <li class="navbar-item" id="navbarhome"><a href="#home">Home</a></li>
+        <li class="navbar-item dropdown">
+          <a href="#perso" class="dropdown-toggle">Personal</a>
+          <ul class="dropdown-menu">
+            <li><a href="#values">Values</a></li>
+            <li><a href="#trivia">Trivia</a></li>
+          </ul>
+        </li>
+        <li class="navbar-item dropdown">
+          <a href="#pro" class="dropdown-toggle">Professional</a>
+          <ul class="dropdown-menu">
+            <li><a href="#dc">Degrees & certifications</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+              </ul>
+        </li>
+        <li class="navbar-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    </nav>s
 
 <!-- Background Canvas -->
     
@@ -185,7 +153,7 @@
         <div class="description">Ness, my six year old cat, also known as the lovely mascot of the most of my personal project.</div>
       </div>
     </article>
-    <article class="column" style="background-image: url('https://lh3.googleusercontent.com/pw/AJFCJaVf2wEJwPJj5XTO-D2pFxdyVe20W3I4wbygv8VbEJR0fCa0uBeWaEDQmT0spZErWw5BcReaEh9qjs3COFu8HdnNCIpG2GDNrt8wqDCz13Mqx8Y8ZZBeU_b7GTiruUDgAk53vB-y2se9F_EcLgDpHFiP4xGrqc90s2GVuLqGc2JlJ_Pv8Re0zUfFNiww0Q-DAsetA-B6W1PksRuxUuotXARQkVjJisQ50YH5blVI21D6CIE6GqymfTlAGaTiXZOdK1oe0leJ5rJehczo6Fq71YUEyEFkNOduExMI7sSKcHnaeow_Pq-MqyQ5KI5cE_gWlFFt21B5rguLhpyPutFTmxwDDL_0y8tvTaGRvklAIHmsbyx3i33briv1t-0TDYaxZs_7IIKSW3MuUSVxlXzPjBLGOFRNVvmUNtVrjRMDXudo2EblUE2o2gSep8RJk6KyREmDi51ukCyoC4xzQRqOJLmmNKEzWzEcQP59XIOmUBU4mT6rt3PBeCjyOmUyJyoS_rL6SzZf5jWp7Bs8DwshoIx_wtUU5-122ImjfYgigFeE6aqnYPIwuG4rArWWf5GEx3Llwv8JmRp4SpJWQsDgYV59Wil8KFdSqyShW1bpM0GERLiRr24CzY3AGgi4ZhWWsmJcm7UfSjhnHMDfKjJHmQF-39HtNAfBk5v1BtiE41AWeHSyrJlfhwkKSPVafZrv_pVPPFLODaIqtki-dbLHSKKuLXWzweZA4anDrolV4KbMMxKBtPkHMkRB8o-PkfmifR_JO_pHti-2PcE03csIHtTYiajXCA-GTjUwyS41VtqzukL9NyDMPkgB0R2Nl4S0re3kBarSvo8W7y_JoMLO6CRHHJW0th6EjnlaVbPtQZjksT0pxu8BaNmxZK1RPYwDLcKNmX2GUIXNUaXiS7IKBw4=w629-h838-s-no?authuser=0');">
+    <article class="column" style="background-image: url('assets/pictures/IMG_0081.jpg');">
       <div class="overlay-trivia">
         <div class="description">Games, I like to play (boardgames, video games, escape games, quizz) and I work and have workd on mines</div>
       </div>
@@ -201,7 +169,7 @@
 
 <section id="dc" class="section-3">
 <div id="polyform"></div>
-<div id="degrees">test</div>
+<div id="degrees"></div>
 </section>
 
 <section id="resume" class="section-4">
@@ -212,11 +180,51 @@
 
 </section>
 
-<section id="contact" class="section-6"></section>
+<section id="contact" class="section-6">
+  <div id="polycontact"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form action="https://formspree.io/f/xdovyzdp" method="POST">
+
+          <label>
+            Your firstname :
+            <br><input type="firstname" name="firstname">
+          </label>
+            <br>
+          <label>
+            Your lastname :
+            <br><input type="firstname" name="firstname">
+          </label>
+          <br>
+          <label>
+            Your email:
+            <br><input type="email" name="email">
+          </label>
+          <label>
+          <br> Wanna talk ? say "Hi" ? don't hesitate to share your pronouns :
+            <br><textarea name="message" rows="4" cols="60"></textarea>
+          </label>
+          <!-- your other form fields go here -->
+
+          <br><button type="submit">Send</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
 </body>
       <script src="assets/js/animationNess.js"></script>
       <script src="assets/js/bodyNess.js"></script>
       <script src="assets/js/toggle.js"></script>
       <script src="assets\js\polyground.js"></script>
       <script src="assets\js\cursor.js"></script>
+      <script src="assets\js\bandeaualeatoire.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
 </html>
+

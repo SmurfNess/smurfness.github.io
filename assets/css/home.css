@@ -51,7 +51,7 @@
   
   .overlay {
     position: absolute;
-    height: 70px;
+    height: 30%;
     bottom: 0; /* Positionner le texte en bas de l'image */
     left: 0;
     right: 0;
@@ -76,6 +76,7 @@
   
   .overlay .title {
     margin-top: 10px;
+    font-size: medium;
   }
 
   .box:hover .overlay { opacity: 1; }
