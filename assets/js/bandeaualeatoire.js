@@ -20,8 +20,10 @@ function chargerImagesAleatoires() {
     }
 
     // Ajouter les liens à droite du bandeau
+    
     var linksContainer = document.createElement('div');
     linksContainer.className = 'links-container';
+
 
     var githubLink = document.createElement('a');
     githubLink.href = 'https://github.com/SmurfNess';
@@ -78,6 +80,7 @@ function chargerImagesAleatoires() {
     linksContainer.appendChild(linkedinLink);
 
     banner.appendChild(linksContainer);
+
 }
 
 
