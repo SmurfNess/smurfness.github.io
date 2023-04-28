@@ -7,7 +7,6 @@
 
 /* loading screen */
 
-
 #loading-screen {
   position: fixed;
   top: 0;
@@ -38,14 +37,31 @@
   to { transform: rotate(360deg); }
 }
 
-
 /* body */
 
 body{
   font-family: var(--font-sans  );
   color: white;
-  background-color: #484d68;
+  background-color: #3d4364;
   overflow-x: hidden;}
+
+/* Pour Chrome, Safari et Edge */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d4364c5;
+}
+
+/* Pour Firefox */
+body {
+  scrollbar-color: #3b3b3b rgb(0, 0, 0);
+}
 
 /* banner */
 
