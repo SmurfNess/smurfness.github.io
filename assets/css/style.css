@@ -5,7 +5,7 @@
   --font-serif: "Arial", serif;
 }
 
-/* loading screen */
+/************************************ loading screen *********************************************/
 
 #loading-screen {
   position: fixed;
@@ -37,13 +37,15 @@
   to { transform: rotate(360deg); }
 }
 
-/* body */
+/**************************************** body *********************************/
 
 body{
   font-family: var(--font-sans  );
   color: white;
   background-color: #3d4364;
-  overflow-x: hidden;}
+  scrollbar-color: #3b3b3b rgb(0, 0, 0);
+  overflow-x: hidden;
+}
 
 /* Pour Chrome, Safari et Edge */
 ::-webkit-scrollbar {
@@ -52,18 +54,15 @@ body{
 
 ::-webkit-scrollbar-track {
   background-color: black;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #3d4364c5;
+  overflow-x: hidden;
 }
 
-/* Pour Firefox */
-body {
-  scrollbar-color: #3b3b3b rgb(0, 0, 0);
-}
-
-/* banner */
+/***************************************** banner *********************************/
 
 #banner{
   background-color: #a6b3ff;
@@ -132,7 +131,7 @@ body {
     display: none;
   }
 
-/* ness */
+/************************************************* ness ****************************************/
 
 .nessclass{
   position: fixed;
@@ -143,7 +142,6 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 15s;
 }
-
 @keyframes hidingness {
   00%		{ top:141px; 	left: var(--random-left-left);transform: scale(1);}
   10%		{ top:80px; 	left: var(--random-left-left);transform: scale(1);}
@@ -156,7 +154,6 @@ body {
   90%		{ top:50px; 	left: var(--random-left-right);}
   100%	{ top:141px; 	left: 50%;}   
 }
-
  #blackNess {
     width: 200px;
     height: 200px;
@@ -191,8 +188,7 @@ body {
       /* left bottom */
       0px 100px      
     );	
-    }
-  
+}
   #whiteNess{
     width: 200px;
     height: 200px;
@@ -227,8 +223,7 @@ body {
       /* right bottom */
   80px 90px
     );	
-  }
-
+}
 #eyebrows{
 z-index:10;
 width:80px;
@@ -246,7 +241,6 @@ clip-path: polygon(0px 0px, 80px 0px,80px 0px,40px 0px,0px 00px); /*suprised*/
 
 animation: expression 30s infinite;
 }
-
   @keyframes expression {
     10%		{ clip-path: polygon(0px 0px, 80px 0px,80px 10px,40px 15px,0px 10px);}
     20%		{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}
@@ -256,8 +250,7 @@ animation: expression 30s infinite;
     75%		{ clip-path: polygon(0px 0px, 80px 0px,80px 0px,40px 0px,0px 00px);}
     90%		{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}
     100%	{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}    
-  }
-
+}
   .eyes {
     position: absolute;
     display: flex;
@@ -287,14 +280,11 @@ animation-duration:  30s;
 animation-iteration-count: infinite;
 animation-delay: 0s;
 }
-
-
 @keyframes grozyeux {
 5% 	  { width: 10px;	height: 10px; }
 8% 		{ top: 50%; left: 50%; width: 15px;	height: 15px; }
 11% 	{ width: 10px;	height: 10px; }
 }
-
 .eyelid{
 border-radius: 30% 30% 50% 50%;
 width : 30px;
@@ -304,20 +294,17 @@ z-index:11;
 position: absolute;
 animation : blink 6s infinite;
 }
-
 @keyframes blink {
 98%		{ height: 0px;}
 99%   { height: 20px;}
 100%	{ height: 0px;}   
 }	
-
 #R-eyelid{
 margin-left:45px;
 }
 #L-eyelid{
 margin-left:5px;
 }
-
 #pinkNess{
     width: 15px;
     margin-left: 50px;
@@ -328,9 +315,9 @@ margin-left:5px;
     z-index :10;
     transform: translateX(-50%);
     border-radius: 30% 30% 60% 60% / 50% 50% 90% 90%;
-  }
+}
 
-/* navbar */
+/************************************************** navbar ***********************************************/
 
 #maBande {
   width: 100%;
@@ -414,11 +401,11 @@ margin-left:5px;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #5c5c5c; /* Couleur de fond au survol */
+  background-color: #5c5c5c; 
   width: 198px;
 }
 
-/* Canvas */
+/************************************************ Canvas *******************************************************/
 #canvas {
     position: fixed;
     top: 210px;
@@ -437,7 +424,7 @@ margin-left:5px;
     transition: opacity 0.3s ease-in;
   }
 
-/* general section */
+/********************************************** general section *********************************************/
 
 .section {
   display: flex;
@@ -465,6 +452,7 @@ margin-left:5px;
 }
 
 #resume {
+  position: relative;
 }
 
 #projects {
@@ -475,9 +463,9 @@ margin-left:5px;
   position: relative;
 }
 
-/* contents section */
+/***************** contents section *****************/
 
-/* home */
+/************************************ home ***********************************/
 
 #home-title, #home-text{
   position: relative;
@@ -488,19 +476,17 @@ margin-left:5px;
 
 .section {
   width: 100%;
-  /* Ajoutez d'autres styles nécessaires pour votre section */
 }
 
 .col-md-4,
 .col-sm-11,
 .col-xs-11 {
-  width: 100%; /* Pour occuper 100% de la largeur de la fenêtre */
-  /* Ajoutez d'autres styles nécessaires pour vos colonnes */
+  width: 100%; 
 }
 
 .me {
   position: relative;
-  width: 1100px;
+  width: 950px;
   height: auto;
   bottom:5%;
 }
@@ -510,12 +496,11 @@ margin-left:5px;
   position: relative;
   right: 0%;
   display: flex;
-  align-items: flex-end; /* Pour aligner l'image en bas de la section */
-
+  align-items: flex-end; 
 }
 
 
-  /* values */
+  /************************** values **********************************/
 
   * {
     box-sizing: border-box;
@@ -546,14 +531,14 @@ margin-left:5px;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 55%);
       clip-path: polygon(
-      38% 15%, /* Sommet 1 : 50% de la largeur et 0% de la hauteur */
-      62% 18%, /* Sommet 2 : 62% de la largeur et 18% de la hauteur */
-      100% 34%, /* Sommet 3 : 100% de la largeur et 34% de la hauteur */
-      100% 66%, /* Sommet 4 : 100% de la largeur et 66% de la hauteur */
-      62% 82%, /* Sommet 5 : 62% de la largeur et 82% de la hauteur */
-      50% 100%, /* Sommet 6 : 50% de la largeur et 100% de la hauteur */
-      38% 92%, /* Sommet 7 : 38% de la largeur et 82% de la hauteur */
-      0% 66% /* Sommet 8 : 0% de la largeur et 66% de la hauteur */
+      38% 15%, 
+      62% 18%,
+      100% 34%,
+      100% 66%, 
+      62% 82%, 
+      50% 100%,
+      38% 92%, 
+      0% 66%
     );
   }
     
@@ -589,11 +574,7 @@ margin-left:5px;
     background-color: whitesmoke;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
   }
-  @media (min-width: 600px) {
-    .card {
-      height: 450px;
-    }
-  }
+
   .card:before {
     content: "";
     position: absolute;
@@ -668,7 +649,7 @@ margin-left:5px;
   }
 
   
-  /* trivia */
+  /************************************************** trivia ****************************************************/
 
   #triviacontainer {
     display: flex;
@@ -694,21 +675,30 @@ margin-left:5px;
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.65); /* Couleur d'obscurcissement */
-    transition: opacity 0.3s ease-in-out; /* Transition d'opacité pour une animation fluide */
+    background-color: rgba(0, 0, 0, 0.65); 
+    transition: opacity 0.3s ease-in-out; 
   }
   
   .column:hover .overlay-trivia {
-    opacity: 1; /* Opacité maximale au survol */
+    opacity: 1;
   }
   
-  .description {
+  .title-trivia {
     position: absolute;
-    top: 50%;
+    top: 40%;
     text-align: center;
     padding: 25px;
     font-size: 40px;
-    color: #fff; /* Couleur du texte de description */
+    color: #fff; 
+  }
+
+  .description-trivia {
+    position: absolute;
+    top: 50%;
+    text-align:justify;
+    padding: 25px;
+    font-size:25px;
+    color: #fff; 
   }
   .t-intro{
     position: absolute;
@@ -724,7 +714,7 @@ margin-left:5px;
     clip-path: polygon(0% 10%, 5% 9%, 15% 13%, 20% 15%,35% 15%, 50% 13%,53% 16%,57% 15%,65% 25%,75% 18%,85% 12%,95% 15%,100% 18%,100% 75%,90% 75%,75% 75%,65% 76%,55% 74%,40% 75%,31% 60%,10% 77%,0% 77%);
   }
 
-  /* Skills */
+  /******************************************** Skills ****************************************************/
 
   #polyform {
     display: flex;
@@ -754,20 +744,20 @@ margin-left:5px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Aligne les éléments en haut de la ligne */
+    align-items: flex-start;
   }
   
   .skilla, .skillb {
     display: flex;
     height: 100%;
-    flex-basis: 50%; /* Répartit en deux colonnes égales */
-    align-items: center; /* Centre les éléments verticalement */
+    flex-basis: 50%; 
+    align-items: center;
   }
   
   #s-intro-title {
-    width: 100%; /* Occupe toute la largeur de la ligne */
-    text-align: center; /* Centre le texte horizontalement */
-    padding: 10px; /* Ajoute du padding pour réduire la hauteur de l'élément */
+    width: 100%;
+    text-align: center;
+    padding: 10px; 
   }
   
   .carte {
@@ -883,6 +873,12 @@ margin-left:5px;
   }
 
 /* ########################################## smartphone size screen display : 768px ################################################## */
+
+@media (min-width: 600px) {
+  .card {
+    height: 450px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   #btn_toggle{
