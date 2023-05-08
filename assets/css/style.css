@@ -449,6 +449,7 @@ margin-left:5px;
 
 #skills {
   background-color: rgba(0,245,255,0.15);
+  height: 150vh;
 }
 
 #resume {
@@ -485,10 +486,9 @@ margin-left:5px;
 }
 
 .me {
-  position: relative;
-  width: 950px;
+  position: absolute;
+  width: 700px;
   height: auto;
-  bottom:5%;
 }
 
 
@@ -722,8 +722,17 @@ margin-left:5px;
     width: 100%;
     clip-path:polygon(100% 0%, 100% 45%,98% 60%,93% 70%,85% 90%,80% 92%, 70% 94%,60% 96%,50% 94%,40% 98%, 30% 97%,20% 99%, 10% 95%,00% 100%, 100% 100% );
     background-color: black;
+margin-top: 10px;
   }
 
+  .skills-polygon{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(9% 15%,15% 15%,20% 10%,50% 13%,65% 10%, 80% 15%,90% 25%,95% 55%, 85% 65%,70% 70%,60% 63%,45% 67%, 25% 64%,15% 68%,6% 63%,5% 35%, 7% 28%);
+    background-color: #10468542;
+  }
 
   #s-intro-title{
     position: relative;
@@ -737,7 +746,6 @@ margin-left:5px;
     flex-wrap: wrap;
     width: 100%;
     height: 65%;
-    background-color: #10468542;
   }
   
   .row {
@@ -747,12 +755,42 @@ margin-left:5px;
     align-items: flex-start;
   }
   
-  .skilla, .skillb {
-    display: flex;
-    height: 100%;
-    flex-basis: 50%; 
-    align-items: center;
-  }
+.skillunit{
+  position: relative;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+  border-bottom: solid white 1px;
+  left: 10px;
+}
+
+
+.title-card-skill {
+  font-size: 15px;
+  color: #b3b3b3;
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+.img-card-skill{
+  position: relative;
+  max-height: 75px;
+  max-width: 75px;
+  padding-bottom: 10px;
+}
+
+.title-skill{
+  position: relative;
+  color: white;
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+.description-skill{
+  font-size: 12px;
+  font-weight:normal;
+}
   
   #s-intro-title {
     width: 100%;
@@ -762,24 +800,14 @@ margin-left:5px;
   
   .carte {
     position: relative;
-    min-width: 400px;
-    height: 400px;
+    max-width: 300px;
+    min-width: 275px;
+    height: 75%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    background-color: #3d3d3d;
+    background-color: #00043ba1;
     margin: 5px;
-  }
-  .titre {
-    font-size: 18px;
-    margin: 0 0 10px;
-    text-align: center;
-  }
-  
-  .card-img {
-    max-width: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
   }
 
   #codewars{
@@ -787,7 +815,7 @@ margin-left:5px;
   }
   
   .description {
-    font-size: 14px;
+    font-size: 11px;
     margin: 0 0 10px;
   }
   
@@ -803,28 +831,163 @@ margin-left:5px;
   .lien:hover {
     background-color: #0056b3;
   }
+
+  .skillrow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -5px;
+  }
+
+.softskillunit {
+  position: relative;
+  width: calc(100% / 3 - 10px);
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.title-softskill {
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+  
+.img-card-softskill {
+  position: relative;
+  max-height: 50px;
+  max-width: 6        0px;
+}
+  
+
+  .gauge {
+    width: 100%;
+    height: 4px;
+    background-color: #00d4fa83;
+    position: relative;
+  }
+  
+  .gauge-level {
+    height: 100%;
+    background-color: #00d4fa;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s;
+  }
   
 
 
-  /* resume */
 
+  /* resume */
+ 
+
+  #texte-timeline{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.267);
+    width: 100%;
+    height: 100%;
+    min-width: 800px;
+    min-height: 250px;
+    color: white;
+    border-radius: 5px;
+    border: rgba(255, 255, 255, 0.2) solid 5px;
+  }
+
+  .axis-timeline{
+    width: 100%;
+    height: 100px;
+  }
+  .timeline {
+    position: relative;
+    width: 100%;
+    height: 75%;
+  }
+.timeline input[type="radio"] {
+  position: absolute;
+  width: 20px; /* Nouvelle règle pour définir la largeur */
+  height: 20px; /* Nouvelle règle pour définir la hauteur */
+  transform: translate(-50%, -50%) scale(1.5); /* Modification de la transformation */
+}
+
+  .timeline label {
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+
+  input[type="radio"] {
+    background-color: white;
+  }
+  
+
+  #date1-label {
+    left: 0%;
+  }
+
+  #date2-label {
+    left: 10%;
+  }
+
+  #date3-label {
+    left: 30%;
+  }
+
+  #date4-label {
+    left: 50%;
+  }
+
+  #date5-label {
+    right: 0%;
+  }
+  
+  .timeline input[type="radio"]#date1 {
+    left: 1%;
+  }
+  
+  .timeline input[type="radio"]#date2 {
+    left: 10%;
+  }
+  
+  .timeline input[type="radio"]#date3 {
+    left: 30%;
+  }
+  
+  .timeline input[type="radio"]#date4 {
+    left: 50%;
+  }
+  
+  .timeline input[type="radio"]#date5 {
+    left: 100%;
+  }
+  .axis {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 15px;
+  }
+  
+    
   #resume-polybackground{
     position: absolute;
     top: 0%;
     width: 100%;
     height: 100%;
     clip-path:polygon(0% 0%,100% 0%,100% 80%, 90% 90%, 80% 95%, 70% 85%, 60% 90%, 50% 85%, 40% 95%, 30% 90%,20% 95%,10% 90%, 0% 100%);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0.8  ) 100%);
   }
 
-  #resume::after {
-    content: ""; /* Contenu généré */
-    position: relative; /* Position absolue par rapport à l'élément parent */
-    left: 0; /* Position à gauche */
+  #resume{
     width: 100%; /* Largeur de départ de 0 */
-    height: 100%; /* Hauteur de départ de 0 */
     background-color: rgba(46, 231, 0, 0.2);
-    clip-path:polygon(0% 100%,10% 87%,20% 93.5%,30% 87%,40% 93.5%,50% 80.4%,60% 87%,70% 80.5%,80% 93.5%,90% 87%,100% 74%,100% 100%);
   }
 
   /* projects */
@@ -852,7 +1015,6 @@ margin-left:5px;
   #polycontact{
     position: absolute;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 45%);
-    top: 0%;
     width: 100%;
     height: 75%;
     clip-path: polygon(15% 0%,55% 5%, 90% 30%, 85% 55%, 50% 96%, 15% 100%, 0% 30%);
@@ -868,8 +1030,9 @@ margin-left:5px;
     border-top: 2px solid  #5c5c5c;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
-    height: 50px;
+    height: 5vh;
     font-size: small;
+    top:3vh
   }
 
 /* ########################################## smartphone size screen display : 768px ################################################## */

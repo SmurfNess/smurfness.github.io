@@ -38,7 +38,7 @@
         <li class="navbar-item dropdown">
           <a href="#pro" class="dropdown-toggle">Professional</a>
           <ul class="dropdown-menu">
-            <li><a href="#achievements" onclick="transition();">Skills</a></li>
+            <li><a href="#skills" onclick="transition();">Skills</a></li>
             <li><a href="#resume" onclick="transition();">Resume</a></li>
             <li><a href="#projects" onclick="transition();">Projects</a></li>
               </ul>
@@ -65,7 +65,7 @@
         <p>I like making things, as much with my hands as with a computer. So I've designed this website as a challenge</p>
       </div>
     </div>
-    <div class="col-md-4 col-sm-11 col-xs-11 moche">
+    <div class="col-md-4 col-sm-11 col-xs-11">
       <img src="assets/pictures/portrait5.png" class="me">
     </div>
   </div>
@@ -161,48 +161,225 @@
 <section id="skills" class="section">
 
 <div id="polyform"></div>
+<div class="skills-polygon"></div>
+
 <div class="skillsContainer">
   <div class="row">
     <div class="col-md-12" id="s-intro-title">Skills</div>
   </div>
   <div class="row">
-    <div class="col-md-6 skilla">    
 
-      <div class="carte">
-        <h2 class="titre">Technical skill</h2>
-       
-
-        <img src="https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-2.png" alt="Image de la carte" class="card-img">
-        <img src="https://cloud2data.com/wp-content/uploads/2023/01/HTML-CSS-Review.png" alt="Image de la carte" class="card-img">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" alt="Image de la carte" class="card-img">
-        </p>
+    <div class="carte col-md-4">
+      <h2 class="title-card-skill">Microsoft skills</h2>
+        <div class="row skillunit">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" alt="PowerShell" class="img-card-skill col-4">
+          <div class="title-skill col-8">PowerShell<p class="description-skill">Scripts et création d'interface </p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:75%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row skillunit">
+          <img src="assets/pictures/activedirectory.png" alt="Active Directory" class="img-card-skill col-4">
+          <div class="title-skill col-8">Active directory<p class="description-skill">Account Creation, access management and reporting</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:50%"></div>
+            </div>
+          </div>
+        </div>
+                <div class="row skillunit">
+          <img src="assets/pictures/pngegg.png" alt="Office365" class="img-card-skill col-4">
+          <div class="title-skill col-8">Office365<p class="description-skill">Office suite <br>Excel (Power Query, charts, data analysis, pivot table, formulas)<br>Teams<br>Power Automate (self-taught)<br>Power BI (not professionally applied)</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="carte">
-        <h2 class="titre">Soft skill</h2>
+      <div class="carte col-md-4">
+        <h2 class="title-card-skill">Developpement skills</h2>
+        <div class="row skillunit">
+          <img src="https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-2.png" alt="Javascript" class="img-card-skill col-4">
+          <div class="title-skill col-8">Javascript<p class="description-skill">a définir</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:50%"></div>
+            </div>
+          </div>
+        </div>
 
-        <p><p></p>
+        <div class="row skillunit">
+          <img src="https://cloud2data.com/wp-content/uploads/2023/01/HTML-CSS-Review.png" alt="HTML & CSS" class="img-card-skill col-4">
+          <div class="title-skill col-8">HTML & CSS<p class="description-skill">Bootstrap, Greensocks</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <img src="https://www.php.net/images/logos/new-php-logo.png" alt="CSS" class="img-card-skill col-4">
+          <div class="title-skill col-8">PHP<p class="description-skill">To begin</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:00%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <img src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png" alt="CSS" class="img-card-skill col-4">
+          <div class="title-skill col-8">C#<p class="description-skill">Unity</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:40%"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="carte">
-        <h2 class="titre">Other skills</h2>
-        <a href="https://www.scrum.org/user/960399"><img src="https://static.scrum.org/web/badges/badge-psmi.svg" alt="Image de la carte" class="card-img">
-          <p class="description">PSM1 - Scrum.org</p>
-        </a>
-        <a href="https://www.scrum.org/user/960399">
-          <img src=https://api.eu.badgr.io/public/assertions/RgfKwvxmSkSXFOS_GJ477g/image" alt="Image de la carte" class="card-img">
-          <div class="description">PSC - Wensei</div>
-        </a>
+      <div class="carte col-md-4">
+        <h2 class="title-card-skill">Certified skills</h2>
+        <div class="row skillunit">
+          <a href="https://www.scrum.org/user/960399" class="img-card-skill col-4" target="_blank"><img src="https://static.scrum.org/web/badges/badge-psmi.svg" style="border-radius: 100%; height: 50px;" ></a>
+          <div class="title-skill col-8">PSM1<p class="description-skill">Formation et certification</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <a href="https://www.scrum.org/user/960399" class="img-card-skill col-4" target="_blank"><img src="https://api.eu.badgr.io/public/assertions/RgfKwvxmSkSXFOS_GJ477g/image" style="height: 50px;"></a>
+          <div class="title-skill col-8">PSC<p class="description-skill">Formation et certification</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:86%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <a href="https://www.francecompetences.fr/recherche/rs/5138/" class="img-card-skill col-4" target="_blank"><img src="assets/pictures/excellens.jfif" alt="excellens-formation" style="border-radius: 100%; height: 50px;"></a>
+          <div class="title-skill col-8">Lead a profesional change<p class="description-skill">Formation et certification</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:80%"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-  </div>
-  
+      <div class="carte col-md-4">
+        <h2 class="title-card-skill">Other skills</h2>
+        <div class="row skillunit">
+          <a href="https://www.efset.org/cert/89EDrE" class="img-card-skill col-4" target="_blank"><img src="https://media.licdn.com/dms/image/C510BAQGrCP6CXBbjAA/company-logo_200_200/0/1571879615985?e=1691625600&v=beta&t=e3L0oSQXYPx9OXxUfRvfuqWg6cBKsvdw_-UonLDS2bk" alt="excellens-formation" style="border-radius: 100%; height: 50px;"></a>
+          <div class="title-skill col-8">English<p class="description-skill">Listening : C2, Reading : C1, writing : N/E, speaking : N/E  </p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:71%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row skillunit">
+          <a href="https://www.efset.org/cert/89EDrE" class="img-card-skill col-4" target="_blank"><img src="assets/pictures/adobe.png" style=" height: 50px;"></a>
+          <div class="title-skill col-8">Adobe CC<p class="description-skill">Photoshop, Premiere, Illustrator, InDesign</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:45%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carte col-md-4">
+        <h2 class="title-card-skill">Soft skills</h2>
+        <div class="row skillrow">
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/creativity.png" class="img-card-softskill">
+            <div class="title-softskill">Creativity</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/question.png" class="img-card-softskill">
+            <div class="title-softskill">Curiosity</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/empathy.png" class="img-card-softskill">
+            <div class="title-softskill">Empathy</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/autonomy.png" class="img-card-softskill">
+            <div class="title-softskill">Autonomy</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/learning.png" class="img-card-softskill">
+            <div class="title-softskill">Self-learning</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/communication.png" class="img-card-softskill">
+            <div class="title-softskill">Communication</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/initiativ.png" class="img-card-softskill">
+            <div class="title-softskill">Initiative spirit</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/team.png" class="img-card-softskill">
+            <div class="title-softskill">Teamwork</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/resilience.png" class="img-card-softskill">
+            <div class="title-softskill">Resilience</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/adapt.png" class="img-card-softskill">
+            <div class="title-softskill">Adaptability</div>
+          </div>
+        </div>
+      </div>
 </div>  
+
 </section>
 
 <section id="resume" class="section">
-<div id="resume-polybackground"></div>
+  <div id="resume-polybackground"></div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 timeline">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="axis-timeline">
+          <div class="axis"></div>
+          <input type="radio" id="date1" name="dates" value="2013" checked>
+          <label for="date1" id="date1-label">2013</label>
+          <input type="radio" id="date2" name="dates" value="2014">
+          <label for="date2" id="date2-label">2014</label>
+          <input type="radio" id="date3" name="dates" value="2016">
+          <label for="date3" id="date3-label">2016</label>
+          <input type="radio" id="date4" name="dates" value="2018">
+          <label for="date4" id="date4-label">2018</label>
+          <input type="radio" id="date5" name="dates" value="2023">
+          <label for="date5" id="date5-label">2023</label>
+        </div>
+        </div>
+        <div class="col-md-12">
+          <div id="texte-timeline">Texte par défaut</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
 </section>
+
+
+
+
 
 <section id="projects" class="section">
   <div class="polyproject">
@@ -210,6 +387,7 @@
     <p> HumanBenchmark (login/exercices/historical)(TODO)</p>
     <p> Dungeon siege survivor (game) (TODO)</p>
   </div>
+
 </section>
 
 <section id="contact" class="section">
@@ -256,6 +434,7 @@
 </footer>  
 </body>
       <script src="assets/js/loading.js"></script>
+      <script src="assets/js/timeline.js"></script>
       <script src="assets/js/animationNess.js"></script>
       <script src="assets/js/bodyNess.js"></script>
       <script src="assets/js/toggle.js"></script>
