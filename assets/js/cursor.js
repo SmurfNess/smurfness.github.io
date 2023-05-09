@@ -25,12 +25,14 @@ function updateCursorPosition(event) {
   const mouseX = event.clientX;
   const mouseY = event.clientY;
   const bannerRect = banner.getBoundingClientRect(); // Récupération des coordonnées de la zone cible
+  
   // Vérification si la souris est à l'intérieur de la zone cible
   if (mouseX >= bannerRect.left && mouseX <= bannerRect.right &&
       mouseY >= bannerRect.top && mouseY <= bannerRect.bottom) {
     cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    cursor.style.opacity = 1; // Show the cursor
   } else {
-    cursor.style.transform = "translate(-100%, -100%)"; // Masquer le curseur en dehors de la zone cible
+    cursor.style.opacity = 0; // Hide the cursor
   }
 }
 
