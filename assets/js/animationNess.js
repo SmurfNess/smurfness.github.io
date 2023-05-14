@@ -33,3 +33,5 @@ const rootStyles = getComputedStyle(document.documentElement);
     setInterval(updateRandomLeft, 30000);
     
   }, 15000); // délai en millisecondes (dans cet exemple, 15 secondes)
+
+  
