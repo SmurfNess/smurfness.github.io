@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
   <title>Arnaud Lemasçon</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon/android-chrome-512x512.png" />
       <!-- Bootstrap -->
@@ -57,7 +57,7 @@
  <section id="home">
 
   <div class="row">
-    <div class="col-md-4 col-sm-11 col-xs-11 truc">
+    <div class="col-md-4 col-sm-11 col-xs-11">
       <div id="home-title">
         <h1>Hey, I'm Arnaud, welcome here</h1>
       </div> 
@@ -124,38 +124,41 @@
 <section id="trivia">
 
   <div id="polytrivia"></div>
-  <div class="t-intro">
-    <h1 class="t-intro-title">Trivia</h1>
-    <p class="t-intro-copy">Out of hours</p>
-  </div>  
 
-  <div id="triviacontainer">
-    <article class="column" style="background-image: url('assets/pictures/ness.jpeg');">
+<div class="row">
+  <div class="t-intro col-12">
+    <h1 class="t-intro-title">Trivia</h1>
+    <p class="t-intro-copy">What i'm doing out of hours</p>
+  </div> 
+    <article class="t-col col-md-3 col-sm-6" id="t-ness">
       <div class="overlay-trivia">
         <div class="title-trivia">Ness</div>
         <div class="description-trivia">My six year old cat, also known as the lovely mascot of the most of my personal project.</div>
       </div>
     </article>
-    <article class="column" style="background-image: url('assets/pictures/IMG_0081.jpg');">
+    <article class="t-col col-md-3 col-sm-6" id="t-games">
       <div class="overlay-trivia">
         <div class="title-trivia">Games</div>
-        <div class="description-trivia">I like to play (boardgames, video games, escape games, quizz) and I work and have worked on mines.</div>
+        <div class="description-trivia">I like to play (board games, video games, escape games, quizzes), and I work and have worked on mine.</div>
       </div>
     </article>
-    <article class="column" id="img-tinkerer" style="background-image: url('assets/pictures/IMG_0209.jpg');background-position:top;">
+    
+    <article class="t-col col-md-3 col-sm-6" id="t-tinkerer">
       <div class="overlay-trivia">
         <div class="title-trivia">Tinkerer</div>
-        <div class="description-trivia">after 5 years at the fine arts school, I have kept the taste of doing things myself, tinkering and creating remain among my favorite activities. </div>
+        <div class="description-trivia">After 5 years at the fine arts school, I have kept the taste of doing things myself. Tinkering and creating remain among my favorite activities.</div>
       </div>
     </article>
-    <article class="column" style="background-image: url('assets/pictures/IMAG0119.jpg'); background-position:left; ">
+    
+    <article class="t-col col-md-3 col-sm-6" id="t-acting">
       <div class="overlay-trivia">
         <div class="title-trivia">Acting</div>
-        <div class="description-trivia">When I arrived in Lyon, I created a group on Meetup to meet people during various activities and it grew to a thousand members. I quickly delegated part of the animation to motivated members.</div>
+        <div class="description-trivia">When I arrived in Lyon, I created a group on Meetup to meet people during various activities, and it grew to a thousand members. I quickly delegated part of the animation to motivated members.</div>
       </div>
     </article>
-  </div>
+    
 
+</div>
   </section>
 
 <section id="skills" >
@@ -408,7 +411,7 @@
           </label>
           <label>
           <br> Wanna talk ? say "Hi" ? don't hesitate to share your pronouns :
-            <br><textarea name="message" rows="4" cols="60"></textarea>
+            <br><textarea name="message" rows="4" cols="40"></textarea>
           </label>
           <!-- your other form fields go here -->
 

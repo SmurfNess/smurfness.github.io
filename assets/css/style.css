@@ -39,8 +39,11 @@
 
 /**************************************** body *********************************/
 
+
 body{
+  width: 100%;
   font-family: var(--font-sans  );
+  box-sizing: border-box;
   color: white;
   background-color: #3d4364;
   scrollbar-color: #3b3b3b rgb(0, 0, 0);
@@ -340,7 +343,7 @@ margin-left:5px;
   display: none;
 }
 #img-toggle{
-  width: 50px;
+  width: 40px;
   display: none;
 }
 
@@ -442,10 +445,13 @@ section {
 
 #values {
   background: transparent;
+  display: grid;
+  place-items: center;
 }
 
 #trivia {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49%, rgba(0,245,255,0.15) 61%);}
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49%, rgba(0,245,255,0.15) 61%);
+}
 
 #skills {
   background-color: rgba(0,245,255,0.15);
@@ -467,8 +473,6 @@ section {
 /***************** contents section *****************/
 
 
-
-
 /************************************ home ***********************************/
 
 #home-title, #home-text{
@@ -485,7 +489,7 @@ section {
 }
 
 .me {
-  position: absolute;
+  position: relative;
   width: 700px;
   height: auto;
 }
@@ -503,11 +507,6 @@ section {
 
   * {
     box-sizing: border-box;
-  }
-  
-  #value {
-    display: grid;
-    place-items: center;
   }
   
   .page-content {
@@ -650,67 +649,68 @@ section {
   
   /************************************************** trivia ****************************************************/
 
-  #triviacontainer {
-    display: flex;
-    clip-path: polygon(0% 100%, 0% 30%, 10% 25%, 20% 15%, 30% 15%, 40% 20%, 50% 20%, 60% 22%, 70% 25%, 80% 20%, 90% 18%, 100% 25%, 100% 100%, 90% 95%, 80% 93%, 70% 95%, 60% 98%, 50% 94%, 40% 96%, 30% 95%, 20% 99%, 10% 97%, 0% 100%);
+  .t-intro{
     position: relative;
-    height: 100%;
-    width: 100vw;
+    background-color: red;
+    text-align: center;
+    margin-top: 100px;
   }
-  
-  .column {
+
+  .t-col{
+    margin-top: -300px;
     position: relative;
-    flex: 1;
     height: 100%;
-    box-sizing: border-box;
+    background-color: pink;
+  }
+
+
+  #t-ness{
+    background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/ness.jpeg');
     background-size: cover;
     background-position: center;
   }
-  
-  .overlay-trivia {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.65); 
-    transition: opacity 0.3s ease-in-out; 
-  }
-  
-  .column:hover .overlay-trivia {
-    opacity: 1;
-  }
-  
-  .title-trivia {
-    position: absolute;
-    top: 40%;
-    text-align: center;
-    padding: 25px;
-    font-size: 40px;
-    color: #fff; 
+
+  #t-games{
+    background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0081.jpg');
+    background-size: cover;
   }
 
-  .description-trivia {
-    position: absolute;
-    top: 50%;
-    text-align:justify;
-    padding: 25px;
-    font-size:25px;
-    color: #fff; 
+  #t-tinkerer{
+    background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0209.jpg');
+    background-size: cover;
+    background-position: top;
   }
-  .t-intro{
-    position: absolute;
-    left: 15px;
-    top: 310px;
-  }
-  #polytrivia{
-    position: absolute;
-    display: flex;
-    width: 100%;
+
+#t-acting{
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMAG0119.jpg');
+  background-size: cover;
+}
+
+  .image-trivia {
+    position: relative;
+    display: block;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0.5) 100%);
-    clip-path: polygon(0% 10%, 5% 9%, 15% 13%, 20% 15%,35% 15%, 50% 13%,53% 16%,57% 15%,65% 25%,75% 18%,85% 12%,95% 15%,100% 18%,100% 75%,90% 75%,75% 75%,65% 76%,55% 74%,40% 75%,31% 60%,10% 77%,0% 77%);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title-trivia{
+    z-index: 5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  .description-trivia{
+    padding-top: 50px;
+    z-index: 5;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    text-align: center;
   }
 
   /******************************************** Skills ****************************************************/
@@ -808,7 +808,10 @@ margin-top: 10px;
   }
 
   #codewars{
+    position: absolute;
     max-width: 350px;
+    top: 25%;
+    right: 0%;
   }
   
   .description {
@@ -1006,15 +1009,16 @@ margin-top: 10px;
     top:3vh
   }
 
-/* ########################################## smartphone size screen display : 768px ################################################## */
+/* ########################################## navbar mobile layout ################################################## */
 
-@media (min-width: 600px) {
-  .card {
-    height: 450px;
+@media screen and (max-width: 900px) {
+
+  #codewars{
+    position: absolute;
+    max-width: 350px;
+    top: 25%;
+    right: 0%;
   }
-}
-
-@media screen and (max-width: 768px) {
   #btn_toggle{
     display: flex;
   }
@@ -1026,7 +1030,6 @@ margin-top: 10px;
   #navbar-mobile{
       top: 150px;
       margin-left: -15px;
-      width: 200px;
       height: calc(100vh - 150px);
       background-color: black;
       display: none;
@@ -1067,13 +1070,16 @@ margin-top: 10px;
       padding-left: 75px;
       padding-top: 10px;
     }
+
+    .card {
+      height: 450px;
+    }
+
+      .page-content {
+    grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media (min-width: 600px) {
-  .page-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media (min-width: 800px) {
   .page-content {
     grid-template-columns: repeat(6, 1fr);
@@ -1122,11 +1128,287 @@ margin-top: 10px;
     transition-duration: 0s;
   }
 }
+/* ############################### view mobile ###################### */
 
-/* ########################################## tablet size screen display ################################################## */
+@media (min-width :360px) and (max-width:414px) {
+  
+  section{
+    height: 75vh;
+  }
+  #codewars{
+    position: absolute;
+    max-width: 250px;
+    top: 25%;
+    right: 0%;
+  }
+  #btn_toggle{
+    display: flex;
+  }
+
+  #img-toggle{
+    display:flex;
+  }
+
+  #navbar-mobile{
+      top: 150px;
+      margin-left: -15px;
+      height: calc(100vh - 150px);
+      background-color: black;
+      display: none;
+  }
+
+  #navbar-mobile.active {
+      display: block;
+    }
+
+  .navbar-list {
+    flex-wrap: wrap;
+  }
+
+  .navbar-item {
+  text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .dropdown {
+    position: static;
+  }
+
+  .dropdown-menu {
+    display: block;
+    position:static;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: -1;
+  }
+
+  .dropdown-menu li a:hover {
+      background-color: #5c5c5c; /* Couleur de fond au survol */
+      width: 198px;
+      padding-left: 0px;
+    }
+
+    #navbarhome{
+      padding-left: 75px;
+      padding-top: 10px;
+    }
+
+    section {
+    display: flex;
+    padding-top: 400px;
+    position: relative;
+    height: 100vh;
+    color: white;
+  }
+  
+  #home {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0.5) 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%,80% 95%, 10% 100%, 0% 98% );
+    }
+  
+    .me {
+      width: 414px;
+      bottom: 0%;
+    }  
+
+  #values {
+    background: transparent;
+    display: grid;
+  }
+
+    .page-content {
+    display: grid;
+    grid-gap: 0px;
+    padding-top: 5px ;
+    max-width: 380px;
+    margin: 0;
+    font-family: var(--font-sans);
+  }
+
+  
+  .polygon{
+    top: 0%;
+    position: absolute;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 55%);
+  }
+    
+    .intro {
+    position: absolute;
+    top: 210px;
+    width: 95%;
+    left: 0%;
+    right: 0;
+    z-index: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .intro-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .intro-copy {
+    font-size: 18px;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width:75%;
+    height: 95%;
+    text-align: center;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+    }
+  .card:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+  }
+  .card:nth-child(1):before {
+    background-image: url(https://cdn.pixabay.com/photo/2015/08/08/13/28/drop-880462_1280.jpg);
+  }
+  .card:nth-child(2):before {
+    background-image: url(https://magnolia-portugal.dunegestion.com/public/magnolia-portugal/40325_livraria_lello_2.jpg);
+  }
+  .card:nth-child(3):before {
+    background-position: center;
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/03/09/49/earth-2113656_960_720.jpg);
+  }
+  .card:nth-child(4):before {
+    background-position: center;
+    background-image: url(https://cdn.pixabay.com/photo/2018/03/07/22/45/color-3207345_960_720.jpg);
+  }
+  .card:nth-child(5):before {
+    background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  }.card:nth-child(6):before {
+    background-image: url(https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  }
+  
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    padding: 2px;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+  }
+  .content > * + * {
+    margin-top: 1rem;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  
+  .copy {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  /* ######################################### TRIVIA ####################################### */
+  #trivia {
+    top: 310px;
+  }
+    
+  .t-col{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .t-intro{
+    text-align: center;
+    position: relative;
+    background-color: rgb(7, 7, 7);
+    border: #000000 solid 2px;
+  }
+
+  #t-acting{
+    bottom: -50px;
+    background-position: bottom;
+    height: 50%;
+  }
+
+  .description-trivia{
+    left: 25px;
+    top: 5%;
+    width: 80%;
+  }
+
+  .overlay-trivia{
+    background-color: #000000b7;
+    z-index: 5;
+  }
+
+  #skills {
+    top: 300px;
+    background-color: rgba(0,245,255,0.15);
+    height: 325vh;
+  }
+
+  .carte {
+    position: relative;
+    max-width: 300px;
+    min-width: 275px;
+    height: 425px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #00043ba1;
+    margin: 5px;
+  }
 
 
-@media screen and (max-width: 1024px) {
+  
+  #resume {
+    position: relative;
+  }
+  
+  #projects {
+    background-color: rgba(46, 231, 0, 0.2);
+  }
+  
+  #contact{
+    position: relative;
+  }
+
 
 }
-
