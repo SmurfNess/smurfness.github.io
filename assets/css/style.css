@@ -88,7 +88,6 @@ body{
 
 .links-container {
     position: fixed;
-    width: 160px;
     top: 0%;
     right: 0%;
     display: flex;
@@ -661,6 +660,7 @@ section {
     position: relative;
     height: 100%;
     background-color: pink;
+    clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%);
   }
 
 
@@ -684,6 +684,10 @@ section {
 #t-acting{
   background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMAG0119.jpg');
   background-size: cover;
+}
+
+.overlay-trivia{
+  padding-top: 100px ;
 }
 
   .image-trivia {
@@ -720,7 +724,7 @@ section {
     height: 100%;
     width: 100%;
     clip-path:polygon(100% 0%, 100% 45%,98% 60%,93% 70%,85% 90%,80% 92%, 70% 94%,60% 96%,50% 94%,40% 98%, 30% 97%,20% 99%, 10% 95%,00% 100%, 100% 100% );
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 margin-top: 10px;
   }
 
@@ -1132,6 +1136,11 @@ margin-top: 10px;
 
 @media (min-width :360px) and (max-width:414px) {
   
+  body{
+    width: 110%;
+  }
+  
+
   section{
     height: 75vh;
   }
@@ -1282,6 +1291,7 @@ margin-top: 10px;
     transition: transform calc(var(--d) * 1.5) var(--e);
     pointer-events: none;
     }
+
   .card:after {
     content: "";
     display: block;
@@ -1345,13 +1355,23 @@ margin-top: 10px;
 
   /* ######################################### TRIVIA ####################################### */
   #trivia {
-    top: 310px;
+    top: 400px;
   }
     
   .t-col{
     position: relative;
     background-position: center;
     background-size: cover;
+    height: 500px;
+    clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 50%, 50% 40%, 0% 50%);
+  }
+
+  .image-trivia {
+    position: relative;
+    display: block;
+    max-height: 25%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .t-intro{
@@ -1361,11 +1381,7 @@ margin-top: 10px;
     border: #000000 solid 2px;
   }
 
-  #t-acting{
-    bottom: -50px;
-    background-position: bottom;
-    height: 50%;
-  }
+
 
   .description-trivia{
     left: 25px;
