@@ -437,42 +437,14 @@ section {
   width: 100%;
 }
 
-#home {
-  clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 100% 65%, 90% 70%, 80% 75%, 70% 70%, 60% 80%, 50% 85%, 40% 80%, 30% 85%, 25% 80%,20% 80%,15% 90%, 10% 87%, 5% 85%,0% 90%);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0.5) 100%);
-  }
-
-#values {
-  background: transparent;
-  display: grid;
-  place-items: center;
-}
-
-#trivia {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49%, rgba(0,245,255,0.15) 61%);
-}
-
-#skills {
-  background-color: rgba(0,245,255,0.15);
-  height: 150vh;
-}
-
-#resume {
-  position: relative;
-}
-
-#projects {
-  background-color: rgba(46, 231, 0, 0.2);
-}
-
-#contact{
-  position: relative;
-}
-
 /***************** contents section *****************/
 
 
 /************************************ home ***********************************/
+#home {
+  clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 100% 65%, 90% 70%, 80% 75%, 70% 70%, 60% 80%, 50% 85%, 40% 80%, 30% 85%, 25% 80%,20% 80%,15% 90%, 10% 87%, 5% 85%,0% 90%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0.5) 100%);
+  }
 
 #home-title, #home-text{
   position: relative;
@@ -503,7 +475,12 @@ section {
 
 
   /************************** values **********************************/
-
+  #values {
+    background: transparent;
+    display: grid;
+    place-items: center;
+  }
+  
   * {
     box-sizing: border-box;
   }
@@ -584,6 +561,7 @@ section {
     transition: transform calc(var(--d) * 1.5) var(--e);
     pointer-events: none;
     }
+    
   .card:after {
     content: "";
     display: block;
@@ -647,20 +625,30 @@ section {
 
   
   /************************************************** trivia ****************************************************/
+  .container-trivia{
+    height: 100%;
+  }
+
+  #trivia {
+    background-color: transparent;
+  }
 
   .t-intro{
     position: relative;
-    background-color: red;
     text-align: center;
-    margin-top: 100px;
+    top: -75px;
+    z-index: 500;
+  }
+
+  .t-intro-title{
+    font-size: 40px;
   }
 
   .t-col{
-    margin-top: -300px;
     position: relative;
-    height: 100%;
-    background-color: pink;
+    height: 75vh;
     clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%);
+    margin-right: 10px;
   }
 
 
@@ -687,7 +675,13 @@ section {
 }
 
 .overlay-trivia{
-  padding-top: 100px ;
+    padding-top: 100px ;
+    position: relative;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 50%);
+    z-index: 5;
+    left: -50%;
 }
 
   .image-trivia {
@@ -695,8 +689,6 @@ section {
     display: block;
     height: 100%;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .title-trivia{
@@ -709,15 +701,22 @@ section {
   }
 
   .description-trivia{
-    padding-top: 50px;
+    padding: 5px;
+    padding-top: 40px;
     z-index: 5;
     position: absolute;
-    left: 5%;
-    width: 90%;
+    width: 50%;
+    left: 25%;
     text-align: center;
   }
 
+
+
   /******************************************** Skills ****************************************************/
+  #skills {
+    height: 150vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0,245,255,0.15) 25%);
+  }
 
   #polyform {
     display: flex;
@@ -725,7 +724,7 @@ section {
     width: 100%;
     clip-path:polygon(100% 0%, 100% 45%,98% 60%,93% 70%,85% 90%,80% 92%, 70% 94%,60% 96%,50% 94%,40% 98%, 30% 97%,20% 99%, 10% 95%,00% 100%, 100% 100% );
     background-color: rgb(0, 0, 0);
-margin-top: 10px;
+    margin-top: 10px;
   }
 
   .skills-polygon{
@@ -734,7 +733,7 @@ margin-top: 10px;
     height: 100%;
     width: 100%;
     clip-path: polygon(9% 15%,15% 15%,20% 10%,50% 13%,65% 10%, 80% 15%,90% 25%,95% 55%, 85% 65%,70% 70%,60% 63%,45% 67%, 25% 64%,15% 68%,6% 63%,5% 35%, 7% 28%);
-    background-color: #10468542;
+    background-color: #2f488042;
   }
 
   #s-intro-title{
@@ -865,7 +864,7 @@ margin-top: 10px;
 .img-card-softskill {
   position: relative;
   max-height: 50px;
-  max-width: 6        0px;
+  max-width: 60px;
 }
   
 
@@ -888,8 +887,10 @@ margin-top: 10px;
 
 
 
-  /* resume */
-  
+  /*************************************** resume *****************************************************/
+  #resume {
+    position: relative;
+  }
     
   #resume-polybackground{
     position: absolute;
@@ -906,23 +907,29 @@ margin-top: 10px;
   }
 
   
-
-
   /* projects */
+
+  #projects {
+    background-color: rgba(46, 231, 0, 0.2);
+  }
+  
 .hex-text{
   position: relative;
-  top:93%;
+  top:80%;
+  left: -20%;
   width: 100%;
   color: white;
   font-weight: bold;
-  rotate: calc(29deg);
+  rotate: calc(27.8deg);
+  text-align: center;
 }
+
 
   .hex-grid {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 960px; /* ajuster selon vos besoins */
+    max-width: 960px;
     top:0%
   }
   
@@ -940,7 +947,6 @@ margin-top: 10px;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0);
     clip-path: polygon(
       50% 0%,
       95% 25%,
@@ -969,8 +975,23 @@ margin-top: 10px;
     background-position: center;
     background-repeat: no-repeat;
   }
-  
-  /* contact */
+
+  .hexagon-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(35deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+  }
+
+
+  /******************************************** contact ********************************************/
+
+  #contact{
+    position: relative;
+  }
 
   #contact-polybackground{  
     position: absolute;
@@ -1132,12 +1153,15 @@ margin-top: 10px;
     transition-duration: 0s;
   }
 }
+
+/* ################################################################## */
 /* ############################### view mobile ###################### */
+/* ################################################################## */
 
 @media (min-width :360px) and (max-width:414px) {
   
   body{
-    width: 110%;
+    width: 100%;
   }
   
 
@@ -1192,7 +1216,7 @@ margin-top: 10px;
   }
 
   .dropdown-menu li a:hover {
-      background-color: #5c5c5c; /* Couleur de fond au survol */
+      background-color: #5c5c5c;
       width: 198px;
       padding-left: 0px;
     }
@@ -1355,17 +1379,18 @@ margin-top: 10px;
 
   /* ######################################### TRIVIA ####################################### */
   #trivia {
-    top: 400px;
+    top: 450px;
   }
     
-  .t-col{
+  .t-col {
     position: relative;
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height: 60vh;
     clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 50%, 50% 40%, 0% 50%);
+    margin-right: 0%;
   }
-
+  
   .image-trivia {
     position: relative;
     display: block;
@@ -1377,27 +1402,76 @@ margin-top: 10px;
   .t-intro{
     text-align: center;
     position: relative;
-    background-color: rgb(7, 7, 7);
-    border: #000000 solid 2px;
+    background-color: rgb(255, 0, 0);
   }
 
+  .title-trivia{
+    top: 10px;
+  }
 
 
   .description-trivia{
-    left: 25px;
-    top: 5%;
-    width: 80%;
+    top: 60px;
+    text-align: center;
   }
 
   .overlay-trivia{
-    background-color: #000000b7;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.8) 40%);
     z-index: 5;
+    height: 300px;
+    
   }
 
+  .overlay-trivia:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    clip-path:polygon(0% 0%, 100% 0%, 100% 95%,50% 5%,0% 95%);
+    z-index: 1;
+  }
+
+
+
+  #t-ness{
+    background-position: center 125%;
+  }
+
+  #t-ness .description-trivia{
+    top: 75px;
+  }
+
+  #t-games{
+    top:-40vh;
+  }
+
+  #t-tinkerer{
+    top:-80vh;
+  }
+
+  #t-acting{
+    top:-120vh;
+  }
+
+  #t-acting .description-trivia{
+    font-size: 15px;
+  }
+
+  /* ############################### skills ###########################*/
+
   #skills {
-    top: 300px;
-    background-color: rgba(0,245,255,0.15);
-    height: 325vh;
+    top: 70vh;
+    height: 400vh;
+    background-color: transparent;
+  }
+
+  #polyform {
+    clip-path:polygon(0% 88.3%,50% 87%, 100% 88.3%,100% 100%, 0% 100% );
+    background-color: rgb(0, 0, 0);
+    border-bottom: 25px solid black;
   }
 
   .carte {
@@ -1412,19 +1486,93 @@ margin-top: 10px;
     margin: 5px;
   }
 
+/* ######################################## resume ##################################### */
 
-  
   #resume {
     position: relative;
   }
-  
+
+  #resume-polybackground{
+    clip-path:polygon(0% 0%,100% 0%,100% 90%,50% 80%, 0% 90%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0.8  ) 100%);
+  }
+
+  /* ###################### project ###########################*/
+
+  .hex-grid{
+    position: relative;
+    top:-500px;
+  }
+
+  .hexagon{
+    transform: scale(0.9);
+    height: 250px;
+    width: 250px;
+  }
+  .hex-text{
+    transform: rotate(1.5deg);
+  }
+
+  #hbProject{
+    font-size: 13px;
+  }
+
   #projects {
     background-color: rgba(46, 231, 0, 0.2);
   }
-  
+
+
+  /* ###################### contact ###########################*/
+
   #contact{
     position: relative;
+background-color: rgba(0, 255, 255, 0.192);
+height: 75vh;
+  }
+  
+  #contact-polybackground{  
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    clip-path:polygon(0% 0%,0% 0%,0% 0%, 100% 0%);
+    background-color: rgba(46, 231, 0, 0.2);
   }
 
+  #contact-polybackground-before{
+    position: absolute;
+    top: -200px;
+    width: 100%;
+    height: 126.5vh;
+    clip-path:polygon(0% 0%,50% 10%, 100% 0%,100% 100%,0% 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+  }
+
+  #polycontact{
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0) 50%, rgba(0,0,0,0) 100%);
+    width: 100%;
+    height: 75%;
+    clip-path: none;
+  }
+
+  .contact-form{
+    position: relative;
+    top:-250px;
+  }
+
+  /* footer */
+
+  footer{
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    border-top: 2px solid  #5c5c5c;
+    background-color: rgba(0, 0, 0);
+    width: 100%;
+    font-size: small;
+    top:25vh;
+  }
 
 }
