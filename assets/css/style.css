@@ -1158,10 +1158,10 @@ section {
 /* ############################### view mobile ###################### */
 /* ################################################################## */
 
-@media (min-width :360px) and (max-width:414px) {
+@media (min-width :0px) and (max-width:414px) {
   
   body{
-    width: 100%;
+    width: 50vh;
   }
   
 
@@ -1576,3 +1576,4 @@ height: 75vh;
   }
 
 }
+
