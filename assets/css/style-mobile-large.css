@@ -1,4 +1,4 @@
-@media screen and (max-width:767px) {
+@media screen and (min-width:575px) and (max-width:767px) {
 
     .page h2{
         padding: 1% 0% 0% 18%;
