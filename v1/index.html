@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <title>Arnaud Lemasçon</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon/android-chrome-512x512.png" />
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Vis-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" type="text/css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body>
+
+  <div id="loading-screen">
+    <div class="loading-icon"></div>
+  </div>
+
+    <div class="banner" id="banner"></div> <!-- Animation -->
+
+    <div id="btn_toggle">
+      <img src="assets/pictures/toggle_collapse_navbar.png" id="img-toggle">
+    </div>    
+    <nav class="navbar" id="maBande">
+      <div id="navbar-mobile">
+      <ul class="navbar-list">
+        <li class="navbar-item" id="navbarhome"><a href="#home" onclick="transition();">Home</a></li>
+        <li class="navbar-item dropdown">
+          <a href="#perso" class="dropdown-toggle">Personal</a>
+          <ul class="dropdown-menu">
+            <li><a href="#values" onclick="transition();">Values</a></li>
+            <li><a href="#trivia" onclick="transition();">Trivia</a></li>
+          </ul>
+        </li>
+        <li class="navbar-item dropdown">
+          <a href="#pro" class="dropdown-toggle">Professional</a>
+          <ul class="dropdown-menu">
+            <li><a href="#skills" onclick="transition();">Skills</a></li>
+            <li><a href="#resume" onclick="transition();">Resume</a></li>
+            <li><a href="#projects" onclick="transition();">Projects</a></li>
+              </ul>
+        </li>
+        <li class="navbar-item"><a href="#contact" onclick="transition();">Contact</a></li>
+      </ul>
+    </div>
+    <a href="https://www.codewars.com/users/SmurfNess"> <img src="https://www.codewars.com/users/SmurfNess/badges/large" alt="Image de la carte" id="codewars"></a>
+    </nav>
+
+<!-- Background Canvas -->
+<canvas id="canvas"></canvas> 
+
+ <!--Section Home--> 
+  
+ <section id="home">
+
+  <div class="row">
+    <div class="col-md-4 col-sm-11 col-xs-11">
+      <div id="home-title">
+        <h1>Hey, I'm Arnaud, welcome here</h1>
+      </div> 
+      <div id="home-text">
+        <p>I like making things, as much with my hands as with a computer. So I've designed this website as a challenge</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-11 col-xs-11">
+      <img src="assets/pictures/portrait5.png" class="me">
+    </div>
+  </div>
+
+</section>
+
+    
+
+<!--Section Values-->
+
+<section id="values" >
+  <div class="polygon"></div>
+  <div class="intro">
+    <h1 class="intro-title">Values</h1>
+    <p class="intro-copy">Here are some important values that I live by and would to share with you :</p>
+  </div>
+  <main class="page-content">
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Transparency</h2>
+        <p class="copy">Sharing is <span style="text-decoration: line-through;">caring</span>.. working !</p><p>I think we can agree that if we can talk about our difficulties in time, they're rarely becoming a problem.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Curiosity</h2>
+        <p class="copy">I like to discover new skills, new methods and new tools, anecdotal or essential. I don't necessarily become an expert, but I like to open up the field of possibilities.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Commitment</h2>
+        <p class="copy">Some subjects are close to my heart: animal protection since 2011 and gender equality since 2017.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Sociability</h2>
+        <p class="copy">I like to find a form of camaraderie in teams, the best way for me to unite individuals towards a common goal</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Scalability</h2>
+        <p class="copy">There is a time to do and a time to evolve, I like to think about improving my methods. Making the same mistake over and over again is a frustration I can do without.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Empathy</h2>
+        <p class="copy">Without overdoing it, I want to understand a minimum of the people I work with and for. Sometimes, taking the time to put yourself in their shoes allows me to avoid tensions and to facilitate communication.
+      </div>
+    </div>
+  </main>
+      
+</section>
+
+<section id="trivia">
+
+  <div id="polytrivia"></div>
+  <div class="container-fluid container-trivia">
+  <div class="row">
+    <div class="t-intro col-12">
+      <h1 class="t-intro-title">Trivia</h1>
+      <p class="t-intro-copy">What i'm doing out of hours</p>
+    </div>
+  </div>
+
+  <div class="row"> 
+    <article class="t-col col-md-2 col-sm-6" id="t-ness">
+      <div class="overlay-trivia">
+        <div class="title-trivia">Ness</div>
+        <div class="description-trivia">My six year old cat, also known as the lovely mascot of the most of my personal project.</div>
+      </div>
+    </article>
+    <article class="t-col col-md-2 col-sm-6" id="t-games">
+      <div class="overlay-trivia">
+        <div class="title-trivia">Games</div>
+        <div class="description-trivia">I like to play (board games, video games, escape games, quizzes), and I work and have worked on mine.</div>
+      </div>
+    </article>
+    
+    <article class="t-col col-md-2 col-sm-6" id="t-tinkerer">
+      <div class="overlay-trivia">
+        <div class="title-trivia">Tinkerer</div>
+        <div class="description-trivia">After 5 years at the fine arts school, I have kept the taste of doing things myself. Tinkering and creating remain among my favorite activities.</div>
+      </div>
+    </article>
+    
+    <article class="t-col col-md-2 col-sm-6" id="t-acting">
+      <div class="overlay-trivia">
+        <div class="title-trivia">Mover</div>
+        <div class="description-trivia">When I arrived in Lyon, I created a group on Meetup to meet people during various activities, and it grew to a thousand members. I quickly delegated part of the animation to motivated members.</div>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="skills" >
+
+<div id="polyform"></div>
+<div class="skills-polygon"></div>
+
+<div class="skillsContainer">
+  <div class="row">
+    <div class="col-md-12" id="s-intro-title">Skills</div>
+  </div>
+  <div class="row">
+
+    <div class="carte col-md-4 col-sm-12">
+      <h2 class="title-card-skill">Microsoft skills</h2>
+        <div class="row skillunit">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" alt="PowerShell" class="img-card-skill col-4">
+          <div class="title-skill col-8">PowerShell<p class="description-skill">Scripts et création d'interface </p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:75%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row skillunit">
+          <img src="assets/pictures/activedirectory.png" alt="Active Directory" class="img-card-skill col-4">
+          <div class="title-skill col-8">Active directory<p class="description-skill">Account Creation, access management and reporting</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:50%"></div>
+            </div>
+          </div>
+        </div>
+                <div class="row skillunit">
+          <img src="assets/pictures/pngegg.png" alt="Office365" class="img-card-skill col-4">
+          <div class="title-skill col-8">Office365<p class="description-skill">Excel (Power Query, charts, data analysis, pivot table, formulas)<br>Power Automate (mail-analysing)</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carte col-md-4 col-sm-12">
+        <h2 class="title-card-skill">Developpement skills</h2>
+        <div class="row skillunit">
+          <img src="https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-2.png" alt="Javascript" class="img-card-skill col-4">
+          <div class="title-skill col-8">Javascript<p class="description-skill">a définir</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:50%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <img src="https://cloud2data.com/wp-content/uploads/2023/01/HTML-CSS-Review.png" alt="HTML & CSS" class="img-card-skill col-4">
+          <div class="title-skill col-8">HTML & CSS<p class="description-skill">Bootstrap, Greensocks</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:50%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <img src="https://www.php.net/images/logos/new-php-logo.png" alt="CSS" class="img-card-skill col-4">
+          <div class="title-skill col-8">PHP<p class="description-skill">To begin</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:00%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <img src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png" alt="CSS" class="img-card-skill col-4">
+          <div class="title-skill col-8">C#<p class="description-skill">Unity</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:40%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carte col-md-4 col-sm-12">
+        <h2 class="title-card-skill">Certified skills</h2>
+        <div class="row skillunit">
+          <a href="https://www.scrum.org/user/960399" class="img-card-skill col-4" target="_blank"><img src="https://static.scrum.org/web/badges/badge-psmi.svg" style="border-radius: 100%; height: 50px;" ></a>
+          <div class="title-skill col-8">PSM1<p class="description-skill">Formation et certification</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <a href="https://www.scrum.org/user/960399" class="img-card-skill col-4" target="_blank"><img src="https://api.eu.badgr.io/public/assertions/RgfKwvxmSkSXFOS_GJ477g/image" style="height: 50px;"></a>
+          <div class="title-skill col-8">PSC<p class="description-skill">Formation et certification</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:86%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row skillunit">
+          <a href="https://www.francecompetences.fr/recherche/rs/5138/" class="img-card-skill col-4" target="_blank"><img src="assets/pictures/excellens.jfif" alt="excellens-formation" style="border-radius: 100%; height: 50px;"></a>
+          <div class="title-skill col-8">Lead a profesional change<p class="description-skill">Formation et certification</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:80%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carte col-md-4 col-sm-12">
+        <h2 class="title-card-skill">Other skills</h2>
+        <div class="row skillunit">
+          <a href="https://www.efset.org/cert/89EDrE" class="img-card-skill col-4" target="_blank"><img src="https://media.licdn.com/dms/image/C510BAQGrCP6CXBbjAA/company-logo_200_200/0/1571879615985?e=1691625600&v=beta&t=e3L0oSQXYPx9OXxUfRvfuqWg6cBKsvdw_-UonLDS2bk" alt="excellens-formation" style="border-radius: 100%; height: 50px;"></a>
+          <div class="title-skill col-8">English<p class="description-skill">Listening : C2, Reading : C1, writing : N/E, speaking : N/E  </p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:71%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row skillunit">
+          <div class="img-card-skill col-4" target="_blank"><img src="assets/pictures/adobe.png" style=" height: 50px;"></div>
+          <div class="title-skill col-8">Adobe CC<p class="description-skill">Photoshop, Premiere, Illustrator, InDesign</p></div>
+          <div class="gauge-wrapper col-md-12">
+            <div class="gauge">
+              <div class="gauge-level" style="width:45%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carte col-md-4 col-sm-12">
+        <h2 class="title-card-skill">Soft skills</h2>
+        <div class="row skillrow">
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/creativity.png" class="img-card-softskill">
+            <div class="title-softskill">Creativity</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/question.png" class="img-card-softskill">
+            <div class="title-softskill">Curiosity</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/adapt.png" class="img-card-softskill">
+            <div class="title-softskill">Adaptability</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/autonomy.png" class="img-card-softskill">
+            <div class="title-softskill">Autonomy</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/learning.png" class="img-card-softskill">
+            <div class="title-softskill">Self-learning</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/resilience.png" class="img-card-softskill">
+            <div class="title-softskill">Resilience</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/initiativ.png" class="img-card-softskill">
+            <div class="title-softskill">Initiative spirit</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/team.png" class="img-card-softskill">
+            <div class="title-softskill">Teamwork</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/communication.png" class="img-card-softskill">
+            <div class="title-softskill">Communication</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/empathy.png" class="img-card-softskill">
+            <div class="title-softskill">Emotional intelligence</div>
+          </div>
+
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/listening.png" class="img-card-softskill">
+            <div class="title-softskill">Listening</div>
+          </div>
+          <div class="softskillunit col-md-4">
+            <img src="assets/pictures/truth.png" class="img-card-softskill">
+            <div class="title-softskill">Honesty</div>
+          </div>
+        </div>
+      </div>
+</div>  
+
+</section>
+
+<section  id="resume">
+  <div id="resume-polybackground"></div>
+</section>
+
+
+
+<section id="projects" >
+  <div class="hex-grid row">
+    <div class="hexagon col-md-4 col-sm-12">
+      <div class="hexagon-img" style="background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/jax.png')">      
+        <div class="hex-text">Jax et la lune</div>
+    </div>
+    </div>
+    <div class="hexagon col-md-4 col-sm-12">
+      <div class="hexagon-img" style="background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/hHBproject.png')">
+        <div class="hex-text" id="hbProject">Hooman benchmark</div>
+      </div>
+    </div>
+    <div class="hexagon col-md-4 col-sm-12">
+      <div class="hexagon-img" style="background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/DSproject.jpg')">
+        <div class="hex-text">Survivor siege</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" >
+  <div id="contact-polybackground"></div>
+  <div id="contact-polybackground-before"></div>
+  <div id="polycontact"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-sm-12">
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form action="https://formspree.io/f/xdovyzdp" method="POST" class="contact-form">
+
+          <label>
+            Your firstname :
+            <br><input type="firstname" name="firstname">
+          </label>
+            <br>
+          <label>
+            Your lastname :
+            <br><input type="firstname" name="firstname">
+          </label>
+          <br>
+          <label>
+            Your email:
+            <br><input type="email" name="email">
+          </label>
+          <label>
+          <br> Wanna talk ? say "Hi" ? don't hesitate to share your pronouns :
+            <br><textarea name="message" rows="4" cols="40"></textarea>
+          </label>
+          <!-- your other form fields go here -->
+
+          <br><button type="submit" class="send-mail">Send</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="powered">Design & Built by Arnaud Lemasçon © 2023</div>
+</footer>  
+</body>
+      <script src="assets/js/loading.js"></script>
+      <script src="assets/js/timeline.js"></script>
+      <script src="assets/js/animationNess.js"></script>
+      <script src="assets/js/bodyNess.js"></script>
+      <script src="assets/js/toggle.js"></script>
+      <script src="assets\js\polyground.js"></script>
+      <script src="assets\js\cursor.js"></script>
+      <script src="assets\js\bandeaualeatoire.js"></script>
+      <script src="assets/js/portrait.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+</html>
+
