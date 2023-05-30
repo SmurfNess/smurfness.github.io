@@ -35,8 +35,6 @@ function chargerImagesAleatoires() {
     githubImg.className = 'link-img';
 
     var githubText = document.createElement('span');
-    githubText.className = 'text';
-    githubText.textContent = 'Github';
 
     githubLink.appendChild(githubImg);
     githubLink.appendChild(githubText);
@@ -53,8 +51,6 @@ function chargerImagesAleatoires() {
     codepenImg.className = 'link-img';
 
     var codepenText = document.createElement('span');
-    codepenText.className = 'text';
-    codepenText.textContent = 'Codepen';
 
     codepenLink.appendChild(codepenImg);
     codepenLink.appendChild(codepenText);
@@ -71,8 +67,6 @@ function chargerImagesAleatoires() {
     linkedinImg.className = 'link-img';
 
     var linkedinText = document.createElement('span');
-    linkedinText.className = 'text';
-    linkedinText.textContent = 'LinkedIn';
 
     linkedinLink.appendChild(linkedinImg);
     linkedinLink.appendChild(linkedinText);

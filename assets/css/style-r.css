@@ -1,0 +1,807 @@
+/* Z-index table
+
+- 000-009   background
+- 010-049   content
+- 050-075   banner/ness
+- 076-100   navbar
+- 999       loading screen
+
+*/
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Arial", sans-serif;
+  --font-serif: "Arial", serif;
+}
+
+
+/************************************ loading screen *********************************************/
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+
+.loading-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/**************************************** html/body *********************************/
+
+  html,body{
+    overflow-x: hidden;
+    background-color: #265f8d;
+  }
+
+  /***************************************** banner *********************************/
+
+#banner{
+  background-color: #a6b3ff;
+  width: 100%;
+  z-index: 50;
+  position: fixed;
+  cursor: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.banner img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 10px;
+}
+
+.links-container1 {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column; /* Alignement vertical des liens */
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 95%);
+  }
+  
+  .link {
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255); /* Couleur de fond blanc */
+    height:35px ;
+    width: 35px; /* Largeur souhaitée pour le lien entier */
+    margin: 5px; /* Ajout d'une marge en bas pour créer un interstice vertical */
+  }
+  
+  .text {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .link-img {
+    position: relative;
+    width: 25px;
+    left: -5px;
+    height: auto;
+  }
+  
+  #positionDuBas{
+    position: fixed;
+    display: none;
+  }
+
+  #positionBande{
+    position: fixed;
+    display: none;
+  }
+
+  #resultat{
+    position: fixed;
+    display: none;
+  }
+
+/************************************************* ness ****************************************/
+
+.nessclass{
+  position: fixed;
+  top: 141px;
+  animation: hidingness;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-delay: 15s;
+}
+@keyframes hidingness {
+  00%		{ top:141px; 	left: var(--random-left-left);transform: scale(1);}
+  10%		{ top:80px; 	left: var(--random-left-left);transform: scale(1);}
+  20%		{ top:80px; 	left: var(--random-left);transform: scale(1.3);}
+  30%		{ top:141px; 	left: var(--random-left-right);transform: scale(1);}
+  35%		{ top:141px; 	left: var(--random-left);}
+  40%		{ top:90px; 	left: var(--random-left-left);transform: scale(1);}
+  45%		{ top:90px; 	left: var(--random-left);}
+  75%		{ top:141px; 	left: var(--random-left);}
+  90%		{ top:50px; 	left: var(--random-left-right);}
+  100%	{ top:141px; 	left: 50%;}   
+}
+ #blackNess {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    z-index :51;
+    clip-path: polygon(
+      /* X Y */
+      
+      /* left top */
+      5px 50px,
+      7px 25px,
+      10px 5px,
+      12px 2px,
+      15px 2px,
+      36px 25px,
+      
+      /* center */
+      50px 25px,
+      
+      /* right top */
+      60px 25px,
+      85px 2px,
+      88px 2px,
+      90px 5px, 
+      92px 25px,
+      95px 50px,
+      
+      /* right bottom */
+      100px 100px,
+      
+      /* left bottom */
+      0px 100px      
+    );	
+}
+  #whiteNess{
+    width: 200px;
+    height: 200px;
+    background-color:white;
+    position: absolute;
+    z-index :52;
+    clip-path: polygon(
+      /* X Y */
+      
+      /* left bottom */
+  20px 90px,
+  
+      /* left top */
+  22px 55px,
+  24px 52px,
+  25px 50px,
+  45px 45px,
+      
+      /* center */
+  48px 35px,
+      49px 35px,
+      50px 35px,
+      51px 35px,
+      52px 35px,
+      
+      /* right top */
+      55px 45px,
+  75px 50px,
+  76px 52px,
+  78px 55px,
+      
+      /* right bottom */
+  80px 90px
+    );	
+}
+#eyebrows{
+z-index:60;
+width:80px;
+margin-left:10px;
+margin-top:20px;
+height:30px;
+background-color:black;
+position:absolute;
+/*clip-path: polygon(0px 0px, 80px 0px,80px 10px,40px 15px,0px 10px); /*angry*/
+/*clip-path: polygon(0px 0px, 80px 0px,80px 20px,40px 10px,0px 20px); /*sad-not selected*/
+clip-path: polygon(0px 0px, 80px 0px,80px 0px,40px 0px,0px 00px); /*suprised*/
+/*clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px); /*blased*/
+/*clip-path: polygon(0px 0px, 80px 0px,80px 15px,45px 16px,40px 15px,35px 15px,0px 5px); /*dubitative-not selected*/
+/*clip-path: polygon(0px 0px, 80px 0px,80px 20px,45px 20px, 45px 25px, 80px 25px,80px 15px,40px 15px,0px 15px, 0px 20px, 35px 20px, 35px 25px, 0px 25px); /*suspicious*/
+
+animation: expression 30s infinite;
+}
+  @keyframes expression {
+    10%		{ clip-path: polygon(0px 0px, 80px 0px,80px 10px,40px 15px,0px 10px);}
+    20%		{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}
+    30%		{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}
+    40%		{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}
+    45%		{ clip-path: polygon(0px 0px, 80px 0px,80px 0px,40px 0px,0px 00px);}
+    75%		{ clip-path: polygon(0px 0px, 80px 0px,80px 0px,40px 0px,0px 00px);}
+    90%		{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}
+    100%	{ clip-path: polygon(0px 0px, 80px 0px,80px 15px,40px 15px,0px 15px);}    
+}
+  .eyes {
+    position: absolute;
+    display: flex;
+    margin: 25px 10px;
+    z-index: 55;
+}
+.eyes .eye {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: radial-gradient(#4f5c16,#bfdf0a,#4f5c16);
+    margin: 0 10px;
+    border-radius: 50%;
+}
+.eyes .eye::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    animation: grozyeux;
+    animation-duration:  30s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+@keyframes grozyeux {
+5% 	  { width: 10px;	height: 10px; }
+8% 		{ top: 50%; left: 50%; width: 15px;	height: 15px; }
+11% 	{ width: 10px;	height: 10px; }
+}
+.eyelid{
+border-radius: 30% 30% 50% 50%;
+width : 30px;
+height: 0px;
+background-color:black;
+z-index:61;
+position: absolute;
+animation : blink 6s infinite;
+}
+@keyframes blink {
+98%		{ height: 0px;}
+99%   { height: 20px;}
+100%	{ height: 0px;}   
+}	
+#R-eyelid{
+margin-left:45px;
+}
+#L-eyelid{
+margin-left:5px;
+}
+#pinkNess{
+    width: 15px;
+    margin-left: 50px;
+    margin-top: 45px;
+    height: 8px;
+    background-color:pink;
+    position: absolute;
+    z-index :59;
+    transform: translateX(-50%);
+    border-radius: 30% 30% 60% 60% / 50% 50% 90% 90%;
+}
+
+/************************************************** navbar ***********************************************/
+
+#maBande {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 140px;
+  z-index: 76;
+}
+
+.img_home{
+  height: 50px;
+  filter: invert(50%);
+}
+
+.navbar{
+  background-color: black;
+  height: 70px;
+}
+
+/************************************************ Canvas *******************************************************/
+#canvas {
+    position: fixed;
+    top: 210px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+
+/************************************************ Content *******************************************************/
+/*
+.col-1{
+  background-color: rgba(255, 255, 255, 0.5);
+}.col-2{
+  background-color: rgba(255, 145, 0, 0.5);
+}.col-3{
+  background-color: rgba(255, 251, 0, 0.5);
+}.col-4{
+  background-color: rgba(200, 255, 0, 0.5);
+}.col-5{
+  background-color: rgba(72, 255, 0, 0.5);
+}.col-6{
+  background-color: rgba(0, 255, 55, 0.5);
+}.col-7{
+  background-color: rgba(0, 255, 242, 0.5);
+}.col-8{
+  background-color: rgba(0, 153, 255, 0.5);
+}.col-9{
+  background-color: rgba(4, 0, 255, 0.5);
+}.col-10{
+  background-color: rgba(153, 0, 255, 0.5);
+}.col-11{
+  background-color: rgba(255, 0, 191, 0.5);
+}.col-12{
+  background-color: rgba(255, 0, 0, 0.5);
+}
+*/
+.row{
+  position: relative;
+  top: 210px;
+  width: 100%;
+}
+
+.wrapper {
+  z-index: 10;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.page{
+  height: calc(95vh - 210px);
+  width: 100vw;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.page h2{
+  padding: 1% 0% 0% 18%;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight:800;
+  font-size: 200px;
+}
+
+.page .text{
+  width: 500px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+/* ***** HOME ***** */
+.portrait{
+  position: absolute;
+  max-height: 60vh;
+  bottom: 0%;
+}
+
+/* ***** VALUES ***** */
+
+#values h2{
+font-size: 100px;
+height: 100px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.596);
+}
+
+.card .content {
+  position: relative;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.card .title {
+  position: absolute;
+  text-align: center;
+  bottom: 0%;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card .copy {
+  position: relative;
+  top:95%;
+  left: 20%;
+  padding: 15px;
+  color: #000000;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1;
+  background-color: rgb(255, 210, 126);
+  z-index: 48;
+  transform: rotate(-25deg) scale(0.9);
+  height: 200px;
+}
+
+.card .img{
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: 85%;
+  width: 100%;
+}
+
+#transparency{
+  background-image: url(https://cdn.pixabay.com/photo/2015/08/08/13/28/drop-880462_1280.jpg);
+}
+#curiosity{
+  background-image: url(https://magnolia-portugal.dunegestion.com/public/magnolia-portugal/40325_livraria_lello_2.jpg);
+}
+#commitment{
+  background-position: center;
+  background-image: url(https://cdn.pixabay.com/photo/2017/03/03/09/49/earth-2113656_960_720.jpg);
+}
+#sociability{
+  background-position: center;
+  background-image: url(https://cdn.pixabay.com/photo/2018/03/07/22/45/color-3207345_960_720.jpg);
+}
+#scalability{
+  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+#empathy{
+  background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+/* ####### TRIVIA ####### */
+
+#trivia h2{
+  font-size: 100px;
+  height: 100px;
+  }
+
+.funfact{
+  height:50vh;
+  width: 100vw;
+  bottom: 5vh;
+}
+.hexagone{
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 90%;
+  clip-path: polygon(      50% 0%,
+  95% 25%,
+  95% 75%,
+  50% 100%,
+  5% 75%,
+  5% 25%);
+}
+
+
+#dadcat{
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/ness.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+#gamer{
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0081.jpg');
+  background-size: cover;
+}
+
+#tinkerer{
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0209.jpg');
+  background-size: cover;
+  background-position: top;
+}
+
+#mover{
+background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMAG0119.jpg');
+background-size: cover;
+}
+
+.description{
+  text-align: center;
+  padding: 50% 10%;
+  color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  font-weight: bold;
+  background-color: rgba(102, 51, 153, 0.7);
+}
+
+/* #################### SKILLS ################### */
+
+#skills h2{
+  position: relative;
+  font-size: 100px;
+  height: 50px;
+  left: -19%;
+  }
+
+.cards_skills{
+  position: relative;
+  max-width: 300px;
+  min-width: 275px;
+  height: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #00043ba1;
+  margin: 5px;
+}
+
+.cards-skill-title{
+  font-size: 12px;
+  color: white;
+}
+
+.img-card-skill{
+  position: relative;
+  max-height: 75px;
+  max-width: 75px;
+  padding-bottom: 10px;
+}
+
+.title-skill{
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.description-skill{
+  font-size: 12px;
+  color: white;
+}
+
+.softskillunit {
+  position: relative;
+  width: calc(100% / 3 - 10px);
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.title-softskill {
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+  
+.img-card-softskill {
+  position: relative;
+  max-height: 50px;
+  max-width: 60px;
+}
+  
+
+  .gauge {
+    width: 100%;
+    height: 4px;
+    background-color: #00d4fa83;
+    position: relative;
+  }
+  
+  .gauge-level {
+    height: 100%;
+    background-color: #00d4fa;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s;
+  }
+  /* ###### PROJECTS ######### */
+#projects h2{
+  font-size: 80px;
+  height: 100px;
+  }
+
+  .hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 960px;
+    top:-10%
+  }
+  
+  .hexagon {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .hexagon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      50% 0%,
+      95% 25%,
+      95% 75%,
+      50% 100%,
+      5% 75%,
+      5% 25%
+    );
+  }
+  .hex-text{
+    position: relative;
+    top:80%;
+    left: -20%;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    rotate: calc(28deg);
+    text-align: center;
+  }
+  
+  .hexagon-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      50% 0%,
+      95% 25%,
+      95% 75%,
+      50% 100%,
+      5% 75%,
+      5% 25%
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hexagon-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(35deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+  }
+
+
+
+
+  /* ######## CONTACT ####### */
+
+  #contact h2{
+    font-size: 50px;
+    height: 50px;
+    }
+
+    #polycontact{
+      position: absolute;
+      top: 0%;
+      z-index: 46;
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(48, 63, 114, 0.2) 45%);
+      width: 100%;
+      height: 100vh;
+      clip-path: polygon(15% 0%,55% 5%, 90% 30%, 85% 55%, 50% 96%, 15% 100%, 0% 30%);
+    }
+  
+    .contact-form{
+      height: 100vh;
+      position: absolute;
+      z-index: 47;
+    }
+
+/****************************************** Footer ****************************************************/
+
+  footer{
+    z-index: 49;
+    color: white;
+    position: fixed;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    background-color:#000000;
+    width: 100%;
+    height: 5vh;
+    font-size: small;
+    top:95vh;
+  }
+
+  /* ######################## POP UP ############################## */
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .popup-content h2 {
+    margin-top: 0;
+  }
+  
+  .popup-content p {
+    margin-bottom: 20px;
+  }
+  
+  #close-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

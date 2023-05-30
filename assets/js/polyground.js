@@ -1,4 +1,5 @@
 const canvas = document.getElementById('canvas');
+var largeurPage = document.documentElement.clientWidth;
 const context = canvas.getContext('2d');
 const width = canvas.width = canvas.offsetWidth;
 const height = canvas.height = canvas.offsetHeight;
@@ -12,8 +13,8 @@ function draw() {
     const x = Math.random() * width;
     const y = Math.random() * height;
     const size = {
-      width: Math.random() * 100 + 1500,
-      height: Math.random() * 100 + 1500
+      width: Math.random() * 100 + largeurPage,
+      height: Math.random() * 100 + largeurPage
     };
     const color = colors[Math.floor(Math.random() * colors.length)];
     const gradient = context.createLinearGradient(0, 0, 0, height);
