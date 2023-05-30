@@ -604,6 +604,16 @@ background-size: cover;
   color: white;
 }
 
+.skillunit{
+  top: 0%;
+  position: relative;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  align-items: center;
+  left: 10px;
+}
+
 .softskillunit {
   position: relative;
   width: calc(100% / 3 - 10px);
