@@ -16,6 +16,7 @@ function chargerImagesAleatoires() {
     for (var i = 0; i < images.length; i++) {
         var img = document.createElement('img');
         img.src = images[i];
+        img.setAttribute('alt', 'Description de l\'image ' + i); // Ajout de la propriété alt
         banner.appendChild(img);
     }
 
@@ -33,6 +34,7 @@ function chargerImagesAleatoires() {
     var githubImg = document.createElement('img');
     githubImg.src = 'assets/pictures/github.png';
     githubImg.className = 'link-img';
+
 
     var githubText = document.createElement('span');
 
