@@ -7,6 +7,22 @@
         font-size: 150px;
       }
 
+      @media (max-width: 767px) {
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          height: auto;
+          overflow: auto;
+          white-space: nowrap;
+        }
+        
+        .wrapper > * {
+          width: 100%;
+          white-space: normal;
+        }
+      }
+      
+
     /* ***** HOME ***** */
 
     .portrait{

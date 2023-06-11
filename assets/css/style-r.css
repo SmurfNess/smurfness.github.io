@@ -145,6 +145,7 @@
   90%		{ top:50px; 	left: var(--random-left-right);}
   100%	{ top:141px; 	left: 50%;}   
 }
+
  #blackNess {
     width: 200px;
     height: 200px;
@@ -733,6 +734,53 @@ background-size: cover;
   }
 
 
+  /* ######## RESUME ####### */
+
+  .resumetitle{
+    height: 50px;
+    top: -5vh;
+    position: relative;
+  }
+
+  .minime{
+    height: 50%;
+    position: relative;
+    background-color: rgba(0, 128, 0, 0.253);
+  }
+
+  .minime-head {
+    position: relative;
+    height: 14vh;
+    width: 5vw;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .minime-head::before,
+  .minime-head::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  
+  /* Répétez le bloc suivant pour chaque élément supplémentaire */
+  .minime-head:nth-child(2n) {
+    transform: rotate(30deg); /* Ajustez l'angle de rotation pour chaque élément */
+    background-color: rgb(238, 22, 130); /* Couleur personnalisée */
+  }
+  
+  .minime-head:nth-child(2n) {
+    transform: rotate(-45deg); /* Ajustez l'angle de rotation pour chaque élément */
+    background-color: rgb(150, 100, 200); /* Couleur personnalisée */
+  }
+
+  
+  .talking{
+    height: 50%;
+    position: relative;
+    background-color: rgba(255, 255, 0, 0.199);
+  }
 
 
   /* ######## CONTACT ####### */
