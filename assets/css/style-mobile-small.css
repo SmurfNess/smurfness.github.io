@@ -1,27 +1,25 @@
 @media screen and (min-width:0px) and (max-width:575px) {
   
   .page{
+    position: relative;
     height: calc(75vh - 210px);
     width: 100vw;
     display: flex;
     flex-shrink: 0;
   }
 
-  @media (max-width: 575px) {
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      overflow: auto;
-      white-space: nowrap;
-    }
-    
-    .wrapper > * {
-      width: 100%;
-      white-space: normal;
-    }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+    white-space: nowrap;
   }
-  
+    
+  .wrapper > * {
+    width: 100%;
+    white-space: normal;
+  }
   
 .page h2{
   font-size: 50px;
@@ -29,21 +27,23 @@
 }
 
 .page h1{
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .portrait{
   position: absolute;
-  width: 250px;
-  bottom: -100%;
+  width: 200px;
+  left: -25%;
+  bottom: 0%;
 }
 
 .page .text{
+  text-align: right;
   position: absolute;
-  top: 20%;
-  left: 5%;
-  width: 100%;
-  font-size: 14px;
+  top: 40%;
+  right: 0%;
+  width: 60%;
+  font-size: 16px;
   font-weight: normal;
 }
 
@@ -54,22 +54,30 @@
   font-weight: 800;
   }
 
+  .colvalues{
+    position: relative;
+    height: 13%;
+    top: -10%;
+  }
+
   .card {
     top: 0%;
     position: relative;
-    display: flex;
-    padding: 0.2rem;
-    width: 125px;
-    height: 60%;
+    padding: 0.1rem;
+    width: 100vw;
+    height: 90%;
     background-color: rgba(245, 245, 245, 0.596);
+  }
+
+  .img{
+    display: none;
   }
 
   .card .title {
     position: absolute;
     left: 5%;
-    top:90%;
-    font-size: 12px;
-
+    font-size: 20px;
+    text-align: center;
     font-weight: bold;
   }
   
@@ -86,26 +94,34 @@
 
 
 /*trivia */
-
+.coltrivia{
+  position: relative;
+  height: 15%;
+  width: 120vw;
+  padding-left: 2%;
+}
 #trivia h2{
     position: absolute;
   font-size: 50px;
   font-weight: 800;
   height: 20px;
+  top: -50%;
   }
 
   .funfact{
-    height:30vh;
-    padding: 75%;
+    height:5vh;
+    width: 100vw;
   }
 
   .hexagone{
     width: 100%;
-    height: 60%;
+    height: 100%;
+    clip-path: none;
   }
 
   #dadcat{
-    bottom: -7%;
+    position: absolute;
+    bottom: -15%;
   }
   #gamer{
     bottom: -7%;
@@ -134,6 +150,8 @@
 /*  SKILLS  */
 
 #skills{
+  position: relative;
+  left: 10%;
   height: 100%;
   width: 100%;
 }
@@ -146,10 +164,12 @@
 
 .cards_skills{
   position: relative;
-  height: 15%;
+  max-width: 500px;
+  min-width: 350px; 
+  height: 20%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 2px 0px 0px 10px;
+  padding: 5px 0px 0px 10px;
   background-color: #00043ba1;
   margin: 0px;
 }
@@ -157,6 +177,7 @@
 .cards-skill-title{
   font-size: 13px;
   color: rgb(63, 141, 137);
+  padding: 2%;
 }
 
 .img-card-skill{
@@ -173,6 +194,9 @@ display: none;
 display: none;
 }
 
+#softskills{
+  height: 35%;
+}
 .skillunit{
   top: 0%;
   position: relative;
@@ -203,9 +227,7 @@ display: none;
 }
   
 .img-card-softskill {
-  position: relative;
-  max-height: 50px;
-  max-width: 60px;
+display: none;
 }
   
 
@@ -224,38 +246,41 @@ display: none;
     left: 0;
     transition: width 0.5s;
   }
+
+
+
   /*  PROJECTS  */
 
+  #projects{
+    position: relative;
+    top: 400px;
+    width: 100vw;
+  }
   #projects h2{
-    position: absolute;
+    position: relative;
     font-size: 50px;
     height: 40px;
+    width: 100vw;
     left: 0%;
+    top: -200%;
     }
   
-    .hexagon {
-      top: 25%;
+    .projects-small-view{
+      display: inline;
       position: relative;
-      width: 150px;
-      height: 150px;
-      overflow: hidden;
+      top: -60%;
+      width: 300%;
+      color: white;
+      font-size: 16px;
+      padding: 8%;
+    }
+
+    .hexagon {
+      display: none;
     }
     
     .hexagon:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(
-        50% 0%,
-        95% 25%,
-        95% 75%,
-        50% 100%,
-        5% 75%,
-        5% 25%
-      );
+      display: none;
     }
     .hex-text{
       position: relative;
@@ -269,37 +294,23 @@ display: none;
     }
     
     .hexagon-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(
-        50% 0%,
-        95% 25%,
-        95% 75%,
-        50% 100%,
-        5% 75%,
-        5% 25%
-      );
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      display: none;
+
     }
   
     .hexagon-img:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(35deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+display: none;
     }
   
   
   /* ######## CONTACT ####### */
 
+  #contact{
+    position: relative;
+    height: 50vh;
+    top: 200px;
+    color: white;
+  }
   #contact h2{
     font-size: 50px;
     height: 75px;
@@ -307,7 +318,7 @@ display: none;
 
     .contact-form{
       position: relative;
-      height: 150vh;
+      height: 75vh;
       left: 5%;
       z-index: 47;
     }
