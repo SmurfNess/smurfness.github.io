@@ -49,7 +49,7 @@
     {
     var differencePosition = 200 + positionDuBasBande - positionDuBasElement;
     if (differencePosition > 30 ) {
-      blackNess.style.clipPath = 'polygon(5px 50px,7px 25px,10px 5px,12px 0px,15px 0px,36px 15px,40px 14px,45px 14px,50px 13px,55px 14px,60px 14px,65px 15px,85px 0px,88px 0px,90px 5px,92px 25px,95px 50px,100px ' + differencePosition + 'px,0px ' + differencePosition + 'px)';
+    blackNess.style.clipPath = 'polygon(5px 50px,7px 25px,10px 5px,12px 0px,15px 0px,36px 15px,40px 14px,45px 14px,50px 13px,55px 14px,60px 14px,65px 15px,85px 0px,88px 0px,90px 5px,92px 25px,95px 50px,100px ' + differencePosition + 'px,0px ' + differencePosition + 'px)';
 	  whiteNess.style.clipPath = 'polygon(20px ' + differencePosition + 'px,20px 60px,22px 55px,24px 52px,25px 50px,43px 45px,48px 35px,49px 35px,50px 35px,51px 35px,52px 35px,58px 45px,75px 50px,76px 52px,78px 55px,80px 60px,80px ' + differencePosition + 'px)';
 	}
 	  }

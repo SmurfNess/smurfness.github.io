@@ -33,6 +33,7 @@ function chargerImagesAleatoires() {
 
     var githubImg = document.createElement('img');
     githubImg.src = 'assets/pictures/github.png';
+    githubImg.alt = 'Github';
     githubImg.className = 'link-img';
 
 
@@ -51,6 +52,7 @@ function chargerImagesAleatoires() {
     var codepenImg = document.createElement('img');
     codepenImg.src = 'assets/pictures/codepen.webp';
     codepenImg.className = 'link-img';
+    codepenImg.alt = 'Codepen';
 
     var codepenText = document.createElement('span');
 
@@ -67,6 +69,7 @@ function chargerImagesAleatoires() {
     var linkedinImg = document.createElement('img');
     linkedinImg.src = 'assets/pictures/linkedin.png';
     linkedinImg.className = 'link-img';
+    linkedinImg.alt = 'LinkiedIn';
 
     var linkedinText = document.createElement('span');
 
