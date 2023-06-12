@@ -1,5 +1,5 @@
-// Tableau contenant les noms de fichiers des images PNG
-var images = ['./assets/pictures/banner/cat1.png', './assets/pictures/banner/cat2.png', './assets/pictures/banner/shelf1.png', './assets/pictures/banner/shelf2.png', './assets/pictures/banner/window1.png', './assets/pictures/banner/window2.png', './assets/pictures/banner/frames.png', './assets/pictures/banner/frame.png'];
+// Tableau contenant les noms de fichiers des images webp
+var images = ['./assets/pictures/banner/cat1.webp', './assets/pictures/banner/cat2.webp', './assets/pictures/banner/shelf1.webp', './assets/pictures/banner/shelf2.webp', './assets/pictures/banner/window1.webp', './assets/pictures/banner/window2.webp', './assets/pictures/banner/frames.webp', './assets/pictures/banner/frame.webp'];
 
 // Fonction pour charger les images de manière aléatoire dans le bandeau
 function chargerImagesAleatoires() {
@@ -32,7 +32,7 @@ function chargerImagesAleatoires() {
     githubLink.target = '_blank';
 
     var githubImg = document.createElement('img');
-    githubImg.src = 'assets/pictures/github.png';
+    githubImg.src = 'assets/pictures/github.webp';
     githubImg.alt = 'Github';
     githubImg.className = 'link-img';
 
@@ -67,7 +67,7 @@ function chargerImagesAleatoires() {
     linkedinLink.target = '_blank';
 
     var linkedinImg = document.createElement('img');
-    linkedinImg.src = 'assets/pictures/linkedin.png';
+    linkedinImg.src = 'assets/pictures/linkedin.webp';
     linkedinImg.className = 'link-img';
     linkedinImg.alt = 'LinkiedIn';
 

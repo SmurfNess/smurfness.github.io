@@ -529,24 +529,24 @@ height: 100px;
 
 
 #dadcat{
-  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/ness.jpeg');
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/ness.webp');
   background-size: cover;
   background-position: center;
 }
 
 #gamer{
-  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0081.jpg');
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0081.webp');
   background-size: cover;
 }
 
 #tinkerer{
-  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0209.jpg');
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMG_0209.webp');
   background-size: cover;
   background-position: top;
 }
 
 #mover{
-background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMAG0119.jpg');
+background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/IMAG0119.webp');
 background-size: cover;
 }
 
@@ -567,7 +567,6 @@ background-size: cover;
 #skills h2{
   position: relative;
   font-size: 100px;
-  height: 50px;
   left: -19%;
   }
 
@@ -575,7 +574,7 @@ background-size: cover;
   position: relative;
   max-width: 300px;
   min-width: 275px;
-  height: 60%;
+  height: 70%;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
