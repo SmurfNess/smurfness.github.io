@@ -84,12 +84,13 @@
   .card .copy {
     position: relative;
     color: transparent;
-    font-size: 0px;
+    font-size: 15px;
     font-style: italic;
     line-height: 1;
     background-color:transparent;
     z-index: 48;
     transform: rotate(0deg) scale(0.9);
+    display: none;
   }
 
 
@@ -141,9 +142,10 @@
     height: 100%;
     width: 100%;
     bottom: 0%;
-    font-size: 0px;
+    font-size: 12px;
     font-weight: normal;
     background-color: rgba(0, 0, 0, 0);
+    display: none;
   }
 
 
@@ -329,7 +331,7 @@ display: none;
 /* footer */
 
 .powered{
-  font-size: 10px;
+  font-size: 12px;
   height: 10vh;
 }
 
