@@ -5,12 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+          <!-- Bootstrap -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            position: relative;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        
+        h1, h2, h4 {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        a{
+            font-size: 17px;
+            color: white;
+            text-decoration: underline 2px;
+        }
+
+        ul {
+        list-style-position: inside;
+        padding-left: 10;
+        text-align: left;
+        }
+
+    </style>
+    
 </head>
 <body>
-    
-<h2>Erreur 404</h2>
-Ceci est un pop-up non terminé.
+    <canvas id="canvas"></canvas>
+    <div class="row text">
+        <div class="col-12"><h1>Thanks to</h1></div>
+        <div class="col-12"><h2>Pictures creators</h2></div>
+        <div class="col-12 boxicon"><h4>
+            <ul>
+                <li><a href="https://www.flaticon.com/authors/freepik">Home button (cat house) by Freepix</a></li>
+                <li><a href="https://www.flaticon.com/authors/uniconlabs">Creativity icon by Uniconlabs</a></li>
+                <li><a href="https://www.flaticon.com/authors/syafii5758">Curiosity icon by Syafii5758</a></li>
+                <li><a href="https://www.flaticon.com/authors/uniconlabs">Adaptability icon by Uniconlabs</a></li>
+                <li><a href="https://www.flaticon.com/authors/uniconlabs">Autonomy icon by Uniconlabs</a></li>
+                <li><a href="https://www.flaticon.com/authors/itim2101">Self learning icon by Itim2101</a></li>
+                <li><a href="https://www.flaticon.com/authors/uniconlabs">Resiliency icon by Uniconlabs</a></li>
+                <li><a href="https://www.flaticon.com/authors/iconjam">Initiative spirit by Iconjam</a></li>
+                <li><a href="https://www.flaticon.com/authors/uniconlabs">Teamword icon by Uniconlabs</a></li>
+                <li><a href="https://www.flaticon.com/authors/good-ware">Communication icon by Good-ware</a></li>
+                <li><a href="https://www.flaticon.com/authors/uniconlabs">Emotionnal intelligence icon by Uniconlabs</a></li>
+                <li><a href="https://www.flaticon.com/authors/us-and-up">Listening icon by Us and up</a></li>
+                <li><a href="https://www.flaticon.com/authors/mayor-icons">Honesty icon by Mayor icons</a></li>
 
-
+            </ul>
+        </h4></div>
+        <div class="col-12"><h2>Tools</h2></div>
+        <div class="col-12 boxtool"><h4>
+            <ul>
+                <li><a href="https://code.visualstudio.com/">Visual code</a></li>
+                <li><a href="https://chat.openai.com/">Chat GPT</a></li>
+                <li><a href="https://www.flaticon.com/">Flaticon</a></li>
+                <li><a href="https://pagespeed.web.dev/">PageSpeed Insights</a></li>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://convertio.co/">Convertio</a></li>
+            </ul>
+        </h4></div>
+    </div>
+    <script src="assets/js/polyground.js"></script>
 </body>
 </html>

@@ -1,20 +1,24 @@
 const canvas = document.getElementById('canvas');
-var largeurPage = document.documentElement.clientWidth;
 const context = canvas.getContext('2d');
-const width = canvas.width = canvas.offsetWidth;
-const height = canvas.height = canvas.offsetHeight;
-const colors = [  '#3131312a',  '#afafaf2a',  '#0000002a',  '#9292922a',];
+const colors = ['#3131312a', '#afafaf2a', '#0000002a', '#9292922a'];
 
-
+function setCanvasSize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  draw();
+}
 
 function draw() {
+  const width = canvas.width;
+  const height = canvas.height;
+
   context.clearRect(0, 0, width, height);
   for (let i = 0; i < 50; i++) {
     const x = Math.random() * width;
     const y = Math.random() * height;
     const size = {
-      width: Math.random() * 100 + largeurPage,
-      height: Math.random() * 100 + largeurPage
+      width: Math.random() * 100 + width,
+      height: Math.random() * 100 + height,
     };
     const color = colors[Math.floor(Math.random() * colors.length)];
     const gradient = context.createLinearGradient(0, 0, 0, height);
@@ -42,12 +46,14 @@ function transition() {
   canvas.classList.remove('fade-in');
   canvas.classList.add('fade-out');
   setTimeout(() => {
-    draw();
+    setCanvasSize();
     canvas.classList.remove('fade-out');
     canvas.classList.add('fade-in');
   }, 300);
 }
 
+// Call the setCanvasSize function initially and whenever the window is resized
+setCanvasSize();
+window.addEventListener('resize', transition);
 
 draw();
-

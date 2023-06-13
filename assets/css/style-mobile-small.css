@@ -2,14 +2,14 @@
   
   .page{
     position: relative;
-    height: calc(75vh - 210px);
+    height: calc(95vh - 210px);
     width: 100vw;
     display: flex;
     flex-shrink: 0;
   }
 
   .wrapper {
-    display: flex;
+    display: block;
     flex-direction: column;
     height: auto;
     overflow: auto;
@@ -34,13 +34,13 @@
   position: absolute;
   width: 200px;
   left: -25%;
-  bottom: 0%;
+  bottom: 100%;
 }
 
 .page .text{
   text-align: right;
   position: absolute;
-  top: 40%;
+  top: 25%;
   right: 0%;
   width: 60%;
   font-size: 16px;
@@ -48,24 +48,32 @@
 }
 
 /* VALUE */
+#values{
+top: 0px;
+height: 100vh;
+}
+
+#values .row{
+  margin-top: 10px;
+  margin-bottom: 200px;
+}
 
 #values h2{
-  font-size: 50px;
+  font-size: 50px;  
   font-weight: 800;
   }
 
   .colvalues{
     position: relative;
-    height: 13%;
-    top: -10%;
+    height: 7vh;
   }
 
   .card {
     top: 0%;
     position: relative;
-    padding: 0.1rem;
+    padding: 0.5rem;
     width: 100vw;
-    height: 90%;
+    height: 95%;
     background-color: rgba(245, 245, 245, 0.596);
   }
 
@@ -95,22 +103,33 @@
 
 
 /*trivia */
+
+#trivia{
+  top: 0px;
+}
 .coltrivia{
   position: relative;
-  height: 15%;
-  width: 120vw;
-  padding-left: 2%;
+  height: 10vh;
+  right: 0%;
+  width: 100vw;
+  margin-bottom: 20px;
 }
+
+#trivia .row{
+position: relative;
+top:0px
+}
+
 #trivia h2{
-    position: absolute;
+  position: relative;
   font-size: 50px;
   font-weight: 800;
-  height: 20px;
-  top: -50%;
+  height: 75px;
+  width: 100vw;
   }
 
   .funfact{
-    height:5vh;
+    height:100%;
     width: 100vw;
   }
 
@@ -120,32 +139,19 @@
     clip-path: none;
   }
 
-  #dadcat{
-    position: absolute;
-    bottom: -15%;
-  }
-  #gamer{
-    bottom: -7%;
-  }
-  #tinkerer{
-    top: -7%;
-  } 
-   #mover{
-    top: -7%;
-  }
-
   .description{
+    z-index: 1;
     text-align: center;
-    padding: 25% 10%;
+    justify-content: center;
     color: white;
-    position: absolute;
+    font-size: 14px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1% 1%;
     height: 100%;
     width: 100%;
     bottom: 0%;
-    font-size: 12px;
     font-weight: normal;
-    background-color: rgba(0, 0, 0, 0);
-    display: none;
   }
 
 
@@ -153,25 +159,30 @@
 
 #skills{
   position: relative;
-  left: 10%;
-  height: 100%;
+  top: 0%;
+  height: 150vh;
   width: 100%;
 }
 #skills h2{
   position: relative;
   font-size: 50px;
   height: 50px;
-  left: -19%;
+  left: -10%;
+  margin: 50px;
   }
+
+#skills .row{
+  left:10%;
+}
 
 .cards_skills{
   position: relative;
   max-width: 500px;
   min-width: 350px; 
-  height: 20%;
+  height: 10%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 5px 0px 0px 10px;
+  padding: 5px;
   background-color: #00043ba1;
   margin: 0px;
 }
@@ -197,7 +208,8 @@ display: none;
 }
 
 #softskills{
-  height: 35%;
+  height: 20%;
+  margin-bottom: 200px;
 }
 .skillunit{
   top: 0%;
@@ -211,13 +223,11 @@ display: none;
 
 .softskillunit {
   position: relative;
-  width: calc(100% / 3 - 10px);
+  width: 100%;
   height: 100%;
   padding: 5px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
   
 .title-softskill {
@@ -232,9 +242,14 @@ display: none;
 display: none;
 }
   
+.dev{
+  height: 12%;
+}
+
+
 
   .gauge {
-    width: 100%;
+    width: 80%;
     height: 2px;
     background-color: #00d4fa83;
     position: relative;
@@ -255,8 +270,9 @@ display: none;
 
   #projects{
     position: relative;
-    top: 400px;
+    top: 0px;
     width: 100vw;
+    height: 50vh;
   }
   #projects h2{
     position: relative;
@@ -264,7 +280,7 @@ display: none;
     height: 40px;
     width: 100vw;
     left: 0%;
-    top: -200%;
+    top: -150px;
     }
   
     .projects-small-view{
@@ -310,17 +326,23 @@ display: none;
   #contact{
     position: relative;
     height: 50vh;
-    top: 200px;
+    top: 0px;
     color: white;
+    padding: 0%;
   }
   #contact h2{
+    position: relative;
     font-size: 50px;
-    height: 75px;
+    height: 100%;
+    top: -200px;
     }
 
     .contact-form{
+
       position: relative;
-      height: 75vh;
+      top: -200px;
+      height: 100%;
+      width: 100%;
       left: 5%;
       z-index: 47;
     }
