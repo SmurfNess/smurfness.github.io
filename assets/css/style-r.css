@@ -331,6 +331,13 @@ margin-left:5px;
   height: 70px;
 }
 
+.navbar-dark{
+  display:flex;
+}
+
+.navbar-light{
+  display:none;
+}
 /************************************************ Canvas *******************************************************/
 #canvas {
     position: fixed;
