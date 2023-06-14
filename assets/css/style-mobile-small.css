@@ -7,13 +7,7 @@
     display: flex;
     flex-shrink: 0;
   }
-.navbar-dark{
-  display:none;
-}
 
-.navbar-light{
-  display:flex;
-}
   .wrapper {
     display: block;
     flex-direction: column;
