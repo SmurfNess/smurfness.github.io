@@ -181,6 +181,26 @@
       0px 100px      
     );	
 }
+
+#blackNess:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  z-index: 50;
+  clip-path: polygon(
+    /* Coordonnées de la forme rose */
+    /* Remplacez les valeurs ci-dessous par celles que vous souhaitez utiliser */
+    25px 25px,
+    75px 25px,
+    75px 75px,
+    25px 75px
+  );
+}
+
   #whiteNess{
     width: 200px;
     height: 200px;

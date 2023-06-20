@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur de CV</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="generateButton">Générer le CV</button>
+
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script>
+        // Fonction pour générer le CV à partir du fichier Excel
+        function generateCVFromExcel(data) {
+            const workbook = XLSX.read(data, { type: 'array' });
+            const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+            const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, raw: false });
+
+            let cvTemplate = `
+            <html>
+            <head>
+                <title>CV</title>
+                <meta charset="UTF-8">
+            </head>
+            <body>
+                <h1>Curriculum Vitae</h1>
+                <ul>
+            `;
+
+            jsonData.forEach((row) => {
+                const startDate = new Date(row[0]);
+                const endDate = new Date(row[1]);
+                const jobTitle = row[2];
+                const companyName = row[3];
+
+                cvTemplate += `
+                    <li>
+                        <h2>${jobTitle}</h2>
+                        <h3>${companyName}</h3>
+                        <p>${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}</p>
+                    </li>
+                `;
+            });
+
+            cvTemplate += `
+                </ul>
+            </body>
+            </html>
+            `;
+
+            const cvBlob = new Blob([cvTemplate], { type: 'text/html' });
+            const cvUrl = URL.createObjectURL(cvBlob);
+            window.open(cvUrl, '_blank');
+        }
+// Écouteur d'événement pour le bouton de génération du CV
+const generateButton = document.getElementById('generateButton');
+generateButton.addEventListener('click', function() {
+    const excelUrl = 'C:/GithubFolder/smurfness.github.io/assets/xlsx/data.xlsx';
+
+    fetch(excelUrl)
+        .then(response => response.arrayBuffer())
+        .then(arrayBuffer => {
+            const data = new Uint8Array(arrayBuffer);
+            generateCVFromExcel(data);
+        })
+        .catch(error => {
+            console.error('Une erreur s\'est produite lors de la récupération du fichier Excel :', error);
+        });
+});
+
+    </script>
+</body>
+</html>
