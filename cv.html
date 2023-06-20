@@ -3,9 +3,17 @@
 <head>
     <title>Générateur de CV</title>
     <meta charset="UTF-8">
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <button id="generateButton">Générer le CV</button>
+    <div id="cvContainer"></div>
 
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script>
@@ -15,15 +23,24 @@
             const worksheet = workbook.Sheets[workbook.SheetNames[0]];
             const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, raw: false });
 
+            jsonData.sort((a, b) => new Date(b[0]) - new Date(a[0])); // Tri par ordre décroissant de la date de début
+
             let cvTemplate = `
             <html>
             <head>
                 <title>CV</title>
                 <meta charset="UTF-8">
+                <style>
+                    .card {
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                    }
+                </style>
             </head>
             <body>
                 <h1>Curriculum Vitae</h1>
-                <ul>
             `;
 
             jsonData.forEach((row) => {
@@ -32,41 +49,44 @@
                 const jobTitle = row[2];
                 const companyName = row[3];
 
-                cvTemplate += `
-                    <li>
-                        <h2>${jobTitle}</h2>
-                        <h3>${companyName}</h3>
-                        <p>${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}</p>
-                    </li>
+                const cardTemplate = `
+                <div class="card">
+                    <h2>${jobTitle}</h2>
+                    <h3>${companyName}</h3>
+                    <p>${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}</p>
+                </div>
                 `;
+
+                cvTemplate += cardTemplate;
             });
 
             cvTemplate += `
-                </ul>
             </body>
             </html>
             `;
 
-            const cvBlob = new Blob([cvTemplate], { type: 'text/html' });
-            const cvUrl = URL.createObjectURL(cvBlob);
-            window.open(cvUrl, '_blank');
+            const cvContainer = document.getElementById('cvContainer');
+            cvContainer.innerHTML = cvTemplate;
         }
-// Écouteur d'événement pour le bouton de génération du CV
-const generateButton = document.getElementById('generateButton');
-generateButton.addEventListener('click', function() {
-    const excelUrl = 'C:/GithubFolder/smurfness.github.io/assets/xlsx/data.xlsx';
 
-    fetch(excelUrl)
-        .then(response => response.arrayBuffer())
-        .then(arrayBuffer => {
-            const data = new Uint8Array(arrayBuffer);
-            generateCVFromExcel(data);
-        })
-        .catch(error => {
-            console.error('Une erreur s\'est produite lors de la récupération du fichier Excel :', error);
-        });
-});
+        // Fonction pour récupérer le fichier Excel et générer le CV
+        function generateCVOnLoad() {
+            const excelUrl = 'https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/xlsx/data.xlsx';
 
+            // Récupérer le fichier Excel via fetch ou toute autre méthode appropriée
+            fetch(excelUrl)
+                .then(response => response.arrayBuffer())
+                .then(arrayBuffer => {
+                    // Utilisez les données du fichier Excel ici
+                    generateCVFromExcel(arrayBuffer);
+                })
+                .catch(error => {
+                    console.error('Une erreur s\'est produite lors de la récupération du fichier Excel :', error);
+                });
+        }
+
+        // Appeler la fonction de génération du CV lors du chargement de la page
+        window.addEventListener('load', generateCVOnLoad);
     </script>
 </body>
 </html>
