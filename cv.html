@@ -3,89 +3,147 @@
 <head>
     <title>Générateur de CV</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-variant: small-caps;
+        }
+
+        h2::first-letter {
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-variant: small-caps;
+        }
+
+        h3 {
+            text-transform: capitalize;
+        }
+
+        .description{
+            background-color: green;
+        }
         .card {
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            padding: 5px 20px;
             margin-bottom: 10px;
+            width: 100%;
+            background-color: #534f79;
         }
     </style>
 </head>
 <body>
-    <div id="cvContainer"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Curriculum Vitae</h1>
+                <!-- Add your description content here -->
+                <div class="description">I'm a full genius with no limits</div>
+                <div class="certifications">
+                    <h2>nombre de Certifications </h2>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div id="cvContainer"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script>
-        // Fonction pour générer le CV à partir du fichier Excel
+        // Function to generate the CV from the Excel file
         function generateCVFromExcel(data) {
             const workbook = XLSX.read(data, { type: 'array' });
             const worksheet = workbook.Sheets[workbook.SheetNames[0]];
             const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, raw: false });
 
-            jsonData.sort((a, b) => new Date(b[0]) - new Date(a[0])); // Tri par ordre décroissant de la date de début
+            jsonData.sort((a, b) => new Date(b[0]) - new Date(a[0])); // Sort by descending start date
 
-            let cvTemplate = `
-            <html>
-            <head>
-                <title>CV</title>
-                <meta charset="UTF-8">
-                <style>
-                    .card {
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        padding: 10px;
-                        margin-bottom: 10px;
-                    }
-                </style>
-            </head>
-            <body>
-                <h1>Curriculum Vitae</h1>
-            `;
+            let cvTemplate = '';
 
             jsonData.forEach((row) => {
                 const startDate = new Date(row[0]);
-                const endDate = new Date(row[1]);
+                let endDate = new Date(row[1]);
+
+                // Check if the end date is invalid
+                if (isNaN(endDate)) {
+                    endDate = new Date(); // Replace with today's date
+                }
+
                 const jobTitle = row[2];
                 const companyName = row[3];
+                const city = row[4];
 
                 const cardTemplate = `
-                <div class="card">
-                    <h2>${jobTitle}</h2>
-                    <h3>${companyName}</h3>
-                    <p>${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}</p>
-                </div>
+                    <div class="card">
+                        <h2>${jobTitle}</h2>
+                        <h3>${companyName} - ${city}</h3>
+                        <p>${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} (${calculateDuration(startDate, endDate)})</p>
+                    </div>
                 `;
 
                 cvTemplate += cardTemplate;
             });
 
-            cvTemplate += `
-            </body>
-            </html>
-            `;
-
             const cvContainer = document.getElementById('cvContainer');
             cvContainer.innerHTML = cvTemplate;
         }
 
-        // Fonction pour récupérer le fichier Excel et générer le CV
+        // Function to retrieve the Excel file and generate the CV
         function generateCVOnLoad() {
             const excelUrl = 'https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/xlsx/data.xlsx';
 
-            // Récupérer le fichier Excel via fetch ou toute autre méthode appropriée
+            // Retrieve the Excel file via fetch or any other appropriate method
             fetch(excelUrl)
                 .then(response => response.arrayBuffer())
                 .then(arrayBuffer => {
-                    // Utilisez les données du fichier Excel ici
+                    // Use the data from the Excel file here
                     generateCVFromExcel(arrayBuffer);
                 })
                 .catch(error => {
-                    console.error('Une erreur s\'est produite lors de la récupération du fichier Excel :', error);
+                    console.error('An error occurred while retrieving the Excel file:', error);
                 });
         }
 
-        // Appeler la fonction de génération du CV lors du chargement de la page
+        function calculateDuration(startDate, endDate) {
+            const diffInMilliseconds = endDate - startDate;
+            const diffInDays = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24));
+
+            if (diffInDays < 0) {
+                return ''; // If the difference is negative, return an empty string
+            }
+
+            const years = Math.floor(diffInDays / 365);
+            const months = Math.floor((diffInDays % 365) / 30);
+            const days = diffInDays % 30;
+
+            let duration = '';
+            if (years > 0) {
+                duration += years === 1 ? '1 année' : `${years} années`;
+            }
+            if (months > 0) {
+                duration += duration.length > 0 ? ' ' : '';
+                duration += months === 1 ? '1 mois' : `${months} mois`;
+            }
+            if (days > 0) {
+                duration += duration.length > 0 ? ' ' : '';
+                duration += days === 1 ? '1 jour' : `${days} jours`;
+            }
+
+            return duration;
+        }
+
+        // Call the CV generation function on page load
         window.addEventListener('load', generateCVOnLoad);
     </script>
 </body>
