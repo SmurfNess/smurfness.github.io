@@ -11,20 +11,40 @@
             background-color: #333;
             color: #ffffff;
         }
-
-        h1 {
-            font-variant: small-caps;
-        }
-
-        h2::first-letter {
-            text-transform: uppercase;
-        }
+		
+		.container{
+		position:absolute;
+		left:0%;
+		height:100%;
+		width:100vw;
+		}
+		
+		.row{
+		position:relative;
+		display:flex;
+		flex-wrap:wrap;
+		width:100vw;
+		}
+		
+		img{
+		position:relative;
+		height:250px;
+		width:100%;
+		}
 
         h2 {
             font-variant: small-caps;
         }
 
+        h3::first-letter {
+            text-transform: uppercase;
+        }
+
         h3 {
+            font-variant: small-caps;
+        }
+
+        h4 {
             text-transform: capitalize;
         }
 
@@ -34,28 +54,50 @@
         .card {
             border: 1px solid #000000;
             border-radius: 10px;
-            padding: 5px 20px;
-            margin-bottom: 10px;
+            padding: 35px 20px 0px 20px;
+            margin-bottom: 5px;
             width: 100%;
             background-color: #534f79;
         }
+		#schoolCards {
+            border: 1px solid #000000;
+            border-radius: 10px;
+            padding: 25px 20px 0px 20px;
+            margin-bottom: 10px;
+            width: 100%;
+            background-color: pink;
+        }
+		.duration{
+		position:absolute;
+		top:5%;
+		left:2%;
+		color:red;
+		}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <h1>Curriculum Vitae</h1>
+			<div class="col-3">
+				Arnaud Lemascon
+				<img src="/assets/pictures/portrait5.webp">
+				<h1>Curriculum Vitae</h1>
                 <!-- Add your description content here -->
                 <div class="description">I'm a full genius with no limits</div>
-                <div class="certifications">
-                    <h2>nombre de Certifications </h2>
-
+			</div>
+            <div class="col-4">
+                
+                <div class="EducationContainer">
+                    <h2>Education </h2>
+                </div>
+				<div class="certificationsContainer">
+                    <h2>Certifications </h2>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div id="cvContainer">Positions</div>
+            <div class="col-4"><h2>Positions</h2>	
+                <div id="cvContainer"></div>
             </div>
+			<div class=col-1"></div>
         </div>
     </div>
 
@@ -86,9 +128,9 @@
 
                 const cardTemplate = `
                     <div class="card">
-                        <h2>${jobTitle}</h2>
-                        <h3>${companyName} - ${city}</h3>
-                        <p>${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} (${calculateDuration(startDate, endDate)})</p>
+                        <h3>${jobTitle}</h3>
+                        <h4>${companyName} - ${city}</h4>
+                        <p><h6 class="duration">${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} (${calculateDuration(startDate, endDate)})</h6></p>
                     </div>
                 `;
 
@@ -98,22 +140,109 @@
             const cvContainer = document.getElementById('cvContainer');
             cvContainer.innerHTML = cvTemplate;
         }
+		
+// Function to generate cards from the second sheet of the Excel file
+function generateCardsFromSheet2(data) {
+  const workbook = XLSX.read(data, { type: 'array' });
+  const worksheet = workbook.Sheets[workbook.SheetNames[1]];
+  const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, raw: false });
 
-        // Function to retrieve the Excel file and generate the CV
-        function generateCVOnLoad() {
-            const excelUrl = 'https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/xlsx/data.xlsx';
+  let cardTemplate = '';
 
-            // Retrieve the Excel file via fetch or any other appropriate method
-            fetch(excelUrl)
-                .then(response => response.arrayBuffer())
-                .then(arrayBuffer => {
-                    // Use the data from the Excel file here
-                    generateCVFromExcel(arrayBuffer);
-                })
-                .catch(error => {
-                    console.error('An error occurred while retrieving the Excel file:', error);
-                });
-        }
+  jsonData.forEach((row) => {
+    const startDate = new Date(row[0]);
+    let endDate = new Date(row[1]);
+
+    // Check if the end date is invalid
+    if (isNaN(endDate)) {
+      endDate = new Date(); // Replace with today's date
+    }
+
+    const degree = row[2];
+    const school = row[3];
+    const city = row[4];
+
+    const card = `
+      <div class="card" id="schoolCards">
+        <h5>${degree}</h5>
+        <h5>${school} - ${city}</h5>
+        <p><h6 class="duration">${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} </h6></p>
+      </div>
+    `;
+
+    cardTemplate += card;
+  });
+
+  const educationContainer = document.querySelector('.EducationContainer');
+  educationContainer.innerHTML = `
+    <h2>Education</h2>
+    ${cardTemplate}
+  `;
+}
+// Function to generate a list and count LinkedIn certifications from the third sheet of the Excel file
+function generateLinkedInCertifications(data) {
+  const workbook = XLSX.read(data, { type: 'array' });
+  const worksheet = workbook.Sheets[workbook.SheetNames[2]];
+  const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, raw: false });
+
+  let linkedInCount = 0;
+  let listTemplate = '';
+
+  jsonData.forEach((row) => {
+    const certification = row[0];
+    const link = row[1];
+    const school = row[2];
+    const rawDate = row[3];
+
+    if (school === 'LinkedIn') {
+      linkedInCount++;
+    } else {
+      const formattedDate = formatDate(rawDate); // Format the date to DD/MM/YYYY
+
+      const listItem = `
+        <li>
+          <a href="${link}">${certification} - ${school} - ${formattedDate}</a>
+        </li>
+      `;
+
+      listTemplate += listItem;
+    }
+  });
+
+  const linkedInCountElement = document.querySelector('.certificationsContainer');
+  linkedInCountElement.innerHTML = `
+    <h2>Certifications</h2>
+    <div>${linkedInCount} LinkedIn learning ont été validés</div>
+    <ul>${listTemplate}</ul>
+  `;
+}
+
+// Helper function to format date to DD/MM/YYYY
+function formatDate(rawDate) {
+  const dateParts = rawDate.split('/');
+  const day = dateParts[0];
+  const month = dateParts[1];
+  const year = `20${dateParts[2]}`; // Assuming the format is D/M/YY where YY is the two-digit year
+
+  return `${day}/${month}/${year}`;
+}
+
+	
+		function generateCVOnLoad() {
+  const excelUrl = 'https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/xlsx/data.xlsx';
+
+  fetch(excelUrl)
+    .then(response => response.arrayBuffer())
+    .then(arrayBuffer => {
+      generateCVFromExcel(arrayBuffer);
+      generateCardsFromSheet2(arrayBuffer);
+      generateLinkedInCertifications(arrayBuffer);
+    })
+    .catch(error => {
+      console.error('An error occurred while retrieving the Excel file:', error);
+    });
+}
+
 
         function calculateDuration(startDate, endDate) {
             const diffInMilliseconds = endDate - startDate;
@@ -142,9 +271,13 @@
 
             return duration;
         }
+		
+		
 
         // Call the CV generation function on page load
         window.addEventListener('load', generateCVOnLoad);
+		
+		
     </script>
 </body>
 </html>
