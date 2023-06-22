@@ -802,14 +802,18 @@ background-size: cover;
 
   #contact h2{
     font-size: 50px;
-    height: 100px;
+    height: 50px;
     }
 
     .contact-form{
-      position: relative;
-      height: 150vh;
+      position: absolute;
+      left: -15vw;
+      top: -30vh;
+      padding: 2vh;
+      height: 60vh;
+      width: 50vw;
       z-index: 47;
-      background-color:green;
+      background-color:rgba(0, 128, 0, 0.548);
     }
 
 /****************************************** Footer ****************************************************/
