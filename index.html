@@ -470,24 +470,6 @@
   <script src="assets\js\gsap.js"></script>
   <script src="assets\js\popup.js"></script>
 
-
-  <script>
-    // Point 2: En-têtes de cache en JavaScript
-    fetch('data.json')
-      .then(response => {
-        const cacheControlHeader = response.headers.get('Cache-Control');
-        console.log('En-tête Cache-Control:', cacheControlHeader);
-        // Vous pouvez également inspecter d'autres en-têtes tels que 'Expires', 'ETag', etc.
-        return response.json();
-      })
-      .then(data => {
-        console.log('Données récupérées:', data);
-      })
-      .catch(error => {
-        console.error('Erreur lors de la récupération des données:', error);
-      });
-  </script>
-
 </body>
 
 </html>
