@@ -192,15 +192,21 @@
   width: 100%;
   height: 100%;
   background-color: pink;
-  z-index: 50;
+  z-index: 55;
   clip-path: polygon(
     /* Coordonnées de la forme rose */
     /* Remplacez les valeurs ci-dessous par celles que vous souhaitez utiliser */
-    25px 25px,
-    75px 25px,
-    75px 75px,
-    25px 75px
-  );
+    22px 55px,
+    24px 52px,
+    25px 50px,
+    45px 45px,
+
+    55px 45px,
+    75px 50px,
+    76px 52px,
+    78px 55px,
+    45px 45px
+    );
 }
 
   #whiteNess{
@@ -229,7 +235,7 @@
       52px 35px,
       
       /* right top */
-      55px 45px,
+  55px 45px,
   75px 50px,
   76px 52px,
   78px 55px,

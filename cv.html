@@ -26,11 +26,23 @@
 		width:100vw;
 		}
 		
-		img{
-		position:relative;
-		height:250px;
-		width:100%;
-		}
+    .image-container {
+  width: 250px; /* Ajustez la largeur selon vos besoins */
+  height: 300px; /* Ajustez la hauteur selon vos besoins */
+  border: 1px solid #000; /* Ajoute une bordure à votre cadre */
+  overflow: hidden; /* Masque tout contenu dépassant les limites du conteneur */
+  position: relative; /* Permet de positionner l'image à l'intérieur du conteneur */
+  border-radius: 15px;
+}
+
+.image-container img {
+  position: absolute; /* Positionne l'image à l'intérieur du conteneur */
+  top: 55%; /* Place l'image au centre verticalement */
+  left: 55%; /* Place l'image au centre horizontalement */
+  width: 115%;
+  transform: translate(-50%, -50%) rotate(3deg); /* Déplace l'image de 50% vers la gauche et le haut, puis la fait pivoter de 10 degrés */
+}
+
 
         h2 {
             font-variant: small-caps;
@@ -73,33 +85,50 @@
 		left:2%;
 		color:red;
 		}
+
+    .col-6{
+      background-color: green;
+    }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-			<div class="col-3">
-				Arnaud Lemascon
-				<img src="/assets/pictures/portrait5.webp">
-				<h1>Curriculum Vitae</h1>
-                <!-- Add your description content here -->
-                <div class="description">I'm a full genius with no limits</div>
-			</div>
-            <div class="col-4">
-                
-                <div class="EducationContainer">
-                    <h2>Education </h2>
+  <div class="container">
+    <div class="row">
+        <div class="col-4 information">
+            <div class="row">
+                <div class="col-2">
+                    <div class="image-container">
+                        <img src="assets/pictures/cv.webp" alt="Mon portrait par Mélanie Kosowski">
+                    </div>
                 </div>
-				<div class="certificationsContainer">
-                    <h2>Certifications </h2>
+                <div class="col-2">
+                    <div class="cvinformation">
+                        <h4>Arnaud LEMASÇON</h4>
+                        <h5><div class="calcul" id="resultat"></div></h5> 
+                        <h5>Living in Lyon</h5>
+                        <h5>Living in Lyon</h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-4"><h2>Positions</h2>	
-                <div id="cvContainer"></div>
-            </div>
-			<div class=col-1"></div>
+
+            <div class="description">I'm a full genius with no limits</div>
         </div>
+        <div class="col-3">
+            <div class="EducationContainer">
+                <h2>Education</h2>
+            </div>
+            <div class="certificationsContainer">
+                <h2>Certifications</h2>
+            </div>
+        </div>
+        <div class="col-4">
+            <h2>Positions</h2>
+            <div id="cvContainer"></div>
+        </div>
+        <div class="col-1"></div>
     </div>
+</div>
+
 
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script>
@@ -212,8 +241,9 @@ function generateLinkedInCertifications(data) {
   const linkedInCountElement = document.querySelector('.certificationsContainer');
   linkedInCountElement.innerHTML = `
     <h2>Certifications</h2>
-    <div>${linkedInCount} LinkedIn learning ont été validés</div>
     <ul>${listTemplate}</ul>
+    <div>and ${linkedInCount} LinkedIn learning have been approved</div>
+
   `;
 }
 
@@ -277,7 +307,12 @@ function formatDate(rawDate) {
         // Call the CV generation function on page load
         window.addEventListener('load', generateCVOnLoad);
 		
-		
+        var anneeEnCours = new Date().getFullYear();
+    var anneeInitiale = 1989;
+    var resultat = anneeEnCours - anneeInitiale;
+    
+    var divResultat = document.getElementById("resultat");
+    divResultat.textContent = "Age : " + resultat;
     </script>
 </body>
 </html>
