@@ -803,6 +803,7 @@ background-size: cover;
       position: relative;
       height: 150vh;
       z-index: 47;
+      background-color:green;
     }
 
 /****************************************** Footer ****************************************************/
