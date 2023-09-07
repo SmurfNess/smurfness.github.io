@@ -11,6 +11,21 @@
             background-color: #333;
             color: #ffffff;
         }
+
+        a {
+          color: rgb(255, 255, 255);
+          font-size:medium;
+          text-decoration: underline;
+        }
+
+        a:hover{
+          color: rgb(143, 60, 226);
+        }
+
+        li{
+          color: rgb(143, 60, 226);
+          margin-bottom: 10px;
+        }
 		
 		.container{
 		position:absolute;
@@ -24,8 +39,9 @@
 		display:flex;
 		flex-wrap:wrap;
 		width:100vw;
-		}
+  }
 		
+
     .image-container {
       left: 5%;
       width: 175px; /* Ajustez la largeur selon vos besoins */
@@ -50,10 +66,9 @@
         
         h2 {
           position: relative;
-          left: 5%;
           font-variant: small-caps;
           margin-top: 5%;
-          color: gold;
+          color: rgb(143, 60, 226);
         }
 
         h3::first-letter {
@@ -83,47 +98,50 @@
           text-transform: uppercase;
         }
 
+
+
         .description{
           position: relative;
+          height: 150px;
+          width: 350px;
           background: linear-gradient(145deg, rgba(255,255,255,0) 5%, rgba(110, 110, 110, 0.2) 100%);
           top: 25px;
           padding: 25px;
           border: solid rebeccapurple 5px;
+          text-transform:none;
         }
         .description::before {
           content: "";
           position: absolute;
           top: 0;
-          left: -7px;
-          border-left: solid #333 7px ;
-          transform: translateY(12%);
-          height: 80%;
+          left: -5px;
+          border-left: solid #333 6px ;
+          transform: translateY(10px);
+          height: 120px;
         }
         .description::before {
           content: "";
           position: absolute;
           top: 0;
-          right: -7px;
-          border-right: solid #333 7px ;
-          height: 80%;
+          right: -5px;
+          border-right: solid #333 6px ;
         }
         .description::after {
           content: "";
           position: absolute;
           top: 0;
-          top: -7px;
-          border-top: solid #333 7px ;
-          transform: translateX(-54%);
-          width: 92%;
+          top: -5px;
+          border-top: solid #333 6px ;
+          transform: translateX(-41%);
+          width: 310px;
         }
 
         .description::after {
           content: "";
           position: absolute;
           bottom: 0;
-          bottom: -7px;
-          border-bottom: solid #333 7px ;
-          width: 92%;
+          bottom: -5px;
+          border-bottom: solid #333 6px ;
         }
 
 
@@ -339,7 +357,7 @@ function generateLinkedInCertifications(data) {
   linkedInCountElement.innerHTML = `
     <h2>Certifications</h2>
     <ul>${listTemplate}</ul>
-    <div>et ${linkedInCount} certifications LinkedIn ont été passées.</div>
+    <div>et ${linkedInCount} certifications LinkedIn ont été passées, sur divers sujets tels que la gestion de projets, les relations interpersonnel et l'agilité.<br><a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness/details/certifications/">Liste exhaustive ici</a> </div>
   `;
 }
 
