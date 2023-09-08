@@ -4,7 +4,7 @@ const tl = gsap.timeline();
 
 if (window.innerWidth >= 768) {
   // Code de navigation horizontale pour les appareils non mobiles
-  tl.to(".wrapper", 5, {x: -window.innerWidth * 6});
+  tl.to(".wrapper", 5, {x: -window.innerWidth * 3.8});
 
   ScrollTrigger.create({
     animation: tl,
@@ -24,21 +24,15 @@ function trivia() {
   gsap.to(window, {duration: 2, scrollTo: 1100});
 }
 
-function resume() {
-  gsap.to(window, {duration: 2, scrollTo: 1755});
+function informations() {
+  gsap.to(window, {duration: 2, scrollTo: "#informations"});
 }
 
 function skills() {
   gsap.to(window, {duration: 2, scrollTo: 2535});
 }
 
-function projects() {
-  gsap.to(window, {duration: 2, scrollTo: 3550});
-}
 
-function contact() {
-  gsap.to(window, {duration: 2, scrollTo: 5750});
-}
 
 function home() {
   gsap.to(window, {duration: 2, scrollTo: 0});
