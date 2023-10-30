@@ -28,6 +28,27 @@
     width: 450px;
 }
 
+.ears{
+    position: absolute;
+    top: 100px;
+    left: 180px;
+    background-color: pink;
+    height: 20px;
+    width: 120px;
+    border-radius: 50px;
+}
+
+.ears::before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left:5px;
+    background-color: pink;
+    height: 10px;
+    width: 110px;
+    border-radius: 50px;
+}
+
 .head{
     position: relative;
     top: 50px;
@@ -222,12 +243,12 @@
 }
 
 .thumb {
-    position: relative;
-    left: 177px;
-    top: -178px;
+    position: absolute;
+    left: 195px;
+    top: 200px;
     background-color: pink;
-    height: 23px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     clip-path: polygon(0% 0%, 25% 0%, 75% 100%, 0% 100%);
     transform-origin: bottom;
     animation: thumbup 2s infinite alternate;
@@ -236,32 +257,54 @@
 @keyframes thumbup {
     0% {
         transform: rotate(90deg);
+        scale: .8;
     }
     100% {
-        transform:  rotate(20deg);
+        transform:  rotate(10deg);
+        scale: 1.2;
     }
 }
 
 .thumb2 {
-    position: relative;
+    position: absolute;
     background-color: pink;
-    left: 258px;
-    top: -204px;
-    height: 23px;
-    width: 20px;
-    clip-path: polygon(0% 0%, 25% 0%, 75% 100%, 0% 100%);
+    left: 260px;
+    top: 200px;
+    height: 25px;
+    width: 25px;
+    clip-path: polygon(100% 0%, 75% 0%, 25% 100%, 100% 100%);
     transform-origin: bottom;
     animation: thumbup2 2s infinite alternate;
 }
 
 @keyframes thumbup2 {
     0% {
-        transform: rotate(-90deg);
+        transform: rotate(-110deg);
+        scale: .8;
     }
     100% {
         transform:  rotate(-10deg);
+        scale: 1.2;
     }
 }
+
+.bordercv{
+    position: relative;
+    top: -10px;
+    left: 100px;
+    background-color: white;
+    border: solid black 5px;
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.bordercv a{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;}
 
 @media screen and (min-width:0px) and (max-width:575px) {
 }
