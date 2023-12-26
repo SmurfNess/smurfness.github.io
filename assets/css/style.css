@@ -1,197 +1,157 @@
-/* Z-index table
+.col-1{background-color: rgba(255, 0, 0, 0.2);}
+.col-2{background-color: rgba(0, 0, 255, 0.2);}
+.col-3{background-color: rgba(0, 255, 64, 0.2);}
+.col-4{background-color: rgba(255, 123, 0, 0.2);}
+.col-5{background-color: rgba(255, 0, 255, 0.2);}
+.col-6{background-color: rgba(111, 0, 255, 0.2);}
+.col-7{background-color: rgba(0, 238, 255, 0.2);}
+.col-8{background-color: rgba(166, 255, 0, 0.2);}
+.col-9{background-color: rgba(255, 255, 255, 0.2);}
+.col-10{background-color: rgb(0, 0, 0);}
+.col-11{background-color: rgba(172, 172, 172, 0.2);}
+.col-12{background-color: rgba(77, 77, 77, 0.2);}
 
-- 000-009   background
-- 010-049   content
-- 050-075   banner/ness
-- 076-100   navbar
-- 999       loading screen
-
-*/
-
-:root {
-  --d: 700ms;
-  --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Arial", sans-serif;
-  --font-serif: "Arial", serif;
-}
-
-/**************************************** html/body *********************************/
-
-  html,body{
-    overflow-x: hidden;
-    background-color: #265f8d;
-  }
-
-/************************************************ Content *******************************************************/
-/*
-.col-1{
-  background-color: rgba(255, 255, 255, 0.5);
-}.col-2{
-  background-color: rgba(255, 145, 0, 0.5);
-}.col-3{
-  background-color: rgba(255, 251, 0, 0.5);
-}.col-4{
-  background-color: rgba(200, 255, 0, 0.5);
-}.col-5{
-  background-color: rgba(72, 255, 0, 0.5);
-}.col-6{
-  background-color: rgba(0, 255, 55, 0.5);
-}.col-7{
-  background-color: rgba(0, 255, 242, 0.5);
-}.col-8{
-  background-color: rgba(0, 153, 255, 0.5);
-}.col-9{
-  background-color: rgba(4, 0, 255, 0.5);
-}.col-10{
-  background-color: rgba(153, 0, 255, 0.5);
-}.col-11{
-  background-color: rgba(255, 0, 191, 0.5);
-}.col-12{
-  background-color: rgba(255, 0, 0, 0.5);
-}
-*/
-.row{
-  position: relative;
-  top: 210px;
-  width: 100%;
-}
-
-.wrapper {
-  z-index: 10;
+section{
   position: relative;
   height: 100vh;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.page{
-  height: calc(95vh - 210px);
   width: 100vw;
-  display: flex;
-  flex-shrink: 0;
 }
 
-.page h2{
-  padding: 1% 0% 0% 18%;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  font-weight:800;
-  font-size: 200px;
+.section-title{
+  position: relative;
+  font-weight: bolder;
+  font-size: 5vw;
+  color: rgba(255, 255, 255, 0.2);
 }
 
-.page .text{
-  width: 500px;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  word-wrap: break-word;
+.light-section{
+  background-color: rgba(0, 0, 0, 0);
 }
 
-/* Small screen */
+.dark-section{
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-@media screen and (min-width:0px) and (max-width:575px) {
-  
-  .page{
-    position: relative;
-    height: calc(95vh - 210px);
-    width: 100vw;
-    display: flex;
-    flex-shrink: 0;
+.card_skills{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.459);
+  height: 50vh;
+  width: 15vw;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 971px) {
+  .card_skills {
+    width: 30vw;
+    height: 130px;
+    }
   }
 
-  .wrapper {
-    display: block;
-    flex-direction: column;
-    height: auto;
-    overflow: auto;
-    white-space: nowrap;
-  }
-    
-  .wrapper > * {
-    width: 100%;
-    white-space: normal;
-  }
-  
-.page h2{
-  font-size: 50px;
-  font-weight: 800;
+  @media screen and (max-width: 990px) and (min-width: 770px) {
+    .card_skills {
+      width: 60vw;
+      height: 130px;
+      }
+
+      .shake{
+  display: none;
 }
-
-.page h1{
-  font-size: 20px;
-}
-
-.portrait{
-  position: absolute;
-  width: 200px;
-  left: -25%;
-  bottom: 100%;
-}
-
-.page .text{
-  text-align: right;
-  position: absolute;
-  top: 25%;
-  right: 0%;
-  width: 60%;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-
-.powered{
-  font-size: 12px;
-  height: 10vh;
-}
-
-footer{
-  height: 10vh;
-}
-
-}
-
-@media screen and (min-width:575px) and (max-width:767px) {
-
-
-  .page h2{
-      padding: 1% 0% 0% 18%;
-      color: rgba(255, 255, 255, 0.5);
-      text-transform: uppercase;
-      font-size: 150px;
     }
 
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        overflow: auto;
-        white-space: nowrap;
-      }
-      
-      .wrapper > * {
-        width: 100%;
-        white-space: normal;
-      }
+.card_values{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.459);
+  height: 30vh;
+  width: 20vw;
+  text-align: center;
+}
 
+.card_values img{
+  margin-top: 1vw;
+  width: 18vw;
+  height: 15vh;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 770px) {
+  .card_skills {
+    width: 70vw;
+    height: 130px;
+    }
+
+  .card_values {
+    width: 35vw;
+    height: 15vh;
+    }
+
+    .card_values img{
+      display: none;
+    }
+
+    #imageCarousel {
+      height: 30vh;
+  }
+
+  #imageCarousel .img-fluid-carousel {
+    height: 35vh;
+    width: 100%;
+}
+
+#imageCarousel .carousel-caption {
+width: 100%;
+left: 0%;
+bottom: 0%;
+background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 71%, rgba(0,0,0,0) 100%);
+  }
 
 }
 
-/****************************************** Footer ****************************************************/
+textarea{
+  width: 50vw;
+}
 
-  footer{
-    z-index: 49;
-    color: white;
+.blackcontent{
+  background-color: black;
+}
+
+.img-fluid{
+  max-height:400px;
+}
+
+.img-fluid-carousel{
+  height: 60vh ;
+}
+
+.container-fluid{
+  position: relative;
+  top:25vh;
+}
+
+
+#canvas {
     position: fixed;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    background-color:#000000;
+    top: 0px;
+    left: 0;
     width: 100%;
-    height: 5vh;
-    font-size: small;
-    top:95vh;
+    height: 100%;
+    z-index: 0;
+    background-color: rgb(22, 22, 22);
   }
 
-  /* Other elements */
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+
+/* """"""FOOTER """"""""""""""""""*/
+
+footer{
+  position: relative;
+}
+
 
   /* ######################## POP UP ############################## */
 
@@ -232,57 +192,4 @@ footer{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  /* ######################## LOADING SCREEN ############################## */
-
-  #loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
-  
-  
-  }
-    
-  .loading-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 5px solid #ccc;
-    border-top-color: #333;
-    animation: spin 1s infinite linear;
-  }
-  
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  /* ######################## CANVAS ############################## */
-
-  #canvas {
-    position: fixed;
-    top: 210px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  .fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-  }
-  .fade-in {
-    opacity: 1;
-    transition: opacity 0.3s ease-in;
   }

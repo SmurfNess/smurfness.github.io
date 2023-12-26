@@ -1,5 +1,5 @@
 // Tableau contenant les noms de fichiers des images webp
-var images = ['./assets/pictures/banner/cat1.webp', './assets/pictures/banner/cat2.webp', './assets/pictures/banner/shelf1.webp', './assets/pictures/banner/shelf2.webp', './assets/pictures/banner/window1.webp', './assets/pictures/banner/window2.webp', './assets/pictures/banner/frames.webp', './assets/pictures/banner/frame.webp'];
+var images = ['./assets/pictures/banner/cat1.webp', './assets/pictures/banner/sofa.webp', './assets/pictures/banner/cat2.webp', './assets/pictures/banner/shelf1.webp', './assets/pictures/banner/shelf2.webp', './assets/pictures/banner/window1.webp', './assets/pictures/banner/window2.webp', './assets/pictures/banner/frames.webp', './assets/pictures/banner/frame.webp'];
 
 // Fonction pour charger les images de manière aléatoire dans le bandeau
 function chargerImagesAleatoires() {
@@ -7,7 +7,7 @@ function chargerImagesAleatoires() {
     shuffle(images);
 
     // Récupérer le div du bandeau
-    var banner = document.getElementById('banner');
+    var banner = document.getElementById('BANNER');
 
     // Effacer le contenu précédent du bandeau
     banner.innerHTML = '';

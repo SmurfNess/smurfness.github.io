@@ -18,7 +18,7 @@ cursor.style.zIndex = "50000"; // pour être visible au dessus de la bannière
 document.body.appendChild(cursor);
 
 // Récupération de la zone cible (la div avec la classe "banner" et l'id "banner")
-const banner = document.getElementById("banner");
+const banner = document.getElementById("BANNER");
 
 // Fonction pour mettre à jour la position du curseur en fonction de la souris, limitée à la zone cible
 function updateCursorPosition(event) {
