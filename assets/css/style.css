@@ -1,3 +1,4 @@
+/*
 .col-1{background-color: rgba(255, 0, 0, 0.2);}
 .col-2{background-color: rgba(0, 0, 255, 0.2);}
 .col-3{background-color: rgba(0, 255, 64, 0.2);}
@@ -10,7 +11,7 @@
 .col-10{background-color: rgb(0, 0, 0);}
 .col-11{background-color: rgba(172, 172, 172, 0.2);}
 .col-12{background-color: rgba(77, 77, 77, 0.2);}
-
+*/
 section{
   position: relative;
   height: 100vh;
@@ -123,8 +124,9 @@ textarea{
 
 .container-fluid{
   position: relative;
-  top:25vh;
+  top:21vh;
 }
+
 
 
 #canvas {
