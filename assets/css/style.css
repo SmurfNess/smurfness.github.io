@@ -22,7 +22,7 @@ section{
   position: relative;
   font-weight: bolder;
   font-size: 5vw;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .light-section{
@@ -195,3 +195,4 @@ footer{
     border-radius: 5px;
     cursor: pointer;
   }
+

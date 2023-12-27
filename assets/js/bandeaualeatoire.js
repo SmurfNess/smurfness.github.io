@@ -20,65 +20,7 @@ function chargerImagesAleatoires() {
         banner.appendChild(img);
     }
 
-    // Ajouter les liens à droite du bandeau
-    
-    var linksContainer = document.createElement('div');
-    linksContainer.className = 'links-container';
 
-
-    var githubLink = document.createElement('a');
-    githubLink.href = 'https://github.com/SmurfNess';
-    githubLink.className = 'link';
-    githubLink.target = '_blank';
-
-    var githubImg = document.createElement('img');
-    githubImg.src = 'assets/pictures/github.webp';
-    githubImg.alt = 'Github';
-    githubImg.className = 'link-img';
-
-
-    var githubText = document.createElement('span');
-
-    githubLink.appendChild(githubImg);
-    githubLink.appendChild(githubText);
-
-    linksContainer.appendChild(githubLink);
-
-    var codepenLink = document.createElement('a');
-    codepenLink.href = 'https://codepen.io/Greatness-GreatSmurf';
-    codepenLink.className = 'link';
-    codepenLink.target = '_blank';
-
-    var codepenImg = document.createElement('img');
-    codepenImg.src = 'assets/pictures/codepen.webp';
-    codepenImg.className = 'link-img';
-    codepenImg.alt = 'Codepen';
-
-    var codepenText = document.createElement('span');
-
-    codepenLink.appendChild(codepenImg);
-    codepenLink.appendChild(codepenText);
-
-    linksContainer.appendChild(codepenLink);
-
-    var linkedinLink = document.createElement('a');
-    linkedinLink.href = 'https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness';
-    linkedinLink.className = 'link';
-    linkedinLink.target = '_blank';
-
-    var linkedinImg = document.createElement('img');
-    linkedinImg.src = 'assets/pictures/linkedin.webp';
-    linkedinImg.className = 'link-img';
-    linkedinImg.alt = 'LinkiedIn';
-
-    var linkedinText = document.createElement('span');
-
-    linkedinLink.appendChild(linkedinImg);
-    linkedinLink.appendChild(linkedinText);
-
-    linksContainer.appendChild(linkedinLink);
-
-    banner.appendChild(linksContainer);
 
 }
 
@@ -98,6 +40,7 @@ window.onload = function () {
     chargerImagesAleatoires();
 };
 
+/*
 // Créer l'élément div avec la classe "animation"
 var divAnimation = document.createElement("div");
 divAnimation.className = "animation";
@@ -166,6 +109,7 @@ divAnimation.appendChild(pPositionDuBas);
 divAnimation.appendChild(pPositionBande);
 divAnimation.appendChild(pResultat);
 
+
 // Ajouter le div animation avec la classe banner et l'id banner comme enfant du body
 var divBanner = document.createElement("div");
 divBanner.className = "banner";
@@ -174,3 +118,4 @@ divBanner.appendChild(divAnimation);
 
 document.body.appendChild(divBanner);
 
+*/
