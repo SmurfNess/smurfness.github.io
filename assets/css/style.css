@@ -21,7 +21,7 @@ section{
 .section-title{
   position: relative;
   font-weight: bolder;
-  font-size: 5vw;
+  font-size: 3vw;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -29,8 +29,19 @@ section{
   background-color: rgba(0, 0, 0, 0);
 }
 
-.dark-section{
+.dark-section1{
   background-color: rgba(0, 0, 0, 0.5);
+  clip-path: polygon(0% 5%, 100% 0%,100% 95%, 50% 100%, 0% 95%);
+}
+
+.dark-section2{
+  background-color: rgba(0, 0, 0, 0.5);
+  clip-path: polygon(0% 0%,50% 5%, 100% 0%,100% 100%, 50% 95%, 0% 100%);
+}
+
+.home-description{
+  color: white;
+  font-weight: bold;
 }
 
 .card_skills{
@@ -74,6 +85,8 @@ section{
 }
 
 @media screen and (max-width: 770px) {
+ 
+
   .card_skills {
     width: 70vw;
     height: 130px;

@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
   <title>Arnaud Lemasçon</title>
   <meta name="description" content="Site personnel à objectif de portfolio">
-  <link rel="icon" type="image/x-icon" href="assets/favicon/android-chrome-512x512.png" />
-      <!-- Bootstrap -->
+<!-- Utilisation de la balise link pour spécifier le logo de l'onglet -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cpath d='M 50 200 A 40 40 0 1 1 350 200 Z' fill='black' /%3E%3Cpath d='M 50 200 A 40 40 0 1 0 350 200 Z' fill='white'/%3E%3Cpath d='M 50 200 A 40 40 0 1 0 150 200 Z' fill='black' /%3E%3Cpath d='M 250 200 A 40 40 0 1 0 350 200 Z' fill='black' /%3E%3Cpath d='M 150 200 A 40 40 0 1 1 250 200 Z' fill='white' /%3E%3C/svg%3E" type="image/svg+xml">
+
+<!-- Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Vis-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" type="text/css" />
@@ -53,9 +55,39 @@
     <div class="container_banner">
         <div class="containess">
           <div class="nessclass">
-            <div id="blackNess"></div>
-            <div id="whiteNess"></div>
-            <div id="pinkNess"></div>
+            <svg width="400" height="500" xmlns="http://www.w3.org/2000/svg" class="nessrightear">
+              <path d="M 325 125 C 350 10, 320 10, 250 70" stroke="black" fill="pink" stroke-width="12"/>
+              <path d="M 320 27 C 250 60, 320 130, 250 70" stroke="black" fill="black" stroke-width="5"/>
+              <path d="M 75 125 C 50 10, 80 10, 150 70" stroke="black" fill="pink" stroke-width="12"/>
+              <path d="M 80 27 C 150 60, 80 130, 150 70" stroke="black" fill="black" stroke-width="5"/>
+          </svg>
+
+            <svg width="400" height="500" xmlns="http://www.w3.org/2000/svg" class="nessdrawed">
+              <path d="M 0 500 C 0 100, 400 100, 400 500 Z" fill="black"/>
+              <path d="M 100 500 C 100 200, 300 200, 300 500 Z" fill="white"/>
+               <circle cx="200" cy="200" r="150" fill="black"/>
+              <path d="M 300 312 A 150 150 0 0 1 88 300 L 205 200 Z" fill="white" stroke="black" stroke-width="3"/>
+              <circle cx="200" cy="290" r="30" fill="pink"/>
+             
+               <circle cx="220" cy="272" r="35" fill="white"/>
+              <circle cx="180" cy="272" r="35" fill="white"/>
+             
+              <circle cx="130" cy="272" r="50" fill="white"/>
+              <circle cx="270" cy="272" r="50" fill="white"/>
+             
+              <circle cx="200" cy="200" r="30" fill="white"/>
+              <rect x="170" y="200" width="60" height="100" fill="white"/>
+              <ellipse cx="200" cy="250" rx="25" ry="10" fill="pink"/>
+              <path d="M 190 250 C 200 280, 200 280, 210 250" fill="pink" />
+           
+              <line x1="120" y1="260" x2="40" y2="240" stroke="white" stroke-width="15"/>
+              <line x1="120" y1="280" x2="40" y2="280" stroke="white" stroke-width="15"/>
+              <line x1="120" y1="300" x2="50" y2="330" stroke="white" stroke-width="15"/>
+                <line x1="280" y1="260" x2="360" y2="240" stroke="white" stroke-width="15"/>
+              <line x1="280" y1="280" x2="360" y2="280" stroke="white" stroke-width="15"/>
+              <line x1="280" y1="300" x2="350" y2="330" stroke="white" stroke-width="15"/>          
+           </svg>
+
             <div class="eyes">
               <div class="eye"></div>
               <div class="eye"></div>
@@ -67,9 +99,15 @@
         </div>
         <div class="banner" id="BANNER"></div>
         <div class="links-container">
-          <a href="https://github.com/SmurfNess" class="link" target="_blank"><img src="assets/pictures/github.webp" alt="Github" class="link-img"><span></span></a>
-          <a href="https://codepen.io/Greatness-GreatSmurf" class="link" target="_blank"><img src="assets/pictures/codepen.webp" class="link-img" alt="Codepen"><span></span></a>
-          <a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness" class="link" target="_blank"><img src="assets/pictures/linkedin.webp" class="link-img" alt="LinkiedIn"><span></span></a>
+          <a href="https://github.com/SmurfNess" class="link" target="_blank">
+            <img src="assets/pictures/github.webp" alt="Github" class="link-img"><span></span>
+          </a>
+          <a href="https://codepen.io/Greatness-GreatSmurf" class="link" target="_blank">
+            <img src="assets/pictures/codepen.webp" class="link-img" alt="Codepen"><span></span>
+          </a>
+          <a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness" class="link" target="_blank">
+            <img src="assets/pictures/linkedin.webp" class="link-img" alt="LinkiedIn"><span></span>
+          </a>
         </div>
     </div>
 
@@ -85,7 +123,7 @@
           <div class="col-md-4 col-12">
             <img src="assets/pictures/portrait5.webp" id="IMG-PORTRAIT" class="img-fluid">
           </div>
-          <div class="col-md-4 col-12">
+          <div class="col-md-4 col-12 home-description">
             <article>
               <h2 class="fs-2"></h2>
               <br>
@@ -99,7 +137,7 @@
       </div>
     </section>
     
-    <section id="VALUES" class="dark-section"> 
+    <section id="VALUES" class="dark-section1"> 
       <div class="container-fluid">
         <div class="row">
             <div class="col-2 section-title">VALUES</div>
@@ -115,7 +153,7 @@
                         <div class="card_values">
                               <img src="https://cdn.pixabay.com/photo/2015/08/08/13/28/drop-880462_1280.jpg" class="card-img-top" alt="Image 1">
                               <div class="card-body">
-                                  <h5 class="card-title">Titre 1</h5>
+                                  <h5 class="card-title">Curiosity</h5>
                                   <p class="card-text">Description de l'image 1.</p>
                               </div>
                           </div>
@@ -126,7 +164,7 @@
                         <div class="card_values">
                               <img src="https://magnolia-portugal.dunegestion.com/public/magnolia-portugal/40325_livraria_lello_2.jpg" class="card-img-top" alt="Image 2">
                               <div class="card-body">
-                                  <h5 class="card-title">Titre 2</h5>
+                                  <h5 class="card-title">Creativity</h5>
                                   <p class="card-text">Description de l'image 2.</p>
                               </div>
                           </div>
@@ -137,7 +175,7 @@
                         <div class="card_values">
                               <img src="https://www.revuepolitique.be/wp-content/uploads/2023/08/46657953734_7faf3653fe_b-1024x576-c-default.webp" class="card-img-top" alt="Image 3">
                               <div class="card-body">
-                                  <h5 class="card-title">Titre 3</h5>
+                                  <h5 class="card-title">Honesty</h5>
                                   <p class="card-text">Description de l'image 3.</p>
                               </div>
                           </div>
@@ -148,7 +186,7 @@
                         <div class="card_values">
                             <img src="https://cdn.pixabay.com/photo/2018/03/07/22/45/color-3207345_960_720.jpg" class="card-img-top" alt="Image 1">
                             <div class="card-body">
-                                <h5 class="card-title">Titre 1</h5>
+                                <h5 class="card-title">Teamwork</h5>
                                 <p class="card-text">Description de l'image 1.</p>
                             </div>
                         </div>
@@ -159,7 +197,7 @@
                         <div class="card_values">
                             <img src="https://apod.nasa.gov/apod/image/2311/GibbousMoon_Strand_1500.jpg" class="card-img-top" alt="Image 2">
                             <div class="card-body">
-                                <h5 class="card-title">Titre 2</h5>
+                                <h5 class="card-title">Performance</h5>
                                 <p class="card-text">Description de l'image 2.</p>
                             </div>
                         </div>
@@ -170,7 +208,7 @@
                         <div class="card_values">
                             <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1" class="card-img-top" alt="Image 3">
                             <div class="card-body">
-                                <h5 class="card-title">Titre 3</h5>
+                                <h5 class="card-title">Commitment </h5>
                                 <p class="card-text">Description de l'image 3.</p>
                             </div>
                         </div>
@@ -255,7 +293,7 @@
 </section>
 
     
-<section id="SKILLS" class="dark-section">            
+<section id="SKILLS" class="dark-section2">            
     <div class="container-fluid">
         <div class="row">
             <div class="col-2 section-title">SKILLS</div>
@@ -345,6 +383,7 @@
       </div>
     </section>
 
+    
     <footer class="bg-dark text-light text-center py-3">
       <div class="container" id="FOOTER">
         <div class="powered">Design &amp; Built by Arnaud Lemasçon © 2023 - <a href="#FOOTER" onclick="popup();">credits and references</a></div>      

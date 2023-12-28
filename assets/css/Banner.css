@@ -5,25 +5,16 @@
     position: fixed;
     left: 0vw;
     top: 0vh;
-    height: 15vh;
+    height: 120px;
     cursor: none;
     overflow: hidden;
     display: flex;
     width: 100vw;
   }
 
-  .containess{
-    z-index: 52;
-    position: fixed;
-    height: 15vh;
-    width: 100vw;
-    top: 0vh;
-    overflow: hidden;
-  }
-    
   .navbar{
     z-index: 99;
-    top: 14vh;
+    top: 120px;
     clip-path: polygon(
       0% 0%,
       100% 0%,
@@ -46,51 +37,37 @@
   
   .links-container {
       position: fixed;
-      top: 0%;
+      bottom: 5vh;
       height: 15vh;
       right: 1%;
       display: flex;
       flex-direction: column; /* Alignement vertical des liens */
       padding: 5px;
       z-index: 450;
+      scale: 1.5;
     }
     
     .link {
       border-radius: 25px;
       display: flex;
       align-items: center;
-      background-color: rgb(255, 255, 255); /* Couleur de fond blanc */
-      height:35px ;
-      width: 35px; /* Largeur souhaitée pour le lien entier */
-      margin-bottom: 5px; /* Ajout d'une marge en bas pour créer un interstice vertical */
+      background-color: white; 
+      width: 29px;
+      padding: 2px 1px 2px 1px;
+      margin-bottom: 5px; 
       margin-right: 5px;
     }
     
     .text {
       color: black;
-      font-weight: bold;
+      font-weight: bold;  
     }
     
     .link-img {
       position: relative;
       width: 25px;
-      left: 5px;
-      height: auto;
-    }
-    
-    #positionDuBas{
-      position: fixed;
-      display: none;
-    }
-  
-    #positionBande{
-      position: fixed;
-      display: none;
-    }
-  
-    #resultat{
-      position: fixed;
-      display: none;
+      left: 1px;
+      height: 25px;
     }
   
     .shake {
@@ -111,146 +88,76 @@
     }
 
   /************************************************* ness ****************************************/
+  .containess{
+    z-index: 52;
+    position: fixed;
+    height: 120px;
+    width: 100vw;
+    top: 0vh;
+    overflow: hidden;
+  }
+    
+  
   .nessclass{
     position: absolute;
     z-index: 50;
-    top: 128px;
+    top: -70px;
+    left: 50vw;
+    
     animation: hidingness;
     animation-iteration-count: infinite;
     animation-duration: 30s;
     animation-fill-mode: forwards;
     animation-delay: 15s;
+    
   }
-  @keyframes hidingness {
-    00%		{ top:50vh; 	left: var(--random-left-left);transform: scale(1);}
-    10%		{ top:10vh; 	left: var(--random-left-left);transform: scale(1);}
-    20%		{ top:10vh; 	left: var(--random-left);transform: scale(1.3);}
-    30%		{ top:10vh; 	left: var(--random-left-right);transform: scale(1);}
-    35%		{ top:50vh; 	left: var(--random-left);}
-    40%		{ top:10vh; 	left: var(--random-left-left);transform: scale(1);}
-    45%		{ top:10vh; 	left: var(--random-left);}
-    75%		{ top:50vh; 	left: var(--random-left);}
-    90%		{ top:10vh; 	left: var(--random-left-right);}
-    100%	{ top:50vh; 	left: 50%;}   
-  }
-  
-   #blackNess {
-      width: 200px;
-      height: 200px;
-      background-color: black;
-      position: absolute;
-      z-index :51;
-      clip-path: polygon(
-        /* X Y */
-        
-        /* left top */
-        5px 50px,
-        7px 25px,
-        10px 5px,
-        12px 2px,
-        15px 2px,
-        36px 25px,
-        
-        /* center */
-        50px 25px,
-        
-        /* right top */
-        60px 25px,
-        85px 2px,
-        88px 2px,
-        90px 5px, 
-        92px 25px,
-        95px 50px,
-        
-        /* right bottom */
-        100px 100px,
-        
-        /* left bottom */
-        0px 100px      
-      );	
-  }
-  
-  #blackNess:after {
-    content: "";
+
+  .nessdrawed{
     position: absolute;
-    top: 0;
-    left: 02px;
-    width: 100%;
-    height: 100%;
-    background-color: pink;
-    clip-path: polygon(
-      /* X Y */
-      
-      /* left top */
-    
-      06px 25px,
-      10px 06px,
-      12px 03px,
-      15px 03px,
-      30px 17px,
-      
-      /* right top */
-      
-      66px 17px,
-      82px 03px,
-      84px 03px,
-      86px 06px, 
-      
-      /* right bottom */
-      88px 25px,
-      
-      /* middle bottom */
-      77px 20px,
-      66px 17px,
-      30px 17px,
-      15px 20px,
-      /* left bottom */
-      05px 25px      
-    );
+    scale:.25;
   }
   
-    #whiteNess{
-      width: 200px;
-      height: 200px;
-      background-color:white;
-      position: absolute;
-      z-index :52;
-      clip-path: polygon(
-        /* X Y */
-        
-        /* left bottom */
-    20px 90px,
-    
-        /* left top */
-    22px 55px,
-    24px 52px,
-    25px 50px,
-    45px 45px,
-        
-        /* center */
-    48px 35px,
-        49px 35px,
-        50px 35px,
-        51px 35px,
-        52px 35px,
-        
-        /* right top */
-    55px 45px,
-    75px 50px,
-    76px 52px,
-    78px 55px,
-        
-        /* right bottom */
-    80px 90px
-      );	
+  .nessrightear{
+    position: absolute;
+    scale: .25;
+    animation: ear 30s infinite;
+    left: 0px;
   }
+
+  @keyframes ear{
+    00% {top:5px; scale:0.26;}
+    03% {top:8px; scale:0.25; }
+    06% {top:5px; scale:0.26;}
+    09% {top:0px; }
+    12% {top:5px; }
+    15% {top:0px; }
+    18% {top:9px;}
+    100%{top:0px; }
+  }
+
+  @keyframes hidingness {
+    00%		{ top:-70px; 	left: var(--random-left-left);transform: scale(1);}
+    10%		{ top:-120px;  left: var(--random-left-left);transform: scale(1);}
+    20%		{ top:-150px; 	left: var(--random-left);transform: scale(1.2);}
+    30%		{ top:-70px; 	left: var(--random-left-right);transform: scale(0.9);}
+    35%		{ top:-70px; 	left: var(--random-left);}
+    40%		{ top:-140px; 	left: var(--random-left-left);transform: scale(1);}
+    45%		{ top:-70px; 	left: var(--random-left);}
+    75%		{ top:-160px; 	left: var(--random-left); transform: scale(1.3);}
+    90%		{ top:-130px; 	left: var(--random-left-right);transform: scale(1);}
+    100%	{ top:-70px; 	left: 50%;}   
+  }
+  
   #eyebrows{
   z-index:60;
-  width:80px;
+  scale: 0.8;
+  top:185px;
+  left: 138px;
+  width:200px;
   margin-left:10px;
   margin-top:20px;
-  height:30px;
-  background-color:black;
+  height:100px;
+  background-color:rgb(0, 0, 0);
   position:absolute;
   /*clip-path: polygon(0px 0px, 80px 0px,80px 10px,40px 15px,0px 10px); /*angry*/
   /*clip-path: polygon(0px 0px, 80px 0px,80px 20px,40px 10px,0px 20px); /*sad-not selected*/
@@ -277,6 +184,8 @@
       display: flex;
       margin: 25px 10px;
       z-index: 55;
+      top:200px;
+      left: 150px;
   }
   .eyes .eye {
       position: relative;
@@ -328,18 +237,6 @@
   #L-eyelid{
   margin-left:5px;
   }
-  #pinkNess{
-      width: 15px;
-      margin-left: 50px;
-      margin-top: 45px;
-      height: 8px;
-      background-color:pink;
-      position: absolute;
-      z-index :59;
-      transform: translateX(-50%);
-      border-radius: 30% 30% 60% 60% / 50% 50% 90% 90%;
-  }
-
 
   @media only screen and (max-width: 990px) {
     .navbar-toggler{
