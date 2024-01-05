@@ -12,6 +12,10 @@
 .col-11{background-color: rgba(172, 172, 172, 0.2);}
 .col-12{background-color: rgba(77, 77, 77, 0.2);}
 */
+
+body{
+  overflow-x: hidden;
+}
 section{
   position: relative;
   height: 100vh;
@@ -22,7 +26,7 @@ section{
   position: relative;
   font-weight: bolder;
   font-size: 3vw;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0);
 }
 
 .light-section{
@@ -30,93 +34,76 @@ section{
 }
 
 .dark-section1{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(221, 221, 221);
   clip-path: polygon(0% 5%, 100% 0%,100% 95%, 50% 100%, 0% 95%);
 }
 
 .dark-section2{
   background-color: rgba(0, 0, 0, 0.5);
-  clip-path: polygon(0% 0%,50% 5%, 100% 0%,100% 100%, 50% 95%, 0% 100%);
+  clip-path: polygon(0% 0%,50% 5%, 100% 0%,100% 96%, 0% 100%);
 }
 
 .home-description{
   color: white;
   font-weight: bold;
+  ;
 }
 
 .card_skills{
   position: relative;
-  background-color: rgba(255, 255, 255, 0.459);
+  background-color: rgba(255, 255, 255, 0.1);
   height: 50vh;
-  width: 15vw;
+  width: 16vw;
+  border-radius: 15px;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 971px) {
-  .card_skills {
-    width: 30vw;
-    height: 130px;
-    }
-  }
-
-  @media screen and (max-width: 990px) and (min-width: 770px) {
-    .card_skills {
-      width: 60vw;
-      height: 130px;
-      }
-
-      .shake{
-  display: none;
+.S1:hover{
+  background: linear-gradient(140deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
+  color: white;
 }
-    }
+.S2:hover{
+  background: linear-gradient(150deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
+  color: white;
+}
+.S3:hover{
+  background: linear-gradient(160deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
+  color: white;
+}
+.S4:hover{
+  background: linear-gradient(170deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
+  color: white;
+}
+
+
 
 .card_values{
   position: relative;
   background-color: rgba(255, 255, 255, 0.459);
   height: 30vh;
-  width: 20vw;
   text-align: center;
+  width: calc(100% / 1.5);
+
 }
 
 .card_values img{
   margin-top: 1vw;
-  width: 18vw;
-  height: 15vh;
+  width: 90%;
+  height: 75%;
   object-fit: cover;
 }
 
-@media screen and (max-width: 770px) {
- 
-
-  .card_skills {
-    width: 70vw;
-    height: 130px;
-    }
-
-  .card_values {
-    width: 35vw;
-    height: 15vh;
-    }
-
-    .card_values img{
-      display: none;
-    }
-
-    #imageCarousel {
-      height: 30vh;
-  }
-
-  #imageCarousel .img-fluid-carousel {
-    height: 35vh;
-    width: 100%;
+.card-text{
+  position: relative;
+  background: linear-gradient(159deg, rgb(236, 230, 109) 0%, rgb(194, 181, 43) 71%, rgb(184, 181, 51) 100%);  rotate: 15deg;
+  width: 140px;
+  height: 120px;
+  top: -100%;
+  padding: 10px;
+  font-size: 12px;
 }
 
-#imageCarousel .carousel-caption {
-width: 100%;
-left: 0%;
-bottom: 0%;
-background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 71%, rgba(0,0,0,0) 100%);
-  }
-
+.card-title-value{
+  background-color: green;
 }
 
 textarea{
@@ -128,7 +115,8 @@ textarea{
 }
 
 .img-fluid{
-  max-height:400px;
+  position: relative;
+  max-height:60vh;
 }
 
 .img-fluid-carousel{
@@ -140,7 +128,52 @@ textarea{
   top:21vh;
 }
 
+/* ########################## SKILLS############################## */
 
+.gauge {
+  width: 100%;
+  height: 4px;
+  background-color: #00d4fa83;
+  position: relative;
+}
+
+.gauge-level {
+  height: 100%;
+  background-color: #00d4fa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.card-text-skill{
+  text-align: left;
+  left: 10%;
+  position: relative;
+  font-size: 12px;
+  bottom: -16px;
+}
+
+.softskillunit {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-softskill {
+  position: relative;
+  font-size: 11px;
+  text-align: center;
+}
+
+.img-card-softskill {
+  position: relative;
+  max-height: 30px;
+  max-width: 60px;
+}
 
 #canvas {
     position: fixed;
@@ -160,12 +193,6 @@ textarea{
     opacity: 1;
     transition: opacity 0.3s ease-in;
   }
-
-/* """"""FOOTER """"""""""""""""""*/
-
-footer{
-  position: relative;
-}
 
 
   /* ######################## POP UP ############################## */
@@ -209,3 +236,132 @@ footer{
     cursor: pointer;
   }
 
+/* ############################################### */
+
+@media screen and (max-width: 770px) {
+ 
+  .card_skills {
+    width: 70vw;
+    height: 130px;
+  }
+
+  .img-card-softskill{
+    display: none;
+  }
+
+  .softskillunit{
+    padding: 0%;
+  }
+  
+  .card-text-skill{
+    font-size: 10px;
+    bottom: 0%;
+    margin: 0%;
+    background-color: transparent;
+  }
+
+  .card_values {
+    width: 35vw;
+    height: 15vh;
+  }
+
+  .card-text{
+    display: none;
+  }
+
+  .card_values img{
+    display: none;
+  }
+
+  #imageCarousel {
+    height: 30vh;
+  }
+
+  #imageCarousel .img-fluid-carousel {
+    height: 35vh;
+    width: 100%;
+  }
+
+  #imageCarousel .carousel-caption {
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 71%, rgba(0,0,0,0) 100%);
+  }
+
+  .gauge-wrapper{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 990px) and (min-width: 770px) {
+  .card_skills {
+    width: 60vw;
+    height: 130px;
+    background: linear-gradient(130deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
+    color: white;
+}
+  
+  .img-card-softskill{
+    display: none;
+  }
+
+  .softskillunit{
+    padding: 0%;
+  }
+  
+  .card-text-skill{
+    font-size: 10px;
+    bottom: 0%;
+    margin: 0%;
+    background-color: transparent;
+  }
+
+  .gauge-wrapper{
+    display: none;
+  }
+      
+  .card-text{
+    scale: 0.5;
+  }
+
+  .shake{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 971px) {
+  .card_skills {
+    width: 30vw;
+    height: 130px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(130deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
+    color: white;
+  }
+
+  .img-card-softskill{
+    display: none;
+  }
+
+  .softskillunit{
+    padding: 0%;
+  }
+
+    .gauge-wrapper{
+    display: none;
+  }
+    
+  .card-text{
+    scale: 0.6;
+  }
+
+  .card-text-skill{
+    font-size: 10px;
+    bottom: 0%;
+    margin: 0%;
+    background-color: transparent;
+    
+  }
+
+}

@@ -29,6 +29,10 @@
     padding-right: 5vw;
   }
 
+  .nav-link:hover{
+    background: radial-gradient(circle, rgba(238,1,1,1) 0%, rgba(255,255,255,0) 17%);
+    }
+
   .banner img {
     max-height: 100%;
     max-width: 100%;
@@ -44,7 +48,7 @@
       flex-direction: column; /* Alignement vertical des liens */
       padding: 5px;
       z-index: 450;
-      scale: 1.5;
+      scale: 1;
     }
     
     .link {
@@ -95,6 +99,7 @@
     width: 100vw;
     top: 0vh;
     overflow: hidden;
+    cursor: none;
   }
     
   
@@ -102,8 +107,7 @@
     position: absolute;
     z-index: 50;
     top: -70px;
-    left: 50vw;
-    
+   
     animation: hidingness;
     animation-iteration-count: infinite;
     animation-duration: 30s;
@@ -125,14 +129,41 @@
   }
 
   @keyframes ear{
-    00% {top:5px; scale:0.26;}
-    03% {top:8px; scale:0.25; }
-    06% {top:5px; scale:0.26;}
-    09% {top:0px; }
-    12% {top:5px; }
-    15% {top:0px; }
-    18% {top:9px;}
-    100%{top:0px; }
+    00% {top:5px;}
+    03% {top:7px;}
+    06% {top:5px;}
+    09% {top:0px;}
+    12% {top:5px;}
+    15% {top:0px;}
+    18% {top:7px;}
+    20% {top:5px;}
+    23% {top:7px;}
+    26% {top:5px;}
+    29% {top:0px;}
+    32% {top:5px;}
+    35% {top:0px;}
+    38% {top:7px;}
+    40% {top:5px;}
+    43% {top:7px;}
+    46% {top:5px;}
+    49% {top:0px;}
+    52% {top:5px;}
+    55% {top:0px;}
+    58% {top:7px;}
+    60% {top:5px;}
+    63% {top:7px;}
+    66% {top:5px;}
+    69% {top:0px;}
+    72% {top:5px;}
+    75% {top:0px;}
+    78% {top:7px;}
+    80% {top:5px;}
+    83% {top:7px;}
+    86% {top:5px;}
+    89% {top:0px;}
+    92% {top:5px;}
+    95% {top:0px;}
+    98% {top:7px;}
   }
 
   @keyframes hidingness {
@@ -247,3 +278,12 @@
     }
     
   }
+
+  footer{
+    position: fixed;
+    font-size: 12px;
+    height: 50px;
+    width: 100vw;
+    bottom: 0px ;
+  }
+  
