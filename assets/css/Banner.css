@@ -29,9 +29,7 @@
     padding-right: 5vw;
   }
 
-  .nav-link:hover{
-    background: radial-gradient(circle, rgba(238,1,1,1) 0%, rgba(255,255,255,0) 17%);
-    }
+
 
   .banner img {
     max-height: 100%;
@@ -75,22 +73,19 @@
     }
   
     .shake {
-      background-color: #28668f;
+      background-color: transparent;
+      height: 50px;
+      width: 50px;
       color: black;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
       border: none;
-      clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 20% 100%);
-      transition: background-color 0.3s ease-in-out;
       cursor: pointer;
+      transition: transform 0.3s ease-in-out;
     }
 
-    .shake:hover{
-      background-color: #3498db;
-      color: white;
-    }
-
+  .shake:hover {
+    transform: rotate(360deg);
+  }
+  
   /************************************************* ness ****************************************/
   .containess{
     z-index: 52;

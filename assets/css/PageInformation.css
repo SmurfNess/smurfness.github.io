@@ -7,21 +7,7 @@
     height: 20vh;
 }
 
-.name, .mail{
-    color: white;
-    font-size: 20px;
-    padding-top: 50px;
-    width: 400px;
-    height: 120px;
-}
 
-.message{
-    color: white;
-    font-size: 20px;
-    padding-top: 50px;
-    height: 300px;
-   
-}
 
 .minime-head{
     height: 300px;
@@ -306,8 +292,3 @@
     font-size: 20px;
     font-weight: bold;}
 
-@media screen and (min-width:0px) and (max-width:575px) {
-}
-
-@media screen and (min-width:575px) and (max-width:767px) {
-}

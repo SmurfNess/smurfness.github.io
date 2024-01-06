@@ -8,7 +8,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #333;
+            background-color: #808080;
             color: #ffffff;
         }
 
@@ -19,231 +19,123 @@
         }
 
         a:hover{
-          color: rgb(143, 60, 226);
-        }
+          color: #a6b3ff;        }
 
         li{
-          color: rgb(143, 60, 226);
+          color: #a6b3ff;
           margin-bottom: 10px;
         }
 		
-		.container{
-		position:absolute;
-		left:0%;
-		height:100%;
-		width:100vw;
-		}
-		
-		.row{
-		position:relative;
-		display:flex;
-		flex-wrap:wrap;
-		width:100vw;
-  }
-		
+.container{
+  padding: 10px;
+}
 
+
+	
     .image-container {
-      left: 5%;
-      width: 175px; /* Ajustez la largeur selon vos besoins */
-      height: 225px; /* Ajustez la hauteur selon vos besoins */
-      border: 1px solid #000; /* Ajoute une bordure à votre cadre */
-      overflow: hidden; /* Masque tout contenu dépassant les limites du conteneur */
-      position: relative; /* Permet de positionner l'image à l'intérieur du conteneur */
-      border-radius: 5px;
+      position: relative;
+      width: 150px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 15px;
     }
+
+
 
 .image-container img {
   position: absolute; /* Positionne l'image à l'intérieur du conteneur */
-  top: 55%; /* Place l'image au centre verticalement */
+  top: 50%; /* Place l'image au centre verticalement */
   left: 55%; /* Place l'image au centre horizontalement */
-  width: 115%;
+  width: 110%;
   transform: translate(-50%, -50%) rotate(3deg); /* Déplace l'image de 50% vers la gauche et le haut, puis la fait pivoter de 10 degrés */
 }
 
-      .name{
-      color: white;  
-      }
-        
-        h2 {
-          position: relative;
-          font-variant: small-caps;
-          margin-top: 5%;
-          color: rgb(143, 60, 226);
-        }
+.rotatetitle{
+  rotate: 270deg;
+  font-size: 40px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #a6b3ff;}
 
-        h3::first-letter {
-            text-transform: uppercase;
-        }
+.educationtitle{
+  position: relative;
+  top:40%;
+  left: 20px;
+}
 
-        h3 {
-          left: 7%;
-          position: relative;
-          font-variant: small-caps;
-        }
-
-        h4 {
-          text-transform: uppercase;
-          position: relative;
-          left: 2%;
-          text-transform: capitalize;
-        }
-
-        h5 {
-          text-transform: capitalize;
-          position: relative;
-          left: 0%;
-        }
-
-        h6 {
-          text-transform: uppercase;
-        }
-
-
-
-        .description{
-          position: relative;
-          height: 150px;
-          width: 350px;
-          background: linear-gradient(145deg, rgba(255,255,255,0) 5%, rgba(110, 110, 110, 0.2) 100%);
-          top: 25px;
-          padding: 25px;
-          border: solid rebeccapurple 5px;
-          text-transform:none;
-        }
-        .description::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -5px;
-          border-left: solid #333 6px ;
-          transform: translateY(10px);
-          height: 120px;
-        }
-        .description::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: -5px;
-          border-right: solid #333 6px ;
-        }
-        .description::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          top: -5px;
-          border-top: solid #333 6px ;
-          transform: translateX(-41%);
-          width: 310px;
-        }
-
-        .description::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          bottom: -5px;
-          border-bottom: solid #333 6px ;
-        }
-
+.positiontitle{
+  position: relative;
+  top:25%;
+  left: 20px;
+}
 
         .card {
             position: relative;
-            left: -10%;
-            padding-top: 30px;
-            padding-right: 40px;
-            padding-left: 10px;
-            margin-bottom: 5px;
+            padding: 10px;
             border: none;
-            background: linear-gradient(145deg, rgba(255,255,255,0) 5%, rgba(102, 51, 153, 0.5) 100%);
-            border-radius: 0px;
-        }
-
-        .card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -2%;
-          border-left: solid 7px rebeccapurple;
-          transform: translateY(10%);
-          height: 80%;
-        }
-
-        #schoolCards {
-            position: relative;
-            left: 0%;
-            border: none;
-            background: linear-gradient(145deg, rgba(255,255,255,0) 5%, rgba(110, 110, 110, 0.2) 100%);
-            border-radius: 0px;
-        }
-
-        #schoolCards::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -1%;
-          border-left: solid 7px rebeccapurple;
-          transform: translateY(10%);
-          height: 80%;
+            background: linear-gradient(145deg, rgba(255,255,255,0) 5%,rgba(166, 179, 255, 0.5) 100%);
+            border-radius: 0px 5px 5px 0px;
+            margin-top: 10px;
+            width: 98%;
         }
 
 
 		.duration{
-		position:absolute;
-		top:5%;
-		color:rgb(122, 122, 122);
+		color:rgba(47, 79, 79, 0.75);
+    font-size: 14px;
 		}
 
-    .col-2{
-      position: relative;
-      padding: 0%;
-    }
     
-    .col-3,.col-4,.col-5 {
-      position: relative;
-      padding-left: 5%;
-    }
 
-    .col-4{
-      background-color: rgba(102, 51, 153, 0.25);
-    }
 
     </style>
 </head>
 <body>
   <div class="container">
     <div class="row">
-        <div class="col-5 information">
+
+      <div class="col-md-4">
+        <div class="row information">
+          
+          <div class="col-md-6 col-sm-12 ">
+            <div class=" image-container"><img src="assets/pictures/cv.webp" alt="Mon portrait par Mélanie Kosowski"></div>
+          </div>
+          <div class="col-md-6 col-sm-12">
             <div class="row">
-                <div class="col-2">                        
-                  <h2>Informations</h2>
-                  <div class="image-container">
-                    <img src="assets/pictures/cv.webp" alt="Mon portrait par Mélanie Kosowski" >
-                  </div>
-                </div>
-                <div class="col-2">                        
-                  <h2 class="name">Arnaud LEMASÇON</h2>
-                  <h5><div class="calcul" id="resultat"></div></h5> 
-                  <h5>City : Lyon</h5>
-                  <h5><div class="description">D'un naturel curieux, j'aime découvrir de nouveaux outils et technologies.</div></h5>
-                </div>
+              
+              <div class="col-md-12">Arnaud LEMASÇON</div>
+              <div class="col-md-12 calcul" id="resultat"></div>
+              <div class="col-md-12">City : Lyon</div>
+              <div class="col-md-12"><br>D'un naturel curieux, j'aime découvrir de nouveaux outils et technologies.</div>
+            
             </div>
-            <div class="EducationContainer">
-              <h2>Education</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <div class="rotatetitle educationtitle">Educations</div>
             </div>
+            <div class="col-md-10 EducationContainer"></div>
+          </div>
         </div>
-        <div class="col-4">
-          <h2>Positions</h2>
-          <div id="cvContainer"></div>
       </div>
 
-        <div class="col-3">
-            <div class="certificationsContainer">
-                <h2>Certifications</h2>
-            </div>
+      <div class="col-md-5">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="rotatetitle positiontitle">Positions</div>
+          </div>
+          <div class="col-md-10">
+            <div id="cvContainer"></div>
+          </div>
         </div>
-        <div class="col-1"></div>
-    </div>
-</div>
+      </div>
 
+      <div class="col-md-3 certificationsContainer">
+        <h2>Certifications</h2>
+      </div>
+
+    </div>
+  </div>
 
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script>
@@ -271,10 +163,10 @@
                 const city = row[4];
 
                 const cardTemplate = `
-                    <div class="card">
+                    <div class="card col-md-12">
+                        <h6 class="duration">${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} (${calculateDuration(startDate, endDate)})</h6>
                         <h5>${jobTitle}</h3>
                         <h6>${companyName} - ${city}</h4>
-                        <p><h6 class="duration">${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} (${calculateDuration(startDate, endDate)})</h6></p>
                     </div>
                 `;
 
@@ -294,23 +186,37 @@ function generateCardsFromSheet2(data) {
   let cardTemplate = '';
 
   jsonData.forEach((row) => {
+
     const startDate = new Date(row[0]);
+console.log("Raw startDate:", startDate);
+
+const day = startDate.getDate();
+const month = startDate.getMonth() + 1;
+const year = startDate.getFullYear();
+
+// Formatez la date avec le format JJ/MM/AAAA
+const formattedStartDate = `${day < 10 ? '0' : ''}${day}/${month < 10 ? '0' : ''}${month}/${year}`;
+console.log("Formatted startDate:", formattedStartDate);
+
+
+
     let endDate = new Date(row[1]);
 
     // Check if the end date is invalid
     if (isNaN(endDate)) {
       endDate = new Date(); // Replace with today's date
     }
+    
 
     const degree = row[2];
     const school = row[3];
     const city = row[4];
 
     const card = `
-      <div class="card" id="schoolCards">
+      <div class="card col-md-12" id="schoolCards">
+        <h6 class="duration">${formattedStartDate} - ${endDate.toLocaleDateString()} </h6>
         <h5>${degree}</h5>
         <h6>${school} - ${city}</h5>
-        <p><h6 class="duration">${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} </h6></p>
       </div>
     `;
 
@@ -319,10 +225,10 @@ function generateCardsFromSheet2(data) {
 
   const educationContainer = document.querySelector('.EducationContainer');
   educationContainer.innerHTML = `
-    <h2>Education</h2>
     ${cardTemplate}
   `;
 }
+
 // Fonction pour générer une liste et compter les certifications LinkedIn à partir de la troisième feuille du fichier Excel
 function generateLinkedInCertifications(data) {
   const workbook = XLSX.read(data, { type: 'array' });
@@ -345,7 +251,7 @@ function generateLinkedInCertifications(data) {
 
       const listItem = `
         <li>
-          <a href="${link}">${certification} - ${school} - ${formattedDate}</a>
+          <a href="${link}" target="_blank">${certification} - ${school} - ${formattedDate}</a>
         </li>
       `;
 
@@ -357,7 +263,7 @@ function generateLinkedInCertifications(data) {
   linkedInCountElement.innerHTML = `
     <h2>Certifications</h2>
     <ul>${listTemplate}</ul>
-    <div>et ${linkedInCount} certifications LinkedIn ont été passées, sur divers sujets tels que la gestion de projets, les relations interpersonnel et l'agilité.<br><a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness/details/certifications/">Liste exhaustive ici</a> </div>
+    <div>et ${linkedInCount} certifications LinkedIn ont été passées, sur divers sujets tels que la gestion de projets, les relations interpersonnel et l'agilité.<br><a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness/details/certifications/" target="_blank">Liste exhaustive ici</a> </div>
   `;
 }
 

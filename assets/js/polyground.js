@@ -56,7 +56,6 @@ function transition() {
 
 // Call the setCanvasSize function initially and whenever the window is resized
 setCanvasSize();
-window.addEventListener('resize', transition);
-
+//window.addEventListener('resize', transition);
 draw();
 });
