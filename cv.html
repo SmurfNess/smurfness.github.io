@@ -85,6 +85,30 @@
     font-size: 14px;
 		}
 
+    .infobulle {
+  position: relative;
+  cursor: help;
+}
+
+.infobulle:hover::before {
+  content: attr(title);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.infobulle:hover::before {
+  opacity: 0.5;
+}
+
     
 
 
@@ -191,11 +215,14 @@ function generateCardsFromSheet2(data) {
 console.log("Raw startDate:", startDate);
 
 const day = startDate.getDate();
+console.log("day", day);
 const month = startDate.getMonth() + 1;
+console.log("month", month);
 const year = startDate.getFullYear();
+console.log("year", year);
 
 // Formatez la date avec le format JJ/MM/AAAA
-const formattedStartDate = `${day < 10 ? '0' : ''}${day}/${month < 10 ? '0' : ''}${month}/${year}`;
+const formattedStartDate = `${month < 10 ? '0' : ''}${month}/${day < 10 ? '0' : ''}${day}/${year}`;
 console.log("Formatted startDate:", formattedStartDate);
 
 
@@ -211,12 +238,14 @@ console.log("Formatted startDate:", formattedStartDate);
     const degree = row[2];
     const school = row[3];
     const city = row[4];
+    const degreefull = row[6];
+    console.log("full", degreefull);
 
     const card = `
       <div class="card col-md-12" id="schoolCards">
-        <h6 class="duration">${formattedStartDate} - ${endDate.toLocaleDateString()} </h6>
-        <h5>${degree}</h5>
-        <h6>${school} - ${city}</h5>
+        <div class="duration">${formattedStartDate} - ${endDate.toLocaleDateString()} </div>
+        <div class="degree"><span class="infobulle" title="${degreefull}">${degree} </span>.</div>
+        <div class="school">${school} - ${city}</div>
       </div>
     `;
 
