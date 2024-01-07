@@ -138,7 +138,7 @@
               <br>
               <p>Hey, je suis Arnaud, bienvenue ici</p>
               <p>Ancien étudiant en art, j'aime créer, autant avec mes mains qu'avec un ordinateur. J'ai créé ce site pour me challenger.
-               <p>Voici une partie de mon texte <span class="infobulle" title="Ceci est une infobulle">avec une infobulle</span>.</p>
+                
               </p>
             </article>
           </div>
@@ -472,7 +472,9 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-2 section-title">CONTACT</div>
-          <div class="col-8"></div>
+          <div class="col-8">
+            <div class="bordercv"><a href="cv.html" target="_blank">Generate my cv</a></div>
+          </div>
           <div class="col-2"></div>
         </div>
         <div class="row">
@@ -496,22 +498,6 @@
               <button type="submit" style="position: relative;left: 15px;">Send</button>
             </form>          </div>
           <div class="col-2">
-            <div class="minime-head">
-            <div class="torso"></div>
-            <div class="drawHead">
-              <div class="ears"></div>
-              <div class="head"></div>
-              <div class="beard"></div>
-              <div class="glasses"></div>
-              <div class="nose"></div>
-            </div>
-
-            <div class="arms"></div>
-            <div class="arms2"></div>
-            <div class="thumb"></div>
-            <div class="thumb2"></div>
-          </div>
-          <div class="bordercv"><a href="cv.html" target="_blank">Generate my cv</a></div>
         </div>
           </div>
         </div>
@@ -533,17 +519,6 @@
       if ($('.navbar-toggler').is(':visible')) {
         $('.navbar-toggler').click();
       }
-    }
-    
-  function redirigerVersIDAleatoire() {
-    // Liste des IDs possibles
-    var ids = ["HOME", "VALUES","TRIVIA", "SKILLS", "CONTACT"];
-    
-    // Sélectionne un ID aléatoire
-    var idAleatoire = ids[Math.floor(Math.random() * ids.length)];
-    
-    // Redirige vers l'ID sélectionné
-    window.location.href = "#" + idAleatoire;
     }
 </script>
 

@@ -240,6 +240,18 @@ textarea{
   opacity: 0.5;
 }
 
+
+.bordercv{
+  border: solid black 2px;
+  width: fit-content;
+  padding: 20px;
+  background-color: rgba(128, 128, 128, 0.25);
+}
+
+.bordercv a{
+  color: white;
+}
+
 #canvas {
     position: fixed;
     top: 0px;

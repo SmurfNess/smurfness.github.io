@@ -26,58 +26,50 @@
           margin-bottom: 10px;
         }
 		
+
+.col-md-1{
+  background-color: rgb(255, 125, 125);
+  height: 80vh;
+}        
+
+.col-md-11{
+  background-color: rgb(238, 56, 56);
+}        
 .container{
   padding: 10px;
 }
-
-
 	
-    .image-container {
-      position: relative;
-      width: 150px;
-      height: 200px;
-      overflow: hidden;
-      border-radius: 15px;
-    }
-
-
+.image-container {
+  position: relative;
+  width: 140px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 15px;
+}
 
 .image-container img {
   position: absolute; /* Positionne l'image à l'intérieur du conteneur */
-  top: 50%; /* Place l'image au centre verticalement */
+  top: 55%; /* Place l'image au centre verticalement */
   left: 55%; /* Place l'image au centre horizontalement */
-  width: 110%;
+  width: 120%;
   transform: translate(-50%, -50%) rotate(3deg); /* Déplace l'image de 50% vers la gauche et le haut, puis la fait pivoter de 10 degrés */
 }
 
-.rotatetitle{
-  rotate: 270deg;
-  font-size: 40px;
-  font-weight: bolder;
-  text-transform: uppercase;
-  color: #a6b3ff;}
-
-.educationtitle{
+.certificationsContainer{
   position: relative;
-  top:40%;
-  left: 20px;
+  font-size: 10px;
+  margin-top: 20px;
 }
 
-.positiontitle{
+.card {
   position: relative;
-  top:25%;
-  left: 20px;
+  padding: 10px;
+  border: none;
+  background: linear-gradient(145deg, rgba(166, 179, 255, 0.5) 5%,rgba(255,255,255,0) 80%);
+  border-radius: 5px 0px 0px 5px;
+  margin-top: 5px;
+  width: 100%;
 }
-
-        .card {
-            position: relative;
-            padding: 10px;
-            border: none;
-            background: linear-gradient(145deg, rgba(255,255,255,0) 5%,rgba(166, 179, 255, 0.5) 100%);
-            border-radius: 0px 5px 5px 0px;
-            margin-top: 10px;
-            width: 98%;
-        }
 
 
 		.duration{
@@ -98,18 +90,23 @@
   border-radius: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 125%;
+  bottom: 25%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
+  width: 250px;
 }
 
 .infobulle:hover::before {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
-    
+.header{
+  background-color:rgba(47, 79, 79, 0.75);
+  width: 100%;
+  padding: 10px;
+}    
 
 
     </style>
@@ -117,49 +114,39 @@
 <body>
   <div class="container">
     <div class="row">
-
-      <div class="col-md-4">
-        <div class="row information">
-          
-          <div class="col-md-6 col-sm-12 ">
-            <div class=" image-container"><img src="assets/pictures/cv.webp" alt="Mon portrait par Mélanie Kosowski"></div>
+      <!-- Colonne principale pour l'en-tête -->
+      <div class="col-lg-4 header">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="image-container">
+              <img src="assets/pictures/cv.webp" alt="Mon portrait par Mélanie Kosowski">
+            </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="row">
-              
-              <div class="col-md-12">Arnaud LEMASÇON</div>
-              <div class="col-md-12 calcul" id="resultat"></div>
-              <div class="col-md-12">City : Lyon</div>
-              <div class="col-md-12"><br>D'un naturel curieux, j'aime découvrir de nouveaux outils et technologies.</div>
-            
+              <div class="col-12">Arnaud LEMASÇON</div>
+              <div class="col-12 calcul" id="resultat"></div>
+              <div class="col-12">City: Lyon</div>
+              <div class="col-12"><br>D'un naturel curieux, j'aime découvrir de nouveaux outils et technologies.</div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <div class="rotatetitle educationtitle">Educations</div>
-            </div>
-            <div class="col-md-10 EducationContainer"></div>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-5">
         <div class="row">
-          <div class="col-md-2">
-            <div class="rotatetitle positiontitle">Positions</div>
-          </div>
-          <div class="col-md-10">
-            <div id="cvContainer"></div>
+          <div class="col-12 EducationContainer"></div>
+
+          <div class="col-12">
+            <div class="certificationsContainer"></div>
           </div>
         </div>
       </div>
-
-      <div class="col-md-3 certificationsContainer">
-        <h2>Certifications</h2>
+  
+      <!-- Colonne secondaire pour le contenu principal -->
+      <div class="col-lg-8">
+        <div class="col-12" id="cvContainer"></div>
       </div>
-
     </div>
   </div>
+  
 
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script>
@@ -185,13 +172,16 @@
                 const jobTitle = row[2];
                 const companyName = row[3];
                 const city = row[4];
+                const descriptionJob = row[7];
 
                 const cardTemplate = `
+                <span class="infobulle" title="${descriptionJob}">
                     <div class="card col-md-12">
                         <h6 class="duration">${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} (${calculateDuration(startDate, endDate)})</h6>
                         <h5>${jobTitle}</h3>
                         <h6>${companyName} - ${city}</h4>
                     </div>
+                </span>
                 `;
 
                 cvTemplate += cardTemplate;
@@ -242,11 +232,12 @@ console.log("Formatted startDate:", formattedStartDate);
     console.log("full", degreefull);
 
     const card = `
+    <span class="infobulle" title="${degreefull}">
       <div class="card col-md-12" id="schoolCards">
         <div class="duration">${formattedStartDate} - ${endDate.toLocaleDateString()} </div>
-        <div class="degree"><span class="infobulle" title="${degreefull}">${degree} </span>.</div>
-        <div class="school">${school} - ${city}</div>
+        <div class="degree">${degree}<span class="school"> <span style="color:rgba(47, 79, 79, 0.75)">à</span> ${school} - ${city}</div></div>
       </div>
+    </span>  
     `;
 
     cardTemplate += card;
@@ -290,7 +281,6 @@ function generateLinkedInCertifications(data) {
 
   const linkedInCountElement = document.querySelector('.certificationsContainer');
   linkedInCountElement.innerHTML = `
-    <h2>Certifications</h2>
     <ul>${listTemplate}</ul>
     <div>et ${linkedInCount} certifications LinkedIn ont été passées, sur divers sujets tels que la gestion de projets, les relations interpersonnel et l'agilité.<br><a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness/details/certifications/" target="_blank">Liste exhaustive ici</a> </div>
   `;
@@ -356,12 +346,16 @@ function formatDate(rawDate) {
         // Call the CV generation function on page load
         window.addEventListener('load', generateCVOnLoad);
 		
-        var anneeEnCours = new Date().getFullYear();
-    var anneeInitiale = 1989;
-    var resultat = anneeEnCours - anneeInitiale;
-    
+// Date d'anniversaire
+var dateAnniversaire = new Date('1989-10-29');
+var dateActuelle = new Date();
+var age = dateActuelle.getFullYear() - dateAnniversaire.getFullYear();
+if (dateActuelle.getMonth() < dateAnniversaire.getMonth() || (dateActuelle.getMonth() === dateAnniversaire.getMonth() && dateActuelle.getDate() < dateAnniversaire.getDate())) {
+    age--;
+}
+  
     var divResultat = document.getElementById("resultat");
-    divResultat.textContent = "Age : " + resultat +" ans";
+    divResultat.textContent = "Age : " + age +" ans";
     </script>
 </body>
 </html>
