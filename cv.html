@@ -14,18 +14,24 @@
 
         a {
           color: rgb(255, 255, 255);
-          font-size:medium;
+          font-size:small;
           text-decoration: underline;
         }
 
         a:hover{
-          color: #a6b3ff;        }
+          color: #a6b3ff;        
+        }
 
         li{
           color: #a6b3ff;
           margin-bottom: 10px;
         }
+
 		
+.cert{
+  font-size: 15px;
+  text-align: center;
+}
 
 .col-md-1{
   background-color: rgb(255, 125, 125);
@@ -44,7 +50,7 @@
   width: 140px;
   height: 180px;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .image-container img {
@@ -66,18 +72,18 @@
   padding: 10px;
   border: none;
   background: linear-gradient(145deg, rgba(166, 179, 255, 0.5) 5%,rgba(255,255,255,0) 80%);
-  border-radius: 5px 0px 0px 5px;
-  margin-top: 5px;
+  border-radius: 10px 0px 0px 10px;
+  margin-top:10px;
   width: 100%;
 }
 
 
-		.duration{
-		color:rgba(47, 79, 79, 0.75);
-    font-size: 14px;
-		}
+.duration{
+	color:rgba(47, 79, 79, 0.75);
+  font-size: 14px;
+}
 
-    .infobulle {
+.infobulle {
   position: relative;
   cursor: help;
 }
@@ -90,12 +96,12 @@
   border-radius: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 25%;
-  left: 50%;
+  top: 10%;
+  left: 75%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
-  width: 250px;
+  width: 1000px;
 }
 
 .infobulle:hover::before {
@@ -106,7 +112,9 @@
   background-color:rgba(47, 79, 79, 0.75);
   width: 100%;
   padding: 10px;
+  border-radius: 25px;
 }    
+
 
 
     </style>
@@ -179,7 +187,7 @@
                     <div class="card col-md-12">
                         <h6 class="duration">${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} (${calculateDuration(startDate, endDate)})</h6>
                         <h5>${jobTitle}</h3>
-                        <h6>${companyName} - ${city}</h4>
+                        <h6 style="text-transform:uppercase;">${companyName} - ${city}</h4>
                     </div>
                 </span>
                 `;
@@ -281,8 +289,8 @@ function generateLinkedInCertifications(data) {
 
   const linkedInCountElement = document.querySelector('.certificationsContainer');
   linkedInCountElement.innerHTML = `
-    <ul>${listTemplate}</ul>
-    <div>et ${linkedInCount} certifications LinkedIn ont été passées, sur divers sujets tels que la gestion de projets, les relations interpersonnel et l'agilité.<br><a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness/details/certifications/" target="_blank">Liste exhaustive ici</a> </div>
+    <ul class="certificationsList">${listTemplate}</ul>
+    <div class="cert">et ${linkedInCount} certifications LinkedIn ont été passées, sur divers sujets tels que la gestion de projets, les relations interpersonnel et l'agilité.<br><a href="https://www.linkedin.com/in/arnaud-lemas%C3%A7on-ness/details/certifications/" target="_blank">Liste exhaustive ici</a> </div>
   `;
 }
 
