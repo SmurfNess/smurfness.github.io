@@ -15,6 +15,7 @@
 
 body{
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 section{
   position: relative;
@@ -58,6 +59,28 @@ section{
   border-radius: 15px;
   transition: background-color 0.5s ease-in-out;
 }
+
+.card_project{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 50vh;
+  width: 16vw;
+  border-radius: 15px;
+  overflow: hidden;
+  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/p_hooman.webp');
+}
+
+.card_project .card-body{
+  color: white;
+}
+
+.card_project img{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  opacity: 25%;
+}
+
 
 .S1:hover{
   background: linear-gradient(140deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
@@ -277,23 +300,17 @@ textarea{
   textarea{
     background-color: lightgray;
   }
-  .polygon-section{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.25);
-    clip-path: polygon(10% 10%, 50% 5%, 90% 10%, 90% 75%, 75% 80%, 10% 75%);
-  }
 
   footer{
-    position: fixed;
-    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
     height: 50px;
     width: 100vw;
-    bottom: 0px ;
+    color: white;
+    font-size: 15px;
+    padding: 15px;
   }
-  
-
   /* ######################## POP UP ############################## */
 
   .popup {
@@ -404,6 +421,9 @@ textarea{
     display: none;
   }
     
+  footer{
+    font-size: 10px;
+  }
 }
 
 
@@ -444,6 +464,10 @@ textarea{
   .shake{
     display: none;
   }
+
+  footer{
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 971px) {
@@ -480,11 +504,9 @@ textarea{
     bottom: 0%;
     margin: 0%;
     background-color: transparent;
-  }
+  } 
 
   footer{
-    position: relative;
+    font-size: 10px;
   }
-  
-
 }
