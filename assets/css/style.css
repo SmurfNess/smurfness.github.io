@@ -60,27 +60,26 @@ section{
   transition: background-color 0.5s ease-in-out;
 }
 
-.card_project{
+.card_project {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.1);
   height: 50vh;
   width: 16vw;
   border-radius: 15px;
   overflow: hidden;
-  background-image: url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/p_hooman.webp');
+  background: linear-gradient(180deg, rgba(0,0,0,0.6) 38%, rgba(0,0,0,0) 100%), url('https://raw.githubusercontent.com/SmurfNess/smurfness.github.io/main/assets/pictures/p_hooman.webp');
+  background-size: cover; /* Ajustez en fonction de vos besoins */
+}
+
+.card_project .card-body {
+  position: relative; /* Assurez-vous que le contenu est positionné correctement */
+  z-index: 1; /* Placez le contenu de la carte au-dessus de l'image de fond */
+  /* Vos styles pour le contenu de la carte ici */
+  opacity: 1; /* Gardez le texte à une opacité de 1 */
 }
 
 .card_project .card-body{
   color: white;
 }
-
-.card_project img{
-  position: absolute;
-  top:0px;
-  left: 0px;
-  opacity: 25%;
-}
-
 
 .S1:hover{
   background: linear-gradient(140deg, rgba(64,166,101,0.5) 10%, rgba(64,166,101,0) 50%, rgba(64,166,101,0.5) 90%);
